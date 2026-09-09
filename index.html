@@ -170,14 +170,34 @@ h1,h2,h3{
   justify-content:space-between;
   flex-wrap:wrap;
   gap:8px 16px;
-  padding-bottom:18px;
+  padding-bottom:20px;
   border-bottom:1px solid var(--border);
   margin-bottom:22px;
+  position:relative;
+}
+.topbar::after{
+  content:"";
+  position:absolute;
+  left:0; bottom:-1px;
+  width:64px; height:3px;
+  border-radius:3px;
+  background:linear-gradient(90deg, var(--accent), var(--field-newmode));
 }
 .topbar h1{
-  font-size:26px;
+  font-size:28px;
   font-weight:700;
   letter-spacing:-0.01em;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  background:linear-gradient(90deg, var(--ink), var(--accent) 140%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.topbar h1 .emoji{
+  -webkit-text-fill-color:initial;
+  filter:none;
 }
 .updated{
   color:var(--muted);
@@ -212,7 +232,7 @@ section > h2{
   .tiles{ grid-template-columns:repeat(2,1fr); }
 }
 .tile{
-  background:var(--surface);
+  background:linear-gradient(160deg, color-mix(in srgb, var(--tile-color,var(--border)) 7%, var(--surface)), var(--surface));
   border:1px solid var(--border);
   border-left:4px solid var(--tile-color,var(--border));
   border-radius:10px;
@@ -221,12 +241,13 @@ section > h2{
   text-align:left;
   font-family:inherit;
   color:var(--ink);
-  transition:box-shadow .15s ease, transform .15s ease;
+  transition:box-shadow .15s ease, transform .15s ease, background .15s ease;
 }
-.tile:hover{ box-shadow:var(--shadow); }
+.tile:hover{ box-shadow:var(--shadow); transform:translateY(-2px); }
 .tile.active{
-  box-shadow:0 0 0 2px var(--tile-color,var(--accent)) inset;
-  background:var(--surface-2);
+  box-shadow:0 0 0 2px var(--tile-color,var(--accent)) inset, var(--shadow);
+  background:color-mix(in srgb, var(--tile-color,var(--accent)) 12%, var(--surface-2));
+  transform:translateY(-2px);
 }
 .tile-count{
   font-family:"IBM Plex Mono",monospace;
@@ -275,7 +296,8 @@ section > h2{
   gap:6px;
   transition:background .15s ease, border-color .15s ease;
 }
-.pill:hover{ border-color:var(--muted); }
+.pill:hover{ border-color:var(--muted); transform:translateY(-1px); }
+.pill{ transition:background .15s ease, border-color .15s ease, transform .1s ease; }
 .pill .dot{
   width:7px; height:7px; border-radius:50%;
   background:var(--dot-color,var(--muted));
@@ -285,6 +307,7 @@ section > h2{
   background:var(--pill-color,var(--accent));
   border-color:var(--pill-color,var(--accent));
   color:var(--accent-ink);
+  box-shadow:0 2px 8px -2px color-mix(in srgb, var(--pill-color,var(--accent)) 60%, transparent);
 }
 .pill.active .dot{ background:var(--accent-ink); }
 .reset-btn{
@@ -305,6 +328,7 @@ section > h2{
   border:1px solid var(--border);
   border-radius:12px;
   padding:6px 0;
+  box-shadow:var(--shadow);
 }
 .results-head{
   padding:14px 18px 8px;
@@ -343,8 +367,10 @@ section > h2{
   gap:14px;
   padding:12px 18px;
   border-bottom:1px solid var(--border);
+  transition:background .12s ease;
 }
 .result-row:last-child{ border-bottom:none; }
+.result-row:hover{ background:var(--surface-2); }
 .result-author{
   flex:0 0 96px;
   font-weight:600;
@@ -401,13 +427,14 @@ section > h2{
 .bar{
   width:100%;
   max-width:56px;
-  border-radius:5px 5px 0 0;
-  background:var(--accent);
+  border-radius:6px 6px 0 0;
+  background:linear-gradient(180deg, var(--accent), color-mix(in srgb, var(--accent) 65%, var(--field-newmode)));
   min-height:3px;
-  transition:opacity .15s ease;
+  transition:opacity .15s ease, transform .15s ease;
+  transform-origin:bottom;
 }
 .bar-col.active .bar{ opacity:1; box-shadow:0 0 0 2px var(--ink) inset; }
-.bar-col:not(.active):hover .bar{ opacity:0.75; }
+.bar-col:not(.active):hover .bar{ opacity:0.8; transform:scaleX(1.06); }
 .bar-label{
   font-size:11.5px;
   color:var(--muted);
@@ -434,7 +461,7 @@ h3{
 
 <div class="app" id="app" hidden>
   <header class="topbar">
-    <h1>TSAL 연구현황</h1>
+    <h1><span class="emoji">🚗</span>TSAL 연구현황<span class="emoji">🚗</span></h1>
     <div class="updated">갱신일자<span class="mono" id="updated-date"></span></div>
   </header>
 
