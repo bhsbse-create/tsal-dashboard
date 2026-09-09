@@ -663,17 +663,21 @@ h3{
 
   document.getElementById("updated-date").textContent = UPDATED_AT;
 
-  function unlock(){
+  var UNLOCK_TTL_MS = 7 * 24 * 60 * 60 * 1000; // 7일
+
+  function unlock(remember){
     document.getElementById("gate").hidden = true;
     document.getElementById("app").hidden = false;
-    try { sessionStorage.setItem("tsal_unlocked", "1"); } catch(e){}
+    if (remember){
+      try { localStorage.setItem("tsal_unlocked_at", String(Date.now())); } catch(e){}
+    }
     renderAll();
   }
 
   document.getElementById("gate-btn").addEventListener("click", function(){
     var v = document.getElementById("gate-input").value;
     if (v === PASSWORD){
-      unlock();
+      unlock(true);
     } else {
       document.getElementById("gate-err").hidden = false;
     }
@@ -683,7 +687,8 @@ h3{
   });
 
   try {
-    if (sessionStorage.getItem("tsal_unlocked") === "1") unlock();
+    var unlockedAt = Number(localStorage.getItem("tsal_unlocked_at"));
+    if (unlockedAt && (Date.now() - unlockedAt) < UNLOCK_TTL_MS) unlock(false);
   } catch(e){}
 })();
 </script>
