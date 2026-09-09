@@ -1,0 +1,32 @@
+name: Sync TSAL dashboard from Notion
+
+on:
+  schedule:
+    - cron: "19 */6 * * *" # UTC, 지금 클로드 라우틴과 같은 주기 (6시간마다)
+  workflow_dispatch: {} # Actions 탭에서 수동 실행도 가능
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run sync
+        env:
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+        run: node sync.js
+
+      - name: Commit updated index.html if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git diff --cached --quiet || git commit -m "chore: sync dashboard from Notion"
+          git push

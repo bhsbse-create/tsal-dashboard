@@ -1,0 +1,691 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found]){display:none!important}</style></head><body>
+<title>TSAL 연구현황</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+:root{
+  --bg:#F5F6F8;
+  --surface:#FFFFFF;
+  --surface-2:#EEF0F3;
+  --ink:#12161C;
+  --muted:#5B6472;
+  --border:#DEE2E8;
+  --accent:#2E6FDE;
+  --accent-ink:#FFFFFF;
+
+  --field-micro:#1C9C8B;
+  --field-transit:#2E6FDE;
+  --field-newmode:#7B5FD9;
+  --field-behavior:#E0A72E;
+  --field-infra:#D1495B;
+  --field-etc:#8A94A6;
+
+  --status-plan:#2E6FDE;
+  --status-draft:#E0A72E;
+  --status-review:#7B5FD9;
+  --status-published:#1C9C8B;
+  --status-transfer:#8A94A6;
+  --status-none:#AEB4BF;
+
+  --shadow: 0 1px 2px rgba(18,22,28,0.04), 0 8px 24px -12px rgba(18,22,28,0.12);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0D1014;
+    --surface:#161A21;
+    --surface-2:#1D222B;
+    --ink:#E8EAED;
+    --muted:#93A0B0;
+    --border:#2A3039;
+    --accent:#5B8FEF;
+    --accent-ink:#0D1014;
+
+    --field-micro:#2DBBA8;
+    --field-transit:#5B8FEF;
+    --field-newmode:#9B85EB;
+    --field-behavior:#F0BF55;
+    --field-infra:#E8697C;
+    --field-etc:#A6AEBB;
+
+    --status-plan:#5B8FEF;
+    --status-draft:#F0BF55;
+    --status-review:#9B85EB;
+    --status-published:#2DBBA8;
+    --status-transfer:#A6AEBB;
+    --status-none:#5A616E;
+
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px -12px rgba(0,0,0,0.5);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0D1014;
+  --surface:#161A21;
+  --surface-2:#1D222B;
+  --ink:#E8EAED;
+  --muted:#93A0B0;
+  --border:#2A3039;
+  --accent:#5B8FEF;
+  --accent-ink:#0D1014;
+
+  --field-micro:#2DBBA8;
+  --field-transit:#5B8FEF;
+  --field-newmode:#9B85EB;
+  --field-behavior:#F0BF55;
+  --field-infra:#E8697C;
+  --field-etc:#A6AEBB;
+
+  --status-plan:#5B8FEF;
+  --status-draft:#F0BF55;
+  --status-review:#9B85EB;
+  --status-published:#2DBBA8;
+  --status-transfer:#A6AEBB;
+  --status-none:#5A616E;
+
+  --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px -12px rgba(0,0,0,0.5);
+}
+
+*{box-sizing:border-box;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",-apple-system,"Segoe UI",sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{
+  font-family:"IBM Plex Sans",sans-serif;
+  text-wrap:balance;
+  margin:0;
+}
+.mono{
+  font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-variant-numeric:tabular-nums;
+}
+
+/* ---------- password gate ---------- */
+.gate{
+  position:fixed; inset:0;
+  background:var(--bg);
+  display:flex; align-items:center; justify-content:center;
+  z-index:100;
+  padding:20px;
+}
+.gate-card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:14px;
+  box-shadow:var(--shadow);
+  padding:32px 28px;
+  width:100%;
+  max-width:320px;
+  text-align:center;
+}
+.gate-title{
+  font-size:20px; font-weight:700; letter-spacing:-0.01em;
+}
+.gate-sub{
+  color:var(--muted); font-size:13px; margin:8px 0 18px;
+}
+.gate-card input{
+  width:100%;
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid var(--border);
+  background:var(--bg);
+  color:var(--ink);
+  font-size:14px;
+  font-family:inherit;
+  margin-bottom:10px;
+}
+.gate-card input:focus{
+  outline:2px solid var(--accent);
+  outline-offset:1px;
+}
+.gate-card button{
+  width:100%;
+  padding:10px 12px;
+  border-radius:8px;
+  border:none;
+  background:var(--accent);
+  color:var(--accent-ink);
+  font-weight:600;
+  font-size:14px;
+  font-family:inherit;
+  cursor:pointer;
+}
+.gate-card button:hover{ filter:brightness(1.05); }
+.gate-err{
+  color:var(--field-infra);
+  font-size:12.5px;
+  margin:10px 0 0;
+}
+
+/* ---------- layout ---------- */
+.app{
+  max-width:1180px;
+  margin:0 auto;
+  padding:28px 20px 60px;
+}
+.topbar{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:8px 16px;
+  padding-bottom:18px;
+  border-bottom:1px solid var(--border);
+  margin-bottom:22px;
+}
+.topbar h1{
+  font-size:26px;
+  font-weight:700;
+  letter-spacing:-0.01em;
+}
+.updated{
+  color:var(--muted);
+  font-size:13px;
+}
+.updated span{
+  color:var(--ink);
+  font-weight:600;
+  margin-left:4px;
+}
+
+section{ margin-bottom:30px; }
+section > h2{
+  font-size:14px;
+  font-weight:600;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:0.06em;
+  margin-bottom:12px;
+}
+
+/* ---------- status tiles ---------- */
+.tiles{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:10px;
+}
+@media (max-width:820px){
+  .tiles{ grid-template-columns:repeat(3,1fr); }
+}
+@media (max-width:480px){
+  .tiles{ grid-template-columns:repeat(2,1fr); }
+}
+.tile{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-left:4px solid var(--tile-color,var(--border));
+  border-radius:10px;
+  padding:14px 14px 12px;
+  cursor:pointer;
+  text-align:left;
+  font-family:inherit;
+  color:var(--ink);
+  transition:box-shadow .15s ease, transform .15s ease;
+}
+.tile:hover{ box-shadow:var(--shadow); }
+.tile.active{
+  box-shadow:0 0 0 2px var(--tile-color,var(--accent)) inset;
+  background:var(--surface-2);
+}
+.tile-count{
+  font-family:"IBM Plex Mono",monospace;
+  font-variant-numeric:tabular-nums;
+  font-size:26px;
+  font-weight:600;
+  line-height:1.1;
+}
+.tile-label{
+  font-size:12.5px;
+  color:var(--muted);
+  margin-top:4px;
+}
+
+/* ---------- filters ---------- */
+.filter-row{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:10px 8px;
+  margin-bottom:10px;
+}
+.filter-label{
+  font-size:12.5px;
+  font-weight:600;
+  color:var(--muted);
+  width:52px;
+  flex-shrink:0;
+}
+.pills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+}
+.pill{
+  border:1px solid var(--border);
+  background:var(--surface);
+  color:var(--ink);
+  padding:6px 13px;
+  border-radius:999px;
+  font-size:13px;
+  font-family:inherit;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  transition:background .15s ease, border-color .15s ease;
+}
+.pill:hover{ border-color:var(--muted); }
+.pill .dot{
+  width:7px; height:7px; border-radius:50%;
+  background:var(--dot-color,var(--muted));
+  flex-shrink:0;
+}
+.pill.active{
+  background:var(--pill-color,var(--accent));
+  border-color:var(--pill-color,var(--accent));
+  color:var(--accent-ink);
+}
+.pill.active .dot{ background:var(--accent-ink); }
+.reset-btn{
+  background:none;
+  border:none;
+  color:var(--accent);
+  font-size:12.5px;
+  font-family:inherit;
+  cursor:pointer;
+  padding:2px 0;
+  text-decoration:underline;
+  text-underline-offset:2px;
+}
+
+/* ---------- results panel ---------- */
+.results{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:6px 0;
+}
+.results-head{
+  padding:14px 18px 8px;
+  font-size:13px;
+  color:var(--muted);
+}
+.results-head b{
+  color:var(--ink);
+  font-family:"IBM Plex Mono",monospace;
+}
+.results-columns{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:0 18px 8px;
+  border-bottom:1px solid var(--border);
+}
+.col-spacer-author{ flex:0 0 96px; }
+.col-spacer-topic{ flex:1 1 auto; }
+.col-head{
+  flex:0 0 58px;
+  font-size:10.5px;
+  font-weight:600;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:0.03em;
+  text-align:center;
+}
+.results-list{
+  max-height:420px;
+  overflow-y:auto;
+}
+.result-row{
+  display:flex;
+  align-items:baseline;
+  gap:14px;
+  padding:12px 18px;
+  border-bottom:1px solid var(--border);
+}
+.result-row:last-child{ border-bottom:none; }
+.result-author{
+  flex:0 0 96px;
+  font-weight:600;
+  font-size:13.5px;
+}
+.result-topic{
+  flex:1 1 auto;
+  font-size:13.5px;
+  color:var(--muted);
+  min-width:0;
+}
+.result-col{
+  flex:0 0 58px;
+  font-size:14px;
+  text-align:center;
+}
+.results-empty{
+  padding:36px 18px;
+  text-align:center;
+  color:var(--muted);
+  font-size:13.5px;
+}
+
+/* ---------- journal chart ---------- */
+.chart{
+  display:flex;
+  align-items:flex-end;
+  gap:20px;
+  height:150px;
+  padding:10px 10px 0;
+  border-bottom:1px solid var(--border);
+  cursor:default;
+}
+.chart-single{
+  height:110px;
+  max-width:180px;
+}
+.bar-col{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-end;
+  height:100%;
+  cursor:pointer;
+}
+.bar-value{
+  font-family:"IBM Plex Mono",monospace;
+  font-variant-numeric:tabular-nums;
+  font-size:13px;
+  font-weight:600;
+  margin-bottom:6px;
+}
+.bar{
+  width:100%;
+  max-width:56px;
+  border-radius:5px 5px 0 0;
+  background:var(--accent);
+  min-height:3px;
+  transition:opacity .15s ease;
+}
+.bar-col.active .bar{ opacity:1; box-shadow:0 0 0 2px var(--ink) inset; }
+.bar-col:not(.active):hover .bar{ opacity:0.75; }
+.bar-label{
+  font-size:11.5px;
+  color:var(--muted);
+  margin-top:8px;
+  text-align:center;
+}
+h3{
+  font-size:12.5px;
+  font-weight:600;
+  color:var(--muted);
+  margin:22px 0 10px;
+}
+</style>
+
+<div class="gate" id="gate">
+  <div class="gate-card">
+    <div class="gate-title">🚏 TSAL 연구현황</div>
+    <p class="gate-sub">비밀번호를 입력하세요</p>
+    <input type="password" id="gate-input" placeholder="Password" autocomplete="off" />
+    <button id="gate-btn">입장</button>
+    <p class="gate-err" id="gate-err" hidden>비밀번호가 올바르지 않습니다.</p>
+  </div>
+</div>
+
+<div class="app" id="app" hidden>
+  <header class="topbar">
+    <h1>TSAL 연구현황</h1>
+    <div class="updated">갱신일자<span class="mono" id="updated-date"></span></div>
+  </header>
+
+  <section class="tiles" id="tiles"></section>
+
+  <section class="filters">
+    <div class="filter-row">
+      <span class="filter-label">분야</span>
+      <div class="pills" id="field-pills"></div>
+    </div>
+    <div class="filter-row">
+      <span class="filter-label">주저자</span>
+      <div class="pills" id="author-pills"></div>
+    </div>
+    <button class="reset-btn" id="reset-btn">필터 초기화</button>
+  </section>
+
+  <section class="results">
+    <div class="results-head"><b id="results-count"></b> 건</div>
+    <div class="results-columns">
+      <span class="col-spacer-author"></span>
+      <span class="col-spacer-topic"></span>
+      <span class="col-head">학회발표</span>
+      <span class="col-head">수상여부</span>
+    </div>
+    <div class="results-list" id="results-list"></div>
+  </section>
+
+  <section class="journals">
+    <h2>학술지분포</h2>
+    <div class="chart" id="journal-chart"></div>
+    <h3>기타</h3>
+    <div class="chart chart-single" id="other-chart"></div>
+  </section>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var PASSWORD = "tsal308*";
+  var UPDATED_AT = "2026-09-09";
+
+  var DATA = [{"title":"김준구","engAuthors":["Jungu Kim"],"field":"대중교통운영","status":"In preparation","topic":"2024 서울시 버스파업이 기존 수단에 미치는 영향","presented":true,"awarded":false,"journals":["ITS"]},{"title":"고건우","engAuthors":["Keonwoo Koh"],"field":"대중교통운영","status":"In preparation","topic":"Optimizing Express Train Stopping Patterns for Congestion Management Using Smart Card Data: A Case Study of the Gyeongin Line, Seoul","presented":false,"awarded":false,"journals":[]},{"title":"고건우","engAuthors":["Keonwoo Koh"],"field":"","status":"In preparation","topic":"From Accessibility Gaps to Bus Routes: Parcel-Level Diagnosis and Time-Savings-Based Route Design under an Equity Constraint","presented":false,"awarded":false,"journals":[]},{"title":"최성택","engAuthors":["Sungtaek Choi"],"field":"마이크로모빌리티","status":"Round 1","topic":"First-/last-mile and BE","presented":false,"awarded":false,"journals":[]},{"title":"최성택","engAuthors":["Sungtaek Choi"],"field":"대중교통운영","status":"Round 1","topic":"Transfer station clustering","presented":true,"awarded":false,"journals":[]},{"title":"조항훈","engAuthors":["Hanghun Jo"],"field":"인프라 및 정책평가","status":"선택하지 않음","topic":"Seobu Underground Expressway","presented":false,"awarded":false,"journals":[]},{"title":"김성아","engAuthors":["Seong-A Kim"],"field":"신교통서비스","status":"In-progress","topic":"MaaS&SEM","presented":false,"awarded":false,"journals":[]},{"title":"조항훈","engAuthors":["Hanghun Jo"],"field":"통행행태 수요모형","status":"In preparation","topic":"Deep gravity model","presented":false,"awarded":false,"journals":[]},{"title":"조항훈","engAuthors":["Hanghun Jo"],"field":"통행행태 수요모형","status":"In-progress","topic":"Quantum Choice Model (QCM)","presented":false,"awarded":false,"journals":[]},{"title":"조항훈","engAuthors":["Hanghun Jo"],"field":"인프라 및 정책평가","status":"Round 1","topic":"BEVs non-exhaust emissions","presented":false,"awarded":false,"journals":[]},{"title":"허창준","engAuthors":["Changjun Heo"],"field":"신교통서비스","status":"In-progress","topic":"what do travelers need from maas and how they differ?attitude-based individual heterogeneity","presented":false,"awarded":false,"journals":[]},{"title":"서영운","engAuthors":["Youngwoon Seo"],"field":"신교통서비스","status":"게재 完","topic":"광역형 수요응답형 대중교통의 승차 수요 영향요인 분석: 경기도 광역콜버스 사례를 중심으로","presented":false,"awarded":false,"journals":["대한교통학회"]},{"title":"양윤철","engAuthors":["Yuncheol Yang"],"field":"인프라 및 정책평가","status":"Round 1","topic":"Distance-dependent effects of rail travel time on residence–workplace distance: A nonparametric double machine learning approach","presented":false,"awarded":false,"journals":[]},{"title":"허창준","engAuthors":["Changjun Heo"],"field":"대중교통운영","status":"In-progress","topic":"오픈데이터를 활용한 지하철 승·하차 승객 수 산출 방법론","presented":false,"awarded":false,"journals":["대한교통학회"]},{"title":"김성아","engAuthors":["Seong-A Kim"],"field":"기타","status":"In-progress","topic":"무인점포(with 리나prof.)","presented":false,"awarded":false,"journals":[]},{"title":"김우경","engAuthors":["Wookyung Kim"],"field":"인프라 및 정책평가","status":"선택하지 않음","topic":"대체 도로가 존재하는 유료 도로의 Dynamic Pricing 도입을 통한 유료 도로 수입 최적화","presented":false,"awarded":false,"journals":["대한교통학회"]},{"title":"김준구","engAuthors":["Jungu Kim"],"field":"대중교통운영","status":"In-progress","topic":"서울시 경전철 노선 개통 효과","presented":true,"awarded":false,"journals":["HKSTS","ITS"]},{"title":"김우경","engAuthors":["Wookyung Kim"],"field":"마이크로모빌리티","status":"선택하지 않음","topic":"카택 데이터-세 도시 이야기","presented":false,"awarded":false,"journals":["HKSTS"]},{"title":"고건우","engAuthors":["Keonwoo Koh"],"field":"대중교통운영","status":"In-progress","topic":"Network-Proximity based Line Importance assessment","presented":false,"awarded":false,"journals":[]},{"title":"최성택","engAuthors":["Sungtaek Choi"],"field":"신교통서비스","status":"Round 1","topic":"M-DRT mode choice using LCM","presented":true,"awarded":false,"journals":[]},{"title":"최성택","engAuthors":["Sungtaek Choi"],"field":"대중교통운영","status":"Round 4+","topic":"Satisfaction with PT uisng LCM","presented":true,"awarded":false,"journals":[]},{"title":"김성아","engAuthors":["Seong-A Kim"],"field":"통행행태 수요모형","status":"In preparation","topic":"GPS&관광목적 이동패턴","presented":false,"awarded":false,"journals":[]},{"title":"김성아","engAuthors":["Seong-A Kim"],"field":"통행행태 수요모형","status":"In preparation","topic":"GPS&목적추정","presented":false,"awarded":false,"journals":[]},{"title":"김성아","engAuthors":["Seong-A Kim"],"field":"신교통서비스","status":"Round 1","topic":"MaaS&BERTrend","presented":true,"awarded":false,"journals":[]},{"title":"김성아","engAuthors":["Seong-A Kim"],"field":"인프라 및 정책평가","status":"Round 1","topic":"DRT&CMO","presented":false,"awarded":false,"journals":["Cities"]},{"title":"김성아","engAuthors":["Seong-A Kim"],"field":"인프라 및 정책평가","status":"Round 1","topic":"따릉이 B/C","presented":false,"awarded":false,"journals":["Cities"]},{"title":"양윤철","engAuthors":["Yuncheol Yang"],"field":"인프라 및 정책평가","status":"In-progress","topic":"GTFS 기반 공항접근성 분석","presented":false,"awarded":false,"journals":[]},{"title":"고건우","engAuthors":["Keonwoo Koh"],"field":"통행행태 수요모형","status":"선택하지 않음","topic":"Development of an integrated model for mode choice and assignment (steps 3 and 4)","presented":false,"awarded":false,"journals":[]},{"title":"서영운","engAuthors":["Youngwoon Seo"],"field":"마이크로모빌리티","status":"In-progress","topic":"심야 시간 lastmile 따릉이 이용 이득 분해","presented":false,"awarded":false,"journals":["HKSTS"]},{"title":"허창준","engAuthors":["Changjun Heo"],"field":"마이크로모빌리티","status":"In-progress","topic":"ST-LLM을 통한 따릉이 대여량 예측","presented":true,"awarded":true,"journals":[]},{"title":"고건우, 서영운","engAuthors":["Keonwoo Koh","Youngwoon Seo"],"field":"대중교통운영","status":"In-progress","topic":"Car-Level Concentration Analysis Based on Transfer Station Typology and Fast Transfer car Accessibility","presented":false,"awarded":false,"journals":[]},{"title":"고건우","engAuthors":["Keonwoo Koh"],"field":"대중교통운영","status":"Round 2","topic":"DBRS for inter-regional bus routes","presented":false,"awarded":false,"journals":["Transport Policy"]},{"title":"양윤철","engAuthors":["Yuncheol Yang"],"field":"통행행태 수요모형","status":"Round 1","topic":"GPS 궤적 비지도학습 수단 추정","presented":false,"awarded":false,"journals":[]},{"title":"조항훈","engAuthors":["Hanghun Jo"],"field":"마이크로모빌리티","status":"In-progress","topic":"추후 기입 부탁드립니다","presented":true,"awarded":false,"journals":[]},{"title":"조항훈","engAuthors":["Hanghun Jo"],"field":"대중교통운영","status":"Round 3","topic":"대중교통만족도조사","presented":true,"awarded":false,"journals":["Transport Policy"]},{"title":"김우경","engAuthors":["Wookyung Kim"],"field":"통행행태 수요모형","status":"Round 1","topic":"GTX의 통행시간가치","presented":false,"awarded":false,"journals":[]},{"title":"조항훈","engAuthors":["Hanghun Jo"],"field":"마이크로모빌리티","status":"Round 1","topic":"전동킥보드- 경로비교","presented":false,"awarded":false,"journals":[]},{"title":"조항훈","engAuthors":["Hanghun Jo"],"field":"인프라 및 정책평가","status":"게재 完","topic":"UAM (부동산)","presented":true,"awarded":false,"journals":[]},{"title":"조항훈","engAuthors":["Hanghun Jo"],"field":"마이크로모빌리티","status":"Round 1","topic":"따릉이 요금제 (요금탄력성)","presented":true,"awarded":false,"journals":["Cities"]}];
+
+  var FIELD_META = [
+    {value:"마이크로모빌리티", label:"마이크로", color:"var(--field-micro)"},
+    {value:"대중교통운영",     label:"대중교통", color:"var(--field-transit)"},
+    {value:"신교통서비스",     label:"신교통",   color:"var(--field-newmode)"},
+    {value:"통행행태 수요모형", label:"통행행태", color:"var(--field-behavior)"},
+    {value:"인프라 및 정책평가", label:"인프라",  color:"var(--field-infra)"},
+    {value:"기타",             label:"기타",     color:"var(--field-etc)"}
+  ];
+
+  var AUTHOR_LIST = [
+    {kr:"조항훈", en:"Hanghun Jo"},
+    {kr:"김성아", en:"Seong-A Kim"},
+    {kr:"고건우", en:"Keonwoo Koh"},
+    {kr:"양윤철", en:"Yuncheol Yang"},
+    {kr:"허창준", en:"Changjun Heo"},
+    {kr:"최성택", en:"Sungtaek Choi"},
+    {kr:"김준구", en:"Jungu Kim"},
+    {kr:"서영운", en:"Youngwoon Seo"},
+    {kr:"김우경", en:"Wookyung Kim"}
+  ];
+
+  var STATUS_META = [
+    {key:"기획",         color:"var(--status-plan)",      match:function(s){ return s === "In-progress"; }},
+    {key:"작성중",       color:"var(--status-draft)",     match:function(s){ return s === "In preparation"; }},
+    {key:"심사중",       color:"var(--status-review)",    match:function(s){ return ["Round 1","Round 2","Round 3","Round 4+"].indexOf(s) !== -1; }},
+    {key:"게재",         color:"var(--status-published)", match:function(s){ return s === "게재 完"; }},
+    {key:"논문 Transfer",color:"var(--status-transfer)",  match:function(s){ return s === "논문 Transfer"; }},
+    {key:"선택하지않음",  color:"var(--status-none)",      match:function(s){ return !s || s === "선택하지 않음"; }}
+  ];
+
+  var JOURNAL_LIST = ["Transport Policy","HKSTS","ITS","대한교통학회","Cities"];
+
+  function bucketOf(status){
+    for (var i = 0; i < STATUS_META.length; i++){
+      if (STATUS_META[i].match(status)) return STATUS_META[i].key;
+    }
+    return "선택하지않음";
+  }
+
+  var state = { field:"all", author:"all", status:null, journal:null };
+
+  function matches(p){
+    if (state.field !== "all" && p.field !== state.field) return false;
+    if (state.author !== "all" && p.engAuthors.indexOf(state.author) === -1) return false;
+    if (state.status !== null && bucketOf(p.status) !== state.status) return false;
+    if (state.journal !== null){
+      if (state.journal === "기타"){ if (p.journals.length !== 0) return false; }
+      else if (p.journals.indexOf(state.journal) === -1) return false;
+    }
+    return true;
+  }
+
+  function el(tag, cls, html){
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (html !== undefined) e.innerHTML = html;
+    return e;
+  }
+
+  function renderTiles(){
+    var wrap = document.getElementById("tiles");
+    wrap.innerHTML = "";
+    STATUS_META.forEach(function(s){
+      var count = DATA.filter(function(p){ return bucketOf(p.status) === s.key; }).length;
+      var btn = el("button", "tile" + (state.status === s.key ? " active" : ""));
+      btn.style.setProperty("--tile-color", s.color);
+      btn.appendChild(el("div", "tile-count mono", String(count)));
+      btn.appendChild(el("div", "tile-label", s.key));
+      btn.addEventListener("click", function(){
+        state.status = (state.status === s.key) ? null : s.key;
+        renderAll();
+      });
+      wrap.appendChild(btn);
+    });
+  }
+
+  function renderFieldPills(){
+    var wrap = document.getElementById("field-pills");
+    wrap.innerHTML = "";
+    var all = el("button", "pill" + (state.field === "all" ? " active" : ""), "전체");
+    all.addEventListener("click", function(){ state.field = "all"; renderAll(); });
+    wrap.appendChild(all);
+    FIELD_META.forEach(function(f){
+      var active = state.field === f.value;
+      var btn = el("button", "pill" + (active ? " active" : ""));
+      if (active) btn.style.setProperty("--pill-color", f.color);
+      var dot = el("span", "dot");
+      dot.style.setProperty("--dot-color", f.color);
+      btn.appendChild(dot);
+      btn.appendChild(document.createTextNode(f.label));
+      btn.addEventListener("click", function(){
+        state.field = (state.field === f.value) ? "all" : f.value;
+        renderAll();
+      });
+      wrap.appendChild(btn);
+    });
+  }
+
+  function renderAuthorPills(){
+    var wrap = document.getElementById("author-pills");
+    wrap.innerHTML = "";
+    var all = el("button", "pill" + (state.author === "all" ? " active" : ""), "전체");
+    all.addEventListener("click", function(){ state.author = "all"; renderAll(); });
+    wrap.appendChild(all);
+    AUTHOR_LIST.forEach(function(a){
+      var active = state.author === a.en;
+      var btn = el("button", "pill" + (active ? " active" : ""), a.kr);
+      btn.addEventListener("click", function(){
+        state.author = (state.author === a.en) ? "all" : a.en;
+        renderAll();
+      });
+      wrap.appendChild(btn);
+    });
+  }
+
+  function renderResults(){
+    var filtered = DATA.filter(matches);
+    document.getElementById("results-count").textContent = filtered.length;
+    var list = document.getElementById("results-list");
+    list.innerHTML = "";
+    if (filtered.length === 0){
+      list.appendChild(el("div", "results-empty", "조건에 맞는 논문이 없습니다."));
+      return;
+    }
+    filtered.forEach(function(p){
+      var row = el("div", "result-row");
+      row.appendChild(el("div", "result-author", p.title));
+      row.appendChild(el("div", "result-topic", p.topic || "—"));
+      row.appendChild(el("div", "result-col", p.presented ? "🙋" : ""));
+      row.appendChild(el("div", "result-col", p.awarded ? "👑" : ""));
+      list.appendChild(row);
+    });
+  }
+
+  function renderChart(containerId, entries, activeKey, onClick, scaleMax){
+    var wrap = document.getElementById(containerId);
+    wrap.innerHTML = "";
+    entries.forEach(function(entry){
+      var col = el("div", "bar-col" + (activeKey === entry.key ? " active" : ""));
+      col.appendChild(el("div", "bar-value mono", String(entry.count)));
+      var bar = el("div", "bar");
+      var pct = scaleMax > 0 ? Math.max((entry.count / scaleMax) * 100, entry.count > 0 ? 4 : 0) : 0;
+      bar.style.height = pct + "%";
+      col.appendChild(bar);
+      col.appendChild(el("div", "bar-label", entry.key));
+      col.addEventListener("click", function(){ onClick(entry.key); });
+      wrap.appendChild(col);
+    });
+  }
+
+  function renderJournalCharts(){
+    var journalCounts = JOURNAL_LIST.map(function(j){
+      return { key:j, count: DATA.filter(function(p){ return p.journals.indexOf(j) !== -1; }).length };
+    });
+    var otherCount = DATA.filter(function(p){ return p.journals.length === 0; }).length;
+    var scaleMax = Math.max.apply(null, journalCounts.map(function(e){ return e.count; }).concat([otherCount, 1]));
+
+    renderChart("journal-chart", journalCounts, state.journal, function(key){
+      state.journal = (state.journal === key) ? null : key;
+      renderAll();
+    }, scaleMax);
+
+    renderChart("other-chart", [{key:"기타", count: otherCount}], state.journal, function(key){
+      state.journal = (state.journal === "기타") ? null : "기타";
+      renderAll();
+    }, scaleMax);
+  }
+
+  function renderAll(){
+    renderTiles();
+    renderFieldPills();
+    renderAuthorPills();
+    renderResults();
+    renderJournalCharts();
+  }
+
+  document.getElementById("reset-btn").addEventListener("click", function(){
+    state = { field:"all", author:"all", status:null, journal:null };
+    renderAll();
+  });
+
+  document.getElementById("updated-date").textContent = UPDATED_AT;
+
+  function unlock(){
+    document.getElementById("gate").hidden = true;
+    document.getElementById("app").hidden = false;
+    try { sessionStorage.setItem("tsal_unlocked", "1"); } catch(e){}
+    renderAll();
+  }
+
+  document.getElementById("gate-btn").addEventListener("click", function(){
+    var v = document.getElementById("gate-input").value;
+    if (v === PASSWORD){
+      unlock();
+    } else {
+      document.getElementById("gate-err").hidden = false;
+    }
+  });
+  document.getElementById("gate-input").addEventListener("keydown", function(e){
+    if (e.key === "Enter") document.getElementById("gate-btn").click();
+  });
+
+  try {
+    if (sessionStorage.getItem("tsal_unlocked") === "1") unlock();
+  } catch(e){}
+})();
+</script>
+
+</body></html>
