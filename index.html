@@ -357,6 +357,15 @@ section > h2{
   letter-spacing:0.03em;
   text-align:center;
 }
+.col-head-status{
+  flex:0 0 128px;
+  font-size:10.5px;
+  font-weight:600;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:0.03em;
+  text-align:center;
+}
 .results-list{
   max-height:420px;
   overflow-y:auto;
@@ -386,6 +395,23 @@ section > h2{
   flex:0 0 58px;
   font-size:14px;
   text-align:center;
+}
+.result-status{
+  flex:0 0 128px;
+  text-align:center;
+}
+.status-badge{
+  display:inline-block;
+  max-width:100%;
+  padding:3px 9px;
+  border-radius:999px;
+  font-size:10.5px;
+  font-weight:600;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  vertical-align:middle;
+  font-family:"IBM Plex Mono",monospace;
 }
 .results-empty{
   padding:36px 18px;
@@ -484,6 +510,7 @@ h3{
     <div class="results-columns">
       <span class="col-spacer-author"></span>
       <span class="col-spacer-topic"></span>
+      <span class="col-head-status">진행상황</span>
       <span class="col-head">학회발표</span>
       <span class="col-head">수상여부</span>
     </div>
@@ -635,6 +662,16 @@ h3{
       var row = el("div", "result-row");
       row.appendChild(el("div", "result-author", p.title));
       row.appendChild(el("div", "result-topic", p.topic || "—"));
+
+      var statusColor = STATUS_META.filter(function(s){ return s.key === bucketOf(p.status); })[0].color;
+      var statusWrap = el("div", "result-status");
+      var badge = el("span", "status-badge", p.status || "선택하지 않음");
+      badge.style.background = "color-mix(in srgb, " + statusColor + " 16%, var(--surface))";
+      badge.style.color = statusColor;
+      badge.style.border = "1px solid color-mix(in srgb, " + statusColor + " 45%, transparent)";
+      statusWrap.appendChild(badge);
+      row.appendChild(statusWrap);
+
       row.appendChild(el("div", "result-col", p.presented ? "🙋" : ""));
       row.appendChild(el("div", "result-col", p.awarded ? "👑" : ""));
       list.appendChild(row);
