@@ -208,30 +208,31 @@ h1,h2,h3{
   font-weight:600;
   margin-left:4px;
 }
-.title-row{
+.all-row{
   display:flex;
-  align-items:center;
-  gap:12px;
-  flex-wrap:wrap;
+  justify-content:center;
+  margin-bottom:22px;
 }
 .all-btn{
   border:1px solid var(--border);
   background:var(--surface);
   color:var(--ink);
-  padding:7px 18px;
+  padding:14px 40px;
   border-radius:999px;
-  font-size:13.5px;
-  font-weight:600;
+  font-size:17px;
+  font-weight:700;
   font-family:inherit;
   cursor:pointer;
+  box-shadow:var(--shadow);
   transition:background .15s ease, border-color .15s ease, transform .1s ease, color .15s ease;
 }
-.all-btn:hover{ border-color:var(--muted); transform:translateY(-1px); }
+.all-btn .mono{ font-size:17px; }
+.all-btn:hover{ border-color:var(--muted); transform:translateY(-2px); }
 .all-btn.active{
   background:var(--accent);
   border-color:var(--accent);
   color:var(--accent-ink);
-  box-shadow:0 2px 8px -2px color-mix(in srgb, var(--accent) 60%, transparent);
+  box-shadow:0 4px 14px -4px color-mix(in srgb, var(--accent) 65%, transparent);
 }
 
 section{ margin-bottom:30px; }
@@ -512,12 +513,13 @@ h3{
 
 <div class="app" id="app" hidden>
   <header class="topbar">
-    <div class="title-row">
-      <h1><span class="emoji">🚗</span>TSAL 연구현황<span class="emoji">🚗</span></h1>
-      <button class="all-btn" id="all-status-btn">전체</button>
-    </div>
+    <h1><span class="emoji">🚗</span>TSAL 연구현황<span class="emoji">🚗</span></h1>
     <div class="updated">갱신시간<span class="mono" id="updated-date"></span></div>
   </header>
+
+  <div class="all-row">
+    <button class="all-btn" id="all-status-btn">전체: <span class="mono" id="all-count">0</span>건</button>
+  </div>
 
   <section class="tiles" id="tiles"></section>
 
@@ -623,6 +625,7 @@ h3{
 
   function renderTiles(){
     document.getElementById("all-status-btn").classList.toggle("active", state.status === null);
+    document.getElementById("all-count").textContent = DATA.length;
     var wrap = document.getElementById("tiles");
     wrap.innerHTML = "";
     STATUS_META.forEach(function(s){
