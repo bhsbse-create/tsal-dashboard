@@ -662,6 +662,15 @@ h3{
     return "선택하지않음";
   }
 
+  // 심사중(Round 1~4+)은 라운드가 커질수록 같은 계열 색을 점점 진하게 만든다.
+  function colorFor(status){
+    var base = STATUS_META.filter(function(s){ return s.key === bucketOf(status); })[0].color;
+    var m = /^Round (\d)\+?$/.exec(status || "");
+    if (!m) return base;
+    var darken = (Math.min(Number(m[1]), 4) - 1) * 15; // Round1:0%, 2:15%, 3:30%, 4+:45%
+    return darken === 0 ? base : "color-mix(in srgb, " + base + " " + (100 - darken) + "%, black " + darken + "%)";
+  }
+
   var state = { field:"all", author:"all", status:null, journal:null };
 
   function matches(p){
@@ -754,7 +763,7 @@ h3{
       row.appendChild(el("div", "result-author", p.title));
       row.appendChild(el("div", "result-topic", p.topic || "—"));
 
-      var statusColor = STATUS_META.filter(function(s){ return s.key === bucketOf(p.status); })[0].color;
+      var statusColor = colorFor(p.status);
       var statusWrap = el("div", "result-status");
       var badge = el("span", "status-badge", p.status || "선택하지 않음");
       badge.style.background = "color-mix(in srgb, " + statusColor + " 16%, var(--surface))";
@@ -817,7 +826,7 @@ h3{
   });
 
   document.getElementById("all-status-btn").addEventListener("click", function(){
-    state.status = null;
+    state = { field:"all", author:"all", status:null, journal:null };
     renderAll();
   });
 
