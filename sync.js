@@ -36,23 +36,11 @@ if (!NOTION_API_KEY) {
   process.exit(1);
 }
 
-// 알려진 손상 문자(U+FFFD) 교정. Notion DB 자체에 인코딩이 깨진 채로 저장된
-// 값이 있어서(원인 미상) 정규화(NFC)만으로는 못 고치는 것들.
-// 새로운 깨진 값을 만나면 여기 추가하면 된다.
-const FIX_MAP = {
-  "통��행태 수요모형": "통행행태 수요모형",
-  "대한��통학회": "대한교통학회",
-  "2024 서울시 버��파업이 기존 수단에 미치는 영향": "2024 서울시 버스파업이 기존 수단에 미치는 영향",
-};
-
 function nfc(s) {
   return (s || "").normalize("NFC");
 }
-function fix(s) {
-  return FIX_MAP[s] || s;
-}
 function clean(s) {
-  return fix(nfc(s)).trim();
+  return nfc(s).trim();
 }
 function plainText(richTextArr) {
   return clean((richTextArr || []).map((t) => t.plain_text).join(""));
@@ -127,9 +115,10 @@ function transform(pages) {
   return pages.map((p) => Object.assign({ id: p.id }, propsToFields(p.properties)));
 }
 
-// 대량조회(/databases/{id}/query)가 간헐적으로 select 값을 빈 값으로 반환하는
-// 현상이 확인됨 (2026-09-10) — 같은 페이지를 /pages/{id}로 단건 재조회하면
-// 정상 값이 나옴. 편집 직후 Notion 서버 쪽 복제 지연으로 추정.
+// 대량조회(/databases/{id}/query)가 간헐적으로 select/텍스트 값을 빈 값이나
+// 손상된(U+FFFD) 문자로 반환하는 현상이 확인됨 (2026-09-10, 편집 직후뿐
+// 아니라 시점과 무관하게 발생). 같은 페이지를 /pages/{id}로 단건 재조회하면
+// 정상 값이 나온다.
 function notionGetPage(id) {
   return new Promise((resolve, reject) => {
     const req = https.request(
@@ -159,23 +148,39 @@ function notionGetPage(id) {
   });
 }
 
-// 분야/진행상황이 비어보이는 항목만 단건 API로 재확인해서 대량조회의
-// 일시적 빈 값 버그가 대시보드에 그대로 반영되는 것을 막는다.
-async function reverifyEmptySelects(data) {
-  const suspects = data.filter((d) => !d.field || !d.status);
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+// 분야/진행상황/연구주제(제목) 중 하나라도 비어있거나 손상 문자(U+FFFD)가
+// 섞여있으면 의심 대상으로 보고 단건 API로 재확인한다. 대량조회가 계속
+// 불안정한 값을 주면 최대 3번까지 재시도한다.
+function looksBad(fields) {
+  return !fields.field || !fields.status || !fields.topic || JSON.stringify(fields).includes("�");
+}
+
+async function reverifySuspects(data) {
+  const suspects = data.filter((d) => looksBad(d));
   if (suspects.length === 0) return;
-  console.log(`분야/진행상황이 비어보이는 ${suspects.length}건을 단건 API로 재확인합니다...`);
+  console.log(`값이 의심스러운 ${suspects.length}건을 단건 API로 재확인합니다...`);
   for (const d of suspects) {
-    const page = await notionGetPage(d.id);
-    if (!page.properties) continue;
-    const fresh = propsToFields(page.properties);
-    if (fresh.field !== d.field || fresh.status !== d.status) {
+    let fresh = null;
+    for (let attempt = 0; attempt < 3; attempt++) {
+      const page = await notionGetPage(d.id);
+      if (!page.properties) continue;
+      fresh = propsToFields(page.properties);
+      if (!looksBad(fresh)) break;
+      await sleep(1500);
+    }
+    if (!fresh) continue;
+    if (fresh.field !== d.field || fresh.status !== d.status || fresh.topic !== d.topic) {
       console.warn(
-        `재확인으로 값 복구: ${d.title} - ${d.topic} (분야 "${d.field}"→"${fresh.field}", 진행상황 "${d.status}"→"${fresh.status}")`
+        `재확인으로 값 복구: ${d.title} (분야 "${d.field}"→"${fresh.field}", 진행상황 "${d.status}"→"${fresh.status}", 주제 "${d.topic}"→"${fresh.topic}")`
       );
     }
     d.field = fresh.field;
     d.status = fresh.status;
+    d.topic = fresh.topic;
   }
 }
 
@@ -196,13 +201,13 @@ async function main() {
     process.exit(1);
   }
 
-  await reverifyEmptySelects(data);
+  await reverifySuspects(data);
 
   const stillBroken = data.filter((d) => JSON.stringify(d).includes("�"));
   if (stillBroken.length > 0) {
-    console.warn(
-      `경고: FIX_MAP에 없는 손상된(U+FFFD) 값이 ${stillBroken.length}건 남아있습니다. Notion에서 직접 확인하거나 sync.js의 FIX_MAP에 추가하세요.`
-    );
+    console.error(`재확인 후에도 손상된(�) 값이 ${stillBroken.length}건 남아있어 배포를 중단합니다:`);
+    stillBroken.forEach((d) => console.error(` - ${d.title}: ${d.topic}`));
+    process.exit(1);
   }
 
   let html = fs.readFileSync(TARGET_FILE, "utf8");
