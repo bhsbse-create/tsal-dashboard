@@ -166,14 +166,19 @@ h1,h2,h3{
 }
 .topbar{
   display:flex;
-  align-items:baseline;
-  justify-content:space-between;
-  flex-wrap:wrap;
-  gap:8px 16px;
+  flex-direction:column;
+  gap:16px;
   padding-bottom:20px;
   border-bottom:1px solid var(--border);
   margin-bottom:22px;
   position:relative;
+}
+.topbar-top{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:8px 16px;
 }
 .topbar::after{
   content:"";
@@ -211,7 +216,6 @@ h1,h2,h3{
 .all-row{
   display:flex;
   justify-content:center;
-  margin-bottom:22px;
 }
 .all-btn{
   border:1px solid var(--border);
@@ -513,13 +517,14 @@ h3{
 
 <div class="app" id="app" hidden>
   <header class="topbar">
-    <h1><span class="emoji">🚗</span>TSAL 연구현황<span class="emoji">🚗</span></h1>
-    <div class="updated">갱신시간<span class="mono" id="updated-date"></span></div>
+    <div class="topbar-top">
+      <h1><span class="emoji">🚗</span>TSAL 연구현황<span class="emoji">🚗</span></h1>
+      <div class="updated">갱신시간<span class="mono" id="updated-date"></span></div>
+    </div>
+    <div class="all-row">
+      <button class="all-btn" id="all-status-btn">전체: <span class="mono" id="all-count">0</span>건</button>
+    </div>
   </header>
-
-  <div class="all-row">
-    <button class="all-btn" id="all-status-btn">전체: <span class="mono" id="all-count">0</span>건</button>
-  </div>
 
   <section class="tiles" id="tiles"></section>
 
