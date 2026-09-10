@@ -205,6 +205,12 @@ h1,h2,h3{
   -webkit-text-fill-color:initial;
   filter:none;
 }
+.topbar-right{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  flex-wrap:wrap;
+}
 .updated{
   color:var(--muted);
   font-size:13px;
@@ -213,6 +219,51 @@ h1,h2,h3{
   color:var(--ink);
   font-weight:600;
   margin-left:4px;
+}
+.guide-btn{
+  display:flex;
+  align-items:center;
+  gap:5px;
+  border:1px solid var(--border);
+  background:var(--surface);
+  color:var(--muted);
+  padding:6px 14px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:600;
+  font-family:inherit;
+  cursor:pointer;
+  transition:background .15s ease, border-color .15s ease, color .15s ease;
+}
+.guide-btn:hover{ border-color:var(--muted); color:var(--ink); }
+.guide-btn .guide-caret{
+  transition:transform .15s ease;
+  font-size:11px;
+}
+.guide-btn.active{
+  background:var(--surface-2);
+  border-color:var(--accent);
+  color:var(--ink);
+}
+.guide-btn.active .guide-caret{ transform:rotate(180deg); }
+.guide-panel{
+  border:1px solid var(--border);
+  background:var(--surface);
+  border-radius:14px;
+  padding:16px 20px;
+  margin:-8px 0 22px;
+  box-shadow:var(--shadow);
+}
+.guide-panel-title{
+  font-weight:700;
+  font-size:14px;
+  margin-bottom:8px;
+}
+.guide-panel-body{
+  color:var(--muted);
+  font-size:13.5px;
+  line-height:1.7;
+  white-space:pre-line;
 }
 .all-btn{
   border:1px solid var(--border);
@@ -518,8 +569,16 @@ h3{
       <h1><span class="emoji">🚗</span>TSAL 연구현황<span class="emoji">🚗</span></h1>
       <button class="all-btn" id="all-status-btn">전체: <span class="mono" id="all-count">0</span>건</button>
     </div>
-    <div class="updated">갱신시간<span class="mono" id="updated-date"></span></div>
+    <div class="topbar-right">
+      <div class="updated">갱신시간<span class="mono" id="updated-date"></span></div>
+      <button class="guide-btn" id="guide-btn" aria-expanded="false">작성요령<span class="guide-caret">▾</span></button>
+    </div>
   </header>
+
+  <div class="guide-panel" id="guide-panel" hidden>
+    <div class="guide-panel-title">작성요령</div>
+    <div class="guide-panel-body" id="guide-panel-body">내용을 준비 중입니다.</div>
+  </div>
 
   <section class="tiles" id="tiles"></section>
 
@@ -763,6 +822,15 @@ h3{
   });
 
   document.getElementById("updated-date").textContent = UPDATED_AT;
+
+  document.getElementById("guide-btn").addEventListener("click", function(){
+    var btn = document.getElementById("guide-btn");
+    var panel = document.getElementById("guide-panel");
+    var willOpen = panel.hidden;
+    panel.hidden = !willOpen;
+    btn.classList.toggle("active", willOpen);
+    btn.setAttribute("aria-expanded", String(willOpen));
+  });
 
   var UNLOCK_TTL_MS = 7 * 24 * 60 * 60 * 1000; // 7일
 
