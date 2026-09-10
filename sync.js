@@ -105,25 +105,78 @@ async function fetchAllPages() {
   return all;
 }
 
+function propsToFields(props) {
+  return {
+    title: plainText(props["주저자"] && props["주저자"].title),
+    engAuthors: ((props["주저자 영문"] && props["주저자 영문"].multi_select) || []).map((o) =>
+      clean(o.name)
+    ),
+    field: props["분야"] && props["분야"].select ? clean(props["분야"].select.name) : "",
+    status:
+      props["진행상황"] && props["진행상황"].select ? clean(props["진행상황"].select.name) : "",
+    topic: plainText(props["연구 주제"] && props["연구 주제"].rich_text),
+    presented: !!(props["학회발표여부"] && props["학회발표여부"].checkbox),
+    awarded: !!(props["수상여부"] && props["수상여부"].checkbox),
+    journals: ((props["주요학술지"] && props["주요학술지"].multi_select) || []).map((o) =>
+      clean(o.name)
+    ),
+  };
+}
+
 function transform(pages) {
-  return pages.map((p) => {
-    const props = p.properties;
-    return {
-      title: plainText(props["주저자"] && props["주저자"].title),
-      engAuthors: ((props["주저자 영문"] && props["주저자 영문"].multi_select) || []).map((o) =>
-        clean(o.name)
-      ),
-      field: props["분야"] && props["분야"].select ? clean(props["분야"].select.name) : "",
-      status:
-        props["진행상황"] && props["진행상황"].select ? clean(props["진행상황"].select.name) : "",
-      topic: plainText(props["연구 주제"] && props["연구 주제"].rich_text),
-      presented: !!(props["학회발표여부"] && props["학회발표여부"].checkbox),
-      awarded: !!(props["수상여부"] && props["수상여부"].checkbox),
-      journals: ((props["주요학술지"] && props["주요학술지"].multi_select) || []).map((o) =>
-        clean(o.name)
-      ),
-    };
+  return pages.map((p) => Object.assign({ id: p.id }, propsToFields(p.properties)));
+}
+
+// 대량조회(/databases/{id}/query)가 간헐적으로 select 값을 빈 값으로 반환하는
+// 현상이 확인됨 (2026-09-10) — 같은 페이지를 /pages/{id}로 단건 재조회하면
+// 정상 값이 나옴. 편집 직후 Notion 서버 쪽 복제 지연으로 추정.
+function notionGetPage(id) {
+  return new Promise((resolve, reject) => {
+    const req = https.request(
+      {
+        hostname: "api.notion.com",
+        path: `/v1/pages/${id}`,
+        method: "GET",
+        headers: {
+          Authorization: "Bearer " + NOTION_API_KEY,
+          "Notion-Version": "2022-06-28",
+        },
+      },
+      (res) => {
+        let data = "";
+        res.on("data", (c) => (data += c));
+        res.on("end", () => {
+          try {
+            resolve(JSON.parse(data));
+          } catch (e) {
+            reject(e);
+          }
+        });
+      }
+    );
+    req.on("error", reject);
+    req.end();
   });
+}
+
+// 분야/진행상황이 비어보이는 항목만 단건 API로 재확인해서 대량조회의
+// 일시적 빈 값 버그가 대시보드에 그대로 반영되는 것을 막는다.
+async function reverifyEmptySelects(data) {
+  const suspects = data.filter((d) => !d.field || !d.status);
+  if (suspects.length === 0) return;
+  console.log(`분야/진행상황이 비어보이는 ${suspects.length}건을 단건 API로 재확인합니다...`);
+  for (const d of suspects) {
+    const page = await notionGetPage(d.id);
+    if (!page.properties) continue;
+    const fresh = propsToFields(page.properties);
+    if (fresh.field !== d.field || fresh.status !== d.status) {
+      console.warn(
+        `재확인으로 값 복구: ${d.title} - ${d.topic} (분야 "${d.field}"→"${fresh.field}", 진행상황 "${d.status}"→"${fresh.status}")`
+      );
+    }
+    d.field = fresh.field;
+    d.status = fresh.status;
+  }
 }
 
 function nowInSeoul() {
@@ -143,6 +196,8 @@ async function main() {
     process.exit(1);
   }
 
+  await reverifyEmptySelects(data);
+
   const stillBroken = data.filter((d) => JSON.stringify(d).includes("�"));
   if (stillBroken.length > 0) {
     console.warn(
@@ -159,7 +214,8 @@ async function main() {
     throw new Error("index.html 안에서 var DATA / var UPDATED_AT 줄을 찾지 못했습니다.");
   }
 
-  html = html.replace(dataLineRe, "  var DATA = " + JSON.stringify(data) + ";");
+  const outData = data.map(({ id, ...rest }) => rest);
+  html = html.replace(dataLineRe, "  var DATA = " + JSON.stringify(outData) + ";");
   html = html.replace(updatedLineRe, '  var UPDATED_AT = "' + nowInSeoul() + '";');
 
   fs.writeFileSync(TARGET_FILE, html);
