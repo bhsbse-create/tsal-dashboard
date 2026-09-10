@@ -126,9 +126,12 @@ function transform(pages) {
   });
 }
 
-function todayInSeoul() {
-  // 실행 서버의 타임존과 무관하게 항상 한국 날짜를 얻는다 (YYYY-MM-DD)
-  return new Date().toLocaleDateString("sv-SE", { timeZone: "Asia/Seoul" });
+function nowInSeoul() {
+  // 실행 서버의 타임존과 무관하게 항상 한국 시각을 얻는다 (YYYY-MM-DD-HH:mm)
+  return new Date()
+    .toLocaleString("sv-SE", { timeZone: "Asia/Seoul", hour12: false })
+    .slice(0, 16)
+    .replace(" ", "-");
 }
 
 async function main() {
@@ -157,11 +160,11 @@ async function main() {
   }
 
   html = html.replace(dataLineRe, "  var DATA = " + JSON.stringify(data) + ";");
-  html = html.replace(updatedLineRe, '  var UPDATED_AT = "' + todayInSeoul() + '";');
+  html = html.replace(updatedLineRe, '  var UPDATED_AT = "' + nowInSeoul() + '";');
 
   fs.writeFileSync(TARGET_FILE, html);
 
-  console.log(`동기화 완료: ${data.length}건, 갱신일자 ${todayInSeoul()}`);
+  console.log(`동기화 완료: ${data.length}건, 갱신시각 ${nowInSeoul()}`);
 }
 
 main().catch((e) => {
