@@ -667,8 +667,10 @@ h3{
     var base = STATUS_META.filter(function(s){ return s.key === bucketOf(status); })[0].color;
     var m = /^Round (\d)\+?$/.exec(status || "");
     if (!m) return base;
-    var darken = (Math.min(Number(m[1]), 4) - 1) * 15; // Round1:0%, 2:15%, 3:30%, 4+:45%
-    return darken === 0 ? base : "color-mix(in srgb, " + base + " " + (100 - darken) + "%, black " + darken + "%)";
+    var step = (Math.min(Number(m[1]), 4) - 1) * 18; // Round1:0%, 2:18%, 3:36%, 4+:54%
+    // 검정 대신 --ink로 섞으면 라이트 테마에선 더 짙게, 다크 테마에선 더 밝게
+    // 이동해서 배경(라이트=밝음/다크=어두움)과의 대비가 항상 커지는 방향으로 진해진다.
+    return step === 0 ? base : "color-mix(in srgb, " + base + " " + (100 - step) + "%, var(--ink) " + step + "%)";
   }
 
   var state = { field:"all", author:"all", status:null, journal:null };
