@@ -247,14 +247,28 @@ function saveRelatedCache(cache) {
   fs.writeFileSync(RELATED_CACHE_FILE, JSON.stringify(cache, null, 2));
 }
 
+// 캐시 스키마가 바뀔 때(예: 필드 추가) 올려서 기존 캐시를 강제로 재검색하게
+// 만든다. RELATED_MAX_AGE_MS(7일)와 별개로, 버전이 다르면 무조건 새로 검색.
+const RELATED_CACHE_VERSION = 2;
+
+// 날짜 문자열(YYYY-MM-DD 또는 없음)을 정렬 가능한 값으로 정규화. publicationDate가
+// 없으면 그 해 1월 1일로 취급(연도만 있는 경우의 최소값 — 최신순 정렬에서 뒤로 밀림).
+function sortableDate(p) {
+  return p.publicationDate || (p.year ? p.year + "-01-01" : "0000-00-00");
+}
+
 // Semantic Scholar 비인증/저활성 키 상태에서는 429가 잦아서 재시도가 필수임이
 // 실측으로 확인됨 (2026-09-14). 최대 6번, 1.5초 간격 재시도.
+//
+// sort=publicationDate:desc를 API에 요청해도 실제로는 연도가 뒤섞여 오는
+// 경우가 있어(2026-09-14 사용자 제보로 확인) publicationDate 필드를 직접
+// 받아서 클라이언트/서버 양쪽에서 다시 정렬한다.
 async function s2search(query) {
   const thisYear = new Date().getFullYear();
   const url =
     "https://api.semanticscholar.org/graph/v1/paper/search?query=" +
     encodeURIComponent(query) +
-    "&fields=title,year,venue,externalIds&year=" +
+    "&fields=title,year,venue,externalIds,publicationDate&year=" +
     (thisYear - 2) +
     "-&sort=publicationDate:desc&limit=5";
   for (let attempt = 0; attempt <= 6; attempt++) {
@@ -262,23 +276,43 @@ async function s2search(query) {
     if (res.status !== 429) {
       if (!res.ok) return [];
       const json = await res.json();
-      return (json.data || []).map((p) => ({
+      const results = (json.data || []).map((p) => ({
         title: p.title,
         year: p.year,
         venue: p.venue || "",
+        publicationDate: p.publicationDate || null,
         url: "https://www.semanticscholar.org/paper/" + p.paperId,
       }));
+      results.sort((a, b) => (sortableDate(b) < sortableDate(a) ? -1 : sortableDate(b) > sortableDate(a) ? 1 : 0));
+      return results;
     }
     await sleep(1500);
   }
   return null; // 재시도 끝까지 429 — 이번 실행에서는 포기
 }
 
+// 관련 논문 중 게시일이 최근 30일 이내인 게 있으면 true. 캐시 나이(7일 재검색
+// 주기)와 무관하게 매 실행마다 "지금" 기준으로 새로 계산한다 — 그래야 캐시가
+// 며칠 지나도 신규 배지가 정확하게 유지된다.
+function hasRecentPaper(related) {
+  const now = Date.now();
+  return (related || []).some((r) => {
+    if (!r.publicationDate) return false;
+    const t = new Date(r.publicationDate).getTime();
+    if (isNaN(t)) return false;
+    const days = (now - t) / (1000 * 60 * 60 * 24);
+    return days >= 0 && days <= 30;
+  });
+}
+
 async function attachRelatedPapers(data) {
   const cache = loadRelatedCache();
   if (!SEMANTIC_SCHOLAR_API_KEY) {
     console.warn("SEMANTIC_SCHOLAR_API_KEY가 없어 관련 논문은 캐시된 값만 사용합니다.");
-    data.forEach((d) => { d.related = (cache[d.id] || {}).results || []; });
+    data.forEach((d) => {
+      d.related = (cache[d.id] || {}).results || [];
+      d.relatedHasRecent = hasRecentPaper(d.related);
+    });
     return;
   }
   const now = Date.now();
@@ -286,16 +320,26 @@ async function attachRelatedPapers(data) {
   for (const d of data) {
     const query = queryForRecord(d);
     const cached = cache[d.id];
-    const fresh = cached && cached.query === query && now - new Date(cached.computedAt).getTime() < RELATED_MAX_AGE_MS;
-    if (fresh) { d.related = cached.results; continue; }
-    if (!query) { d.related = []; continue; }
+    const fresh =
+      cached &&
+      cached.v === RELATED_CACHE_VERSION &&
+      cached.query === query &&
+      now - new Date(cached.computedAt).getTime() < RELATED_MAX_AGE_MS;
+    if (fresh) {
+      d.related = cached.results;
+      d.relatedHasRecent = hasRecentPaper(d.related);
+      continue;
+    }
+    if (!query) { d.related = []; d.relatedHasRecent = false; continue; }
     const results = await s2search(query);
     if (results === null) {
       d.related = cached ? cached.results : [];
+      d.relatedHasRecent = hasRecentPaper(d.related);
       continue;
     }
     d.related = results;
-    cache[d.id] = { query, computedAt: new Date().toISOString(), results };
+    d.relatedHasRecent = hasRecentPaper(d.related);
+    cache[d.id] = { v: RELATED_CACHE_VERSION, query, computedAt: new Date().toISOString(), results };
     refreshed++;
     await sleep(600);
   }
