@@ -29,7 +29,10 @@ const https = require("https");
 
 const NOTION_API_KEY = process.env.NOTION_API_KEY;
 const DB_ID = process.env.NOTION_DB_ID || "1b217295-e616-802a-aa46-fa4266d789c3";
+const SEMANTIC_SCHOLAR_API_KEY = process.env.SEMANTIC_SCHOLAR_API_KEY;
 const TARGET_FILE = path.join(__dirname, "index.html");
+const RELATED_CACHE_FILE = path.join(__dirname, "related_cache.json");
+const RELATED_MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000; // 7일 지나면 재검색
 
 if (!NOTION_API_KEY) {
   console.error("NOTION_API_KEY가 없습니다 (.env 파일 또는 환경변수로 설정하세요).");
@@ -184,6 +187,122 @@ async function reverifySuspects(data) {
   }
 }
 
+// ---------- 관련 논문(Semantic Scholar) ----------
+// 우리 논문 자체가 아니라 "연구 주제" 텍스트에서 뽑은 키워드로 최근 발표된
+// 관련 논문을 검색한다 (2026-09-14 조사: 국내 학회 논문/미출판 논문은 우리
+// 논문 자체로 매칭이 거의 안 되지만, 주제 키워드 검색은 언어/출판여부와
+// 무관하게 잘 작동함이 확인됨). LLM 토큰은 전혀 쓰지 않는다 — 불용어 제거
+// 규칙만으로 키워드를 뽑고, 결과는 페이지별로 캐시해서 주제가 안 바뀌었으면
+// 7일간 재검색하지 않는다 (Semantic Scholar 요청 수를 아끼기 위함).
+const FIELD_EN = {
+  기타: "transportation research",
+  "인프라 및 정책평가": "transportation infrastructure policy evaluation",
+  "통행행태 수요모형": "travel behavior demand model",
+  신교통서비스: "emerging mobility service",
+  대중교통운영: "public transit operations",
+  마이크로모빌리티: "micromobility",
+};
+
+const STOPWORDS = new Set(
+  "how to the of a an is are and for with from on by this that its it as in using based which who what does do did evaluating comparing case study application applicationof between has evolved tracing trajectory through role affect factors differently valued analysis".split(
+    " "
+  )
+);
+
+function hasKorean(s) {
+  return /[가-힣]/.test(s || "");
+}
+
+function extractKeywords(text, max) {
+  return text
+    .replace(/[?:,.;()]/g, " ")
+    .split(/\s+/)
+    .filter(Boolean)
+    .filter((w) => w.length > 2 && !STOPWORDS.has(w.toLowerCase()))
+    .slice(0, max || 6)
+    .join(" ");
+}
+
+// 검색 쿼리 결정: 영문 주제는 키워드만 추출, 국영문 혼합이면 한글만 지워서
+// 남는 영문이 충분하면 그걸 쓰고, 그마저 없으면(순수 한글) 분야를 영문
+// 키워드로 대체해서 쓴다.
+function queryForRecord(d) {
+  const topic = (d.topic || "").trim();
+  if (topic && !hasKorean(topic)) return extractKeywords(topic);
+  if (topic) {
+    const stripped = topic.replace(/[가-힣]/g, " ").replace(/\s+/g, " ").trim();
+    if (stripped.length > 8) return extractKeywords(stripped);
+  }
+  return FIELD_EN[d.field] || null;
+}
+
+function loadRelatedCache() {
+  try {
+    return JSON.parse(fs.readFileSync(RELATED_CACHE_FILE, "utf8"));
+  } catch (e) {
+    return {};
+  }
+}
+function saveRelatedCache(cache) {
+  fs.writeFileSync(RELATED_CACHE_FILE, JSON.stringify(cache, null, 2));
+}
+
+// Semantic Scholar 비인증/저활성 키 상태에서는 429가 잦아서 재시도가 필수임이
+// 실측으로 확인됨 (2026-09-14). 최대 6번, 1.5초 간격 재시도.
+async function s2search(query) {
+  const thisYear = new Date().getFullYear();
+  const url =
+    "https://api.semanticscholar.org/graph/v1/paper/search?query=" +
+    encodeURIComponent(query) +
+    "&fields=title,year,venue,externalIds&year=" +
+    (thisYear - 2) +
+    "-&sort=publicationDate:desc&limit=5";
+  for (let attempt = 0; attempt <= 6; attempt++) {
+    const res = await fetch(url, { headers: { "x-api-key": SEMANTIC_SCHOLAR_API_KEY || "" } });
+    if (res.status !== 429) {
+      if (!res.ok) return [];
+      const json = await res.json();
+      return (json.data || []).map((p) => ({
+        title: p.title,
+        year: p.year,
+        venue: p.venue || "",
+        url: "https://www.semanticscholar.org/paper/" + p.paperId,
+      }));
+    }
+    await sleep(1500);
+  }
+  return null; // 재시도 끝까지 429 — 이번 실행에서는 포기
+}
+
+async function attachRelatedPapers(data) {
+  const cache = loadRelatedCache();
+  if (!SEMANTIC_SCHOLAR_API_KEY) {
+    console.warn("SEMANTIC_SCHOLAR_API_KEY가 없어 관련 논문은 캐시된 값만 사용합니다.");
+    data.forEach((d) => { d.related = (cache[d.id] || {}).results || []; });
+    return;
+  }
+  const now = Date.now();
+  let refreshed = 0;
+  for (const d of data) {
+    const query = queryForRecord(d);
+    const cached = cache[d.id];
+    const fresh = cached && cached.query === query && now - new Date(cached.computedAt).getTime() < RELATED_MAX_AGE_MS;
+    if (fresh) { d.related = cached.results; continue; }
+    if (!query) { d.related = []; continue; }
+    const results = await s2search(query);
+    if (results === null) {
+      d.related = cached ? cached.results : [];
+      continue;
+    }
+    d.related = results;
+    cache[d.id] = { query, computedAt: new Date().toISOString(), results };
+    refreshed++;
+    await sleep(600);
+  }
+  saveRelatedCache(cache);
+  console.log(`관련 논문 갱신: ${refreshed}건 새로 검색, ${data.length - refreshed}건 캐시 사용`);
+}
+
 function nowInSeoul() {
   // 실행 서버의 타임존과 무관하게 항상 한국 시각을 얻는다 (YYYY-MM-DD-HH:mm)
   return new Date()
@@ -209,6 +328,8 @@ async function main() {
     stillBroken.forEach((d) => console.error(` - ${d.title}: ${d.topic}`));
     process.exit(1);
   }
+
+  await attachRelatedPapers(data);
 
   let html = fs.readFileSync(TARGET_FILE, "utf8");
 
