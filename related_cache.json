@@ -434,38 +434,44 @@
     ]
   },
   "3c817295-e616-800f-9ec3-c86f94855f27": {
+    "v": 2,
     "query": "emerging mobility service",
-    "computedAt": "2026-09-14T03:08:37.381Z",
+    "computedAt": "2026-09-14T03:31:47.477Z",
     "results": [
-      {
-        "title": "Workshop 5 Report. Governing emerging mobility services including rethinking Mobility as a Service (MaaS)",
-        "year": 2025,
-        "venue": "Research on Transport Economics",
-        "url": "https://www.semanticscholar.org/paper/a2b01dd463df8c12bcf9356c98bad8174a8a354a"
-      },
-      {
-        "title": "Workshop 5 report: New service models: Governing emerging mobility services",
-        "year": 2024,
-        "venue": "Research on Transport Economics",
-        "url": "https://www.semanticscholar.org/paper/8cbd2da1f4ac0cc96b4ba2f96f2c5c73bd33b3ee"
-      },
-      {
-        "title": "Mobility service providers’ interacting strategies under multi-modal equilibrium",
-        "year": 2024,
-        "venue": "Transportation Research Part C: Emerging Technologies",
-        "url": "https://www.semanticscholar.org/paper/30d1e33095019bbcef6a5b21aab543b41793519d"
-      },
       {
         "title": "Analysis of Thai’s willingness to adopt mobility-as-a-service (MaaS) in emerging urban transport system",
         "year": 2025,
         "venue": "Urban Transitions",
+        "publicationDate": "2025-09-01",
         "url": "https://www.semanticscholar.org/paper/b398aa8534b289745253bc1328f4a1565fd35469"
       },
       {
         "title": "Emerging Research Issues and Directions on MaaS, Sustainability and Shared Mobility in Smart Cities with Multi-Modal Transport Systems",
         "year": 2025,
         "venue": "Applied Sciences",
+        "publicationDate": "2025-05-20",
         "url": "https://www.semanticscholar.org/paper/a84d8a7f654f1a02c47012e8d912e8ed20834adf"
+      },
+      {
+        "title": "Workshop 5 Report. Governing emerging mobility services including rethinking Mobility as a Service (MaaS)",
+        "year": 2025,
+        "venue": "Research on Transport Economics",
+        "publicationDate": "2025-05-01",
+        "url": "https://www.semanticscholar.org/paper/a2b01dd463df8c12bcf9356c98bad8174a8a354a"
+      },
+      {
+        "title": "Mobility service providers’ interacting strategies under multi-modal equilibrium",
+        "year": 2024,
+        "venue": "Transportation Research Part C: Emerging Technologies",
+        "publicationDate": "2024-07-01",
+        "url": "https://www.semanticscholar.org/paper/30d1e33095019bbcef6a5b21aab543b41793519d"
+      },
+      {
+        "title": "Workshop 5 report: New service models: Governing emerging mobility services",
+        "year": 2024,
+        "venue": "Research on Transport Economics",
+        "publicationDate": "2024-03-01",
+        "url": "https://www.semanticscholar.org/paper/8cbd2da1f4ac0cc96b4ba2f96f2c5c73bd33b3ee"
       }
     ]
   },
@@ -1380,38 +1386,44 @@
     ]
   },
   "1b317295-e616-8089-b35d-cdf35035f6db": {
+    "v": 2,
     "query": "public transit operations",
-    "computedAt": "2026-09-14T03:10:32.361Z",
+    "computedAt": "2026-09-14T03:31:52.146Z",
     "results": [
-      {
-        "title": "Efficacy or Equity? A Public Transit Operations Method for Balancing Costs and Local Need: A COVID-19 Case Study in Austin, TX",
-        "year": 2025,
-        "venue": "Transportation Research Record",
-        "url": "https://www.semanticscholar.org/paper/78d1f4db7fb1397bd558be032e2e5863a161d7d4"
-      },
       {
         "title": "Joint Optimization of E-Scooter and Public Transit Operations",
         "year": 2026,
         "venue": "Journal of Transportation Engineering, Part A: Systems",
+        "publicationDate": "2026-08-01",
         "url": "https://www.semanticscholar.org/paper/f2c059a1ff23da0caeca5f306dc113de11cd605e"
+      },
+      {
+        "title": "Efficacy or Equity? A Public Transit Operations Method for Balancing Costs and Local Need: A COVID-19 Case Study in Austin, TX",
+        "year": 2025,
+        "venue": "Transportation Research Record",
+        "publicationDate": "2025-11-10",
+        "url": "https://www.semanticscholar.org/paper/78d1f4db7fb1397bd558be032e2e5863a161d7d4"
+      },
+      {
+        "title": "A systematic literature review on the application of analytical approaches and mathematical programming in public bus transit network design and operations planning: Part I",
+        "year": 2025,
+        "venue": "arXiv.org",
+        "publicationDate": "2025-02-13",
+        "url": "https://www.semanticscholar.org/paper/93efbf53d7aabad584694a69edfb2b1419c76c91"
       },
       {
         "title": "Charging-on-the-Move Public Transit Systems Constituted by Modular Trolleybuses and Modular Buses",
         "year": 2025,
         "venue": "IEEE Transactions on Transportation Electrification",
+        "publicationDate": "2025-02-01",
         "url": "https://www.semanticscholar.org/paper/0a225f1feb638bb5cf45a96ca495bd8b2085e15b"
       },
       {
         "title": "Mathematical Programming in Public Bus Transit Design and Operations: Emerging Technologies and Sustainability – A Review",
         "year": 2025,
         "venue": "Socio-Economic Planning Sciences",
+        "publicationDate": "2025-01-01",
         "url": "https://www.semanticscholar.org/paper/969cd56cf56d142477c3abf002e1c8c7b5b191ea"
-      },
-      {
-        "title": "A systematic literature review on the application of analytical approaches and mathematical programming in public bus transit network design and operations planning: Part I",
-        "year": 2025,
-        "venue": "arXiv.org",
-        "url": "https://www.semanticscholar.org/paper/93efbf53d7aabad584694a69edfb2b1419c76c91"
       }
     ]
   },
@@ -1500,38 +1512,44 @@
     ]
   },
   "1b217295-e616-8025-8e93-f30e6066d2b8": {
+    "v": 2,
     "query": "transportation infrastructure policy evaluation",
-    "computedAt": "2026-09-14T03:10:53.656Z",
+    "computedAt": "2026-09-14T03:31:55.337Z",
     "results": [
       {
         "title": "Evaluation of Development Policy and Increased Integrated Public Transportation in Bandung City",
         "year": 2025,
         "venue": "Eduvest - Journal Of Universal Studies",
+        "publicationDate": "2025-03-20",
         "url": "https://www.semanticscholar.org/paper/bae4b6d643c2d2a7cf71de085f063cb8259b2184"
-      },
-      {
-        "title": "Addressing transport related social exclusion through transportation policy: A novel evaluation method applied to the Amsterdam Transport Region",
-        "year": 2024,
-        "venue": "Transportation Research Interdisciplinary Perspectives",
-        "url": "https://www.semanticscholar.org/paper/aea086cfbcdb7ed5089b938c82a667bbbf2ccedc"
-      },
-      {
-        "title": "Policy evaluation and performance assessment for sustainable urbanization: a study of selected city corporations in Bangladesh",
-        "year": 2024,
-        "venue": "Frontiers in Sustainable Cities",
-        "url": "https://www.semanticscholar.org/paper/3c67fd27f69f6b99fe52f7fabd6a79bca205afd9"
-      },
-      {
-        "title": "A framework for integrating intelligent transportation systems with smart city infrastructure",
-        "year": 2024,
-        "venue": "Journal of Infrastructure Policy and Development",
-        "url": "https://www.semanticscholar.org/paper/9906bf01a7084b7bdb17dbab6fe918fc0ffad6a8"
       },
       {
         "title": "Weather-Related Disruptions in Transportation and Logistics: A Systematic Literature Review and a Policy Implementation Roadmap",
         "year": 2025,
         "venue": "Logistics",
+        "publicationDate": "2025-02-20",
         "url": "https://www.semanticscholar.org/paper/097170bbe9a46ebdb16ca72e81c2d3483981a7d1"
+      },
+      {
+        "title": "Policy evaluation and performance assessment for sustainable urbanization: a study of selected city corporations in Bangladesh",
+        "year": 2024,
+        "venue": "Frontiers in Sustainable Cities",
+        "publicationDate": "2024-07-15",
+        "url": "https://www.semanticscholar.org/paper/3c67fd27f69f6b99fe52f7fabd6a79bca205afd9"
+      },
+      {
+        "title": "Addressing transport related social exclusion through transportation policy: A novel evaluation method applied to the Amsterdam Transport Region",
+        "year": 2024,
+        "venue": "Transportation Research Interdisciplinary Perspectives",
+        "publicationDate": "2024-07-01",
+        "url": "https://www.semanticscholar.org/paper/aea086cfbcdb7ed5089b938c82a667bbbf2ccedc"
+      },
+      {
+        "title": "A framework for integrating intelligent transportation systems with smart city infrastructure",
+        "year": 2024,
+        "venue": "Journal of Infrastructure Policy and Development",
+        "publicationDate": "2024-04-23",
+        "url": "https://www.semanticscholar.org/paper/9906bf01a7084b7bdb17dbab6fe918fc0ffad6a8"
       }
     ]
   },
