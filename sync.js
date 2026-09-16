@@ -168,12 +168,12 @@ async function reverifySuspects(data) {
   console.log(`값이 의심스러운 ${suspects.length}건을 단건 API로 재확인합니다...`);
   for (const d of suspects) {
     let fresh = null;
-    for (let attempt = 0; attempt < 3; attempt++) {
+    for (let attempt = 0; attempt < 5; attempt++) {
       const page = await notionGetPage(d.id);
       if (!page.properties) continue;
       fresh = propsToFields(page.properties);
       if (!looksBad(fresh)) break;
-      await sleep(1500);
+      await sleep(2000);
     }
     if (!fresh) continue;
     if (fresh.field !== d.field || fresh.status !== d.status || fresh.topic !== d.topic) {
@@ -366,7 +366,17 @@ async function main() {
 
   await reverifySuspects(data);
 
-  const stillBroken = data.filter((d) => JSON.stringify(d).includes("�"));
+  // 편집 직후의 Notion API 불안정 구간이 개별 재확인(최대 10초)보다 길게
+  // 가는 경우가 실측으로 확인돼서(2026-09-16, 조항훈 UAM 레코드가 두 번
+  // 연속 실행에서 계속 깨진 채로 남았다가 그 다음 실행에서 정상화됨),
+  // 그래도 남아있으면 한 번 더 길게 쉬었다가 마지막으로 재확인한다.
+  let stillBroken = data.filter((d) => JSON.stringify(d).includes("�"));
+  if (stillBroken.length > 0) {
+    console.log(`${stillBroken.length}건이 여전히 손상돼 있어 10초 대기 후 마지막으로 재확인합니다...`);
+    await sleep(10000);
+    await reverifySuspects(stillBroken);
+    stillBroken = data.filter((d) => JSON.stringify(d).includes("�"));
+  }
   if (stillBroken.length > 0) {
     console.error(`재확인 후에도 손상된(�) 값이 ${stillBroken.length}건 남아있어 배포를 중단합니다:`);
     stillBroken.forEach((d) => console.error(` - ${d.title}: ${d.topic}`));
