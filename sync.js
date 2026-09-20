@@ -32,6 +32,7 @@ const DB_ID = process.env.NOTION_DB_ID || "1b217295-e616-802a-aa46-fa4266d789c3"
 const SEMANTIC_SCHOLAR_API_KEY = process.env.SEMANTIC_SCHOLAR_API_KEY;
 const TARGET_FILE = path.join(__dirname, "index.html");
 const RELATED_CACHE_FILE = path.join(__dirname, "related_cache.json");
+const LAST_GOOD_CACHE_FILE = path.join(__dirname, "last_good_cache.json");
 const RELATED_MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000; // 7일 지나면 재검색
 
 if (!NOTION_API_KEY) {
@@ -247,6 +248,24 @@ function saveRelatedCache(cache) {
   fs.writeFileSync(RELATED_CACHE_FILE, JSON.stringify(cache, null, 2));
 }
 
+// 재시도 후에도 계속 깨진 값을 주는 경우를 위한 최후 폴백. 매 실행마다
+// (그 시점에 손상되지 않은) 레코드의 field/status/topic/title을 id별로
+// 저장해뒀다가, 나중에 재시도가 다 실패하면 여기서 마지막 정상 값을
+// 꺼내 쓴다. 이렇게 하면 Notion 쪽 일시적 버그 때문에 동기화 자체가
+// 실패 처리(=GitHub Actions 실패 메일)되는 일이 없어진다 — 최악의 경우
+// 그 항목 하나만 몇 시간 전 값으로 잠깐 머무를 뿐, 사이트는 항상 정상
+// 배포된다.
+function loadLastGoodCache() {
+  try {
+    return JSON.parse(fs.readFileSync(LAST_GOOD_CACHE_FILE, "utf8"));
+  } catch (e) {
+    return {};
+  }
+}
+function saveLastGoodCache(cache) {
+  fs.writeFileSync(LAST_GOOD_CACHE_FILE, JSON.stringify(cache, null, 2));
+}
+
 // 캐시 스키마가 바뀔 때(예: 필드 추가) 올려서 기존 캐시를 강제로 재검색하게
 // 만든다. RELATED_MAX_AGE_MS(7일)와 별개로, 버전이 다르면 무조건 새로 검색.
 const RELATED_CACHE_VERSION = 2;
@@ -357,7 +376,7 @@ function nowInSeoul() {
 
 async function main() {
   const pages = await fetchAllPages();
-  const data = transform(pages);
+  let data = transform(pages);
 
   if (data.length === 0) {
     console.error("Notion에서 0건이 조회됐습니다 — 오류로 판단해 배포를 중단합니다.");
@@ -377,11 +396,36 @@ async function main() {
     await reverifySuspects(stillBroken);
     stillBroken = data.filter((d) => JSON.stringify(d).includes("�"));
   }
+
+  // 여기까지 와도 남아있으면 Notion API의 불안정 구간이 평소보다 길게 간
+  // 것 — 예전에는 이 경우 배포 전체를 중단했지만(process.exit(1)), 그러면
+  // 이 흔한 일시적 현상 때문에 매번 GitHub Actions "실패" 메일이 발송되는
+  // 부작용이 있었다(2026-09-19~20 반복 확인). 대신 마지막으로 정상
+  // 확인됐던 값(last_good_cache.json)으로 그 항목만 채워서 배포는 계속
+  // 진행한다. 처음 등록돼 캐시가 아예 없는 레코드만 이번 배포에서 제외한다.
+  const lastGood = loadLastGoodCache();
+  let excluded = [];
   if (stillBroken.length > 0) {
-    console.error(`재확인 후에도 손상된(�) 값이 ${stillBroken.length}건 남아있어 배포를 중단합니다:`);
-    stillBroken.forEach((d) => console.error(` - ${d.title}: ${d.topic}`));
-    process.exit(1);
+    stillBroken.forEach((d) => {
+      const cached = lastGood[d.id];
+      if (cached) {
+        console.warn(`손상된 값이라 마지막 정상값으로 대체: ${cached.title || d.title} (id ${d.id})`);
+        Object.assign(d, cached);
+      } else {
+        console.warn(`손상된 값이고 과거 정상 캐시도 없어 이번 배포에서 제외: ${d.title || d.id}`);
+        excluded.push(d.id);
+      }
+    });
+    if (excluded.length > 0) {
+      data = data.filter((d) => !excluded.includes(d.id));
+    }
   }
+
+  // 이번 실행에서 정상으로 확인된 값들을 다음번 폴백을 위해 갱신 저장.
+  data.forEach((d) => {
+    lastGood[d.id] = { title: d.title, engAuthors: d.engAuthors, field: d.field, status: d.status, topic: d.topic, presented: d.presented, awarded: d.awarded, journals: d.journals };
+  });
+  saveLastGoodCache(lastGood);
 
   await attachRelatedPapers(data);
 
