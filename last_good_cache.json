@@ -195,7 +195,7 @@
     "field": "인프라 및 정책평가",
     "status": "In-progress",
     "topic": "대체 도로가 존재하는 유료 도로의 Dynamic Pricing 도입을 통한 유료 도로 수입 최적화",
-    "presented": true,
+    "presented": false,
     "awarded": false,
     "journals": [
       "대한교통학회"
@@ -366,9 +366,7 @@
     "topic": "심야 시간 lastmile 따릉이 이용 이득 분해",
     "presented": false,
     "awarded": false,
-    "journals": [
-      "HKSTS"
-    ]
+    "journals": []
   },
   "31017295-e616-8014-832f-c7bdb6d62c14": {
     "title": "허창준",
