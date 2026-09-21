@@ -8,7 +8,7 @@
 - `sync.js` — 노션 API로 최신 데이터를 가져와서 `index.html` 안의 데이터 두 줄(`var DATA`, `var UPDATED_AT`)만 바꿔치기하는 Node.js 스크립트. 그 외 내용(비밀번호, 디자인, 로직)은 안 건드림.
 - `.env` — 노션 API 키 (`NOTION_API_KEY`). **깃에 올리면 안 됨** — `.gitignore`에 이미 등록되어 있음.
 - `.env.example` — `.env` 만들 때 참고용 템플릿.
-- `.github/workflows/sync.yml` — GitHub Actions로 6시간마다 자동 동기화하는 설정 (GitHub에 올렸을 때만 동작).
+- `.github/workflows/notion-sync.yml` — GitHub Actions로 1시간마다 자동 동기화하는 설정 (GitHub에 올렸을 때만 동작).
 
 현재 지금 클로드 계정으로는 `index.html`이 Claude Artifact로 호스팅되고 있고, 클로드 스케줄 작업(routine, 6시간마다)이 `sync.js`와 같은 로직으로 자동 갱신 중임. 이 폴더는 그것과 **완전히 별개로, 클로드 없이도** 돌아가게 만든 이식용 사본임.
 
@@ -19,14 +19,14 @@ cd tsal-notion
 node sync.js
 ```
 
-`.env`에 `NOTION_API_KEY`만 있으면 됨 (Node.js 18+ 필요, 별도 패키지 설치 불필요).
+`.env`에 `NOTION_API_KEY`만 있으면 됨 (Node.js 18+ 필요, 별도 패키지 설치 불필요). `SEMANTIC_SCHOLAR_API_KEY`는 선택 사항 — 없으면 "관련 논문" 정보는 캐시된 값만 쓰고 콘솔에 경고만 뜸.
 
 ## 다른 곳에 호스팅하기 (클로드 없이 계속 쓰고 싶을 때)
 
 1. 이 폴더를 GitHub 저장소로 만들기 (private 추천 — 비밀번호가 코드에 그대로 박혀있음).
 2. 저장소 Settings → Pages에서 GitHub Pages 켜기 (브랜치: main, 루트).
-3. 저장소 Settings → Secrets and variables → Actions에서 `NOTION_API_KEY`를 시크릿으로 등록.
-4. 그러면 `.github/workflows/sync.yml`이 6시간마다 알아서 `sync.js`를 돌리고, 데이터가 바뀌면 자동으로 커밋 + 푸시 → GitHub Pages가 자동으로 최신 버전을 서빙함.
+3. 저장소 Settings → Secrets and variables → Actions에서 `NOTION_API_KEY`를 시크릿으로 등록 (선택: `SEMANTIC_SCHOLAR_API_KEY`도 등록하면 관련 논문 정보가 최신으로 갱신됨).
+4. 그러면 `.github/workflows/notion-sync.yml`이 1시간마다 알아서 `sync.js`를 돌리고, 데이터가 바뀌면 자동으로 커밋 + 푸시 → GitHub Pages가 자동으로 최신 버전을 서빙함.
 5. Actions 탭에서 "Run workflow" 누르면 즉시 한 번 수동 실행도 가능.
 
 GitHub Pages 대신 Netlify, Vercel 등 다른 정적 호스팅을 써도 동일한 방식(스케줄러 + `sync.js` + 커밋)으로 대체 가능.
