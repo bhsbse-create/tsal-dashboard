@@ -85,43 +85,43 @@
   },
   "3d417295-e616-8059-9947-cb93b665f078": {
     "v": 2,
-    "query": "Accessibility Gaps Bus Routes Parcel-Level Diagnosis",
-    "computedAt": "2026-09-14T03:20:32.663Z",
+    "query": "public transit operations",
+    "computedAt": "2026-09-21T01:29:25.773Z",
     "results": [
       {
-        "title": "Improving Bus Service Levels: A Coupling Coordination Model Based on Travel Hotspot Detection",
+        "title": "Joint Optimization of E-Scooter and Public Transit Operations",
         "year": 2026,
-        "venue": "Journal of urban planning and development",
-        "publicationDate": "2026-09-01",
-        "url": "https://www.semanticscholar.org/paper/4c34e455ae1c42512e9fdcbff151d12e656b3460"
-      },
-      {
-        "title": "Challenges and Strategic Drivers in 3D IC Failure Analysis: Closing the Critical Gaps using Designs for Analysis",
-        "year": 2026,
-        "venue": "Journal of Failure Analysis and Prevention",
+        "venue": "Journal of Transportation Engineering, Part A: Systems",
         "publicationDate": "2026-08-01",
-        "url": "https://www.semanticscholar.org/paper/fcad7a7686ff909a3a9909cec3decf5d3c758423"
+        "url": "https://www.semanticscholar.org/paper/f2c059a1ff23da0caeca5f306dc113de11cd605e"
       },
       {
-        "title": "GIS-Based Accessibility Analysis for Optimizing Feeder Public Transportation Routes in Surabaya",
-        "year": 2026,
-        "venue": "IOP Conference Series: Earth and Environment",
-        "publicationDate": "2026-03-01",
-        "url": "https://www.semanticscholar.org/paper/e95d697115f226dbbae9f85b78bd2681042c138d"
-      },
-      {
-        "title": "Functional hierarchy using GIS: Diagnosis and traffic regulation solutions in Batna City (Northeastern Algeria)",
-        "year": 2026,
-        "venue": "Vojnotehnički Glasnik",
-        "publicationDate": null,
-        "url": "https://www.semanticscholar.org/paper/36afe5ec467229e830f1fdb2726eb38d3be8e16f"
-      },
-      {
-        "title": "A Bunch of Gaps: Factors Behind Service Reliability in Chicago’s High-Frequency Transit Network",
+        "title": "Efficacy or Equity? A Public Transit Operations Method for Balancing Costs and Local Need: A COVID-19 Case Study in Austin, TX",
         "year": 2025,
-        "venue": "Smart Cities",
-        "publicationDate": "2025-08-28",
-        "url": "https://www.semanticscholar.org/paper/899825f24b1fa8b9747e4fc5c232290fcf23b443"
+        "venue": "Transportation Research Record",
+        "publicationDate": "2025-11-10",
+        "url": "https://www.semanticscholar.org/paper/78d1f4db7fb1397bd558be032e2e5863a161d7d4"
+      },
+      {
+        "title": "A systematic literature review on the application of analytical approaches and mathematical programming in public bus transit network design and operations planning: Part I",
+        "year": 2025,
+        "venue": "arXiv.org",
+        "publicationDate": "2025-02-13",
+        "url": "https://www.semanticscholar.org/paper/93efbf53d7aabad584694a69edfb2b1419c76c91"
+      },
+      {
+        "title": "Charging-on-the-Move Public Transit Systems Constituted by Modular Trolleybuses and Modular Buses",
+        "year": 2025,
+        "venue": "IEEE Transactions on Transportation Electrification",
+        "publicationDate": "2025-02-01",
+        "url": "https://www.semanticscholar.org/paper/0a225f1feb638bb5cf45a96ca495bd8b2085e15b"
+      },
+      {
+        "title": "Mathematical Programming in Public Bus Transit Design and Operations: Emerging Technologies and Sustainability – A Review",
+        "year": 2025,
+        "venue": "Socio-Economic Planning Sciences",
+        "publicationDate": "2025-01-01",
+        "url": "https://www.semanticscholar.org/paper/969cd56cf56d142477c3abf002e1c8c7b5b191ea"
       }
     ]
   },
