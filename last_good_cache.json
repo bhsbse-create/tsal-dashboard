@@ -320,7 +320,9 @@
   },
   "31117295-e616-806b-9e6a-d8c6e20f08ff": {
     "title": "김성아",
-    "engAuthors": [],
+    "engAuthors": [
+      "Seong-A Seren Kim"
+    ],
     "field": "인프라 및 정책평가",
     "status": "Round 1",
     "topic": "따릉이 B/C",
@@ -471,9 +473,7 @@
   },
   "1b217295-e616-8025-8e93-f30e6066d2b8": {
     "title": "조항훈",
-    "engAuthors": [
-      "Hanghun Jo"
-    ],
+    "engAuthors": [],
     "field": "인프라 및 정책평가",
     "status": "게재 完",
     "topic": "UAM (부동산)",
