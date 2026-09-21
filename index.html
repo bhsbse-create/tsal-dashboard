@@ -774,10 +774,10 @@ h3{
     return true;
   }
 
-  function el(tag, cls, html){
+  function el(tag, cls, text){
     var e = document.createElement(tag);
     if (cls) e.className = cls;
-    if (html !== undefined) e.innerHTML = html;
+    if (text !== undefined) e.textContent = text;
     return e;
   }
 

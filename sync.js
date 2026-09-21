@@ -293,7 +293,7 @@ async function s2search(query) {
   for (let attempt = 0; attempt <= 6; attempt++) {
     const res = await fetch(url, { headers: { "x-api-key": SEMANTIC_SCHOLAR_API_KEY || "" } });
     if (res.status !== 429) {
-      if (!res.ok) return [];
+      if (!res.ok) return null; // 일시적 오류(429 외) — 결과 없음이 아니라 실패로 취급, 캐시 안 씀
       const json = await res.json();
       const results = (json.data || []).map((p) => ({
         title: p.title,
