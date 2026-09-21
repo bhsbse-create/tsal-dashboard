@@ -53,9 +53,7 @@
   },
   "3d417295-e616-808b-87f6-da8aa7efd7ab": {
     "title": "최성택",
-    "engAuthors": [
-      "Sungtaek Choi"
-    ],
+    "engAuthors": [],
     "field": "대중교통운영",
     "status": "Round 1",
     "topic": "Transfer station clustering",
@@ -378,7 +376,7 @@
     "field": "마이크로모빌리티",
     "status": "In-progress",
     "topic": "ST-LLM을 통한 따릉이 대여량 예측",
-    "presented": true,
+    "presented": false,
     "awarded": true,
     "journals": []
   },
