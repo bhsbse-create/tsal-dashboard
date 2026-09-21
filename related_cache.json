@@ -2,7 +2,7 @@
   "3d417295-e616-8045-a917-e554f696fd80": {
     "v": 2,
     "query": "public transit operations",
-    "computedAt": "2026-09-14T03:20:28.245Z",
+    "computedAt": "2026-09-21T03:30:52.740Z",
     "results": [
       {
         "title": "Joint Optimization of E-Scooter and Public Transit Operations",
@@ -44,7 +44,7 @@
   "3d417295-e616-8011-873a-d44690f2097b": {
     "v": 2,
     "query": "Optimizing Express Train Stopping Patterns Congestion",
-    "computedAt": "2026-09-14T03:20:31.496Z",
+    "computedAt": "2026-09-21T03:30:53.861Z",
     "results": [
       {
         "title": "Optimization Model of Express–Local Train Schedules under Cross-Line Operation of Suburban Railway",
@@ -128,7 +128,7 @@
   "3d417295-e616-80f5-8725-fb6e47e9af29": {
     "v": 2,
     "query": "First-/last-mile",
-    "computedAt": "2026-09-14T03:20:41.562Z",
+    "computedAt": "2026-09-21T03:30:56.973Z",
     "results": [
       {
         "title": "Modeling bicycle choice behavior and its potential health impact: Case of first/last mile access to suburban rail",
@@ -170,7 +170,7 @@
   "3d417295-e616-808b-87f6-da8aa7efd7ab": {
     "v": 2,
     "query": "Transfer station clustering",
-    "computedAt": "2026-09-14T03:20:49.134Z",
+    "computedAt": "2026-09-21T03:31:00.052Z",
     "results": [
       {
         "title": "Multi-Objective Clustering Algorithm Using Ordered Weighted Averaging (OWA) Operator for Heterogeneous WSN",
@@ -212,7 +212,7 @@
   "3cd17295-e616-8070-89a6-f307a61156ed": {
     "v": 2,
     "query": "Seobu Underground Expressway",
-    "computedAt": "2026-09-14T03:20:50.324Z",
+    "computedAt": "2026-09-21T03:31:04.245Z",
     "results": [
       {
         "title": "Study on the Mitigation of Evacuation Bottlenecks in Deep Underground Tunnels through Deep Learning-Integrated Simulation",
@@ -254,7 +254,7 @@
   "3c917295-e616-80a3-9e89-f00f1968491b": {
     "v": 2,
     "query": "MaaS&SEM",
-    "computedAt": "2026-09-14T03:20:53.995Z",
+    "computedAt": "2026-09-21T03:31:07.466Z",
     "results": [
       {
         "title": "Digital Financial Readiness as a Behavioural Enabler of MaaS Adoption in Rural India: A Hybrid PLS-SEM–ANN Approach",
@@ -296,7 +296,7 @@
   "3c817295-e616-803a-8f6e-f6f3441b9e09": {
     "v": 2,
     "query": "Deep gravity model",
-    "computedAt": "2026-09-14T03:20:59.287Z",
+    "computedAt": "2026-09-21T03:31:17.448Z",
     "results": [
       {
         "title": "Offline Performance of a Nonlocal Deep Learning Parameterization for Climate Model Representation of Atmospheric Gravity Waves",
@@ -338,7 +338,7 @@
   "3c817295-e616-8047-80ec-fd9de9f4e06b": {
     "v": 2,
     "query": "Quantum Choice Model QCM",
-    "computedAt": "2026-09-14T03:21:00.821Z",
+    "computedAt": "2026-09-21T03:31:18.781Z",
     "results": [
       {
         "title": "Q-SCM: A Quantum-Sequential Choice Model for Driver Mental State Evolution",
@@ -348,18 +348,18 @@
         "url": "https://www.semanticscholar.org/paper/e6ade8c333312d310c805203c040672b5fb847ee"
       },
       {
+        "title": "Agent Choice via Quantum Flux in Living Systems",
+        "year": 2026,
+        "venue": "",
+        "publicationDate": "2026-04-07",
+        "url": "https://www.semanticscholar.org/paper/cafeaebda5dd07c6be98a33cb40ad161f93034d1"
+      },
+      {
         "title": "Choice of Quantum Vacuum for Inflation Observables",
         "year": 2026,
         "venue": "Symmetry",
         "publicationDate": "2026-02-25",
         "url": "https://www.semanticscholar.org/paper/65185fdaa151c6cda5748bcf6790b9c44d6a5203"
-      },
-      {
-        "title": "One-Way Quantum Secure Direct Communication with Choice of Measurement Basis as the Secret",
-        "year": 2026,
-        "venue": "",
-        "publicationDate": "2026-02-05",
-        "url": "https://www.semanticscholar.org/paper/0ec16bc374d48539a6673dd186f5a5535ed522e0"
       },
       {
         "title": "Application of quantum computing in choice-based network revenue management",
@@ -380,7 +380,7 @@
   "3c817295-e616-8077-90d9-ef180ecc2873": {
     "v": 2,
     "query": "BEVs non-exhaust emissions",
-    "computedAt": "2026-09-14T03:21:04.289Z",
+    "computedAt": "2026-09-21T03:31:19.988Z",
     "results": [
       {
         "title": "Air Pollution Caused by Urban Transport: Meteorology and Downwind Dispersion of Near-Road Traffic Exhaust and Non-Exhaust Emissions",
@@ -422,7 +422,7 @@
   "3c817295-e616-8024-88fe-de2faf34a632": {
     "v": 2,
     "query": "travelers need maas they differ attitude-based",
-    "computedAt": "2026-09-14T03:21:09.305Z",
+    "computedAt": "2026-09-21T03:31:20.905Z",
     "results": [
       {
         "title": "Key attributes of mobile apps for halal tourism: an analysis of online reviews using Leximancer",
@@ -478,7 +478,7 @@
   "3c817295-e616-80cc-a97f-c2e0a77d5bc7": {
     "v": 2,
     "query": "Distance-dependent effects rail travel time residence–workplace",
-    "computedAt": "2026-09-14T03:21:31.565Z",
+    "computedAt": "2026-09-21T03:31:21.873Z",
     "results": [
       {
         "title": "Targeting travel and energy use after relocation: effects of a personalised intervention moderated by relocation disruptiveness",
@@ -520,7 +520,7 @@
   "3c817295-e616-80bd-970d-dea52e3f0300": {
     "v": 2,
     "query": "public transit operations",
-    "computedAt": "2026-09-14T03:21:37.359Z",
+    "computedAt": "2026-09-21T03:31:23.220Z",
     "results": [
       {
         "title": "Joint Optimization of E-Scooter and Public Transit Operations",
@@ -562,7 +562,7 @@
   "3b817295-e616-8051-97b6-cfaee8822ad8": {
     "v": 2,
     "query": "prof",
-    "computedAt": "2026-09-14T03:21:39.180Z",
+    "computedAt": "2026-09-21T03:31:26.464Z",
     "results": [
       {
         "title": "The communication style of Prof. Dr. M. Quraish Shihab, M.A., and K.H. Ahmad Bahauddin Nursalim in interpreting the Quran (Study on YouTube channel of Pusat Studi Al-Quran)",
@@ -604,7 +604,7 @@
   "3b817295-e616-80a3-828b-d5074a762413": {
     "v": 2,
     "query": "Dynamic Pricing",
-    "computedAt": "2026-09-14T03:21:44.256Z",
+    "computedAt": "2026-09-21T03:31:28.039Z",
     "results": [
       {
         "title": "Techno-economic optimization of renewable hydrogen infrastructure via AI-based dynamic pricing",
@@ -635,18 +635,18 @@
         "url": "https://www.semanticscholar.org/paper/0fd984d3f06cdd121228c46b51b3a5731c3be67e"
       },
       {
-        "title": "Automated Valet Parking and Charging: A Dynamic Pricing and Reservation-Based Framework Leveraging Multi-Agent Reinforcement Learning",
+        "title": "Artificial intelligence and dynamic pricing: a systematic literature review",
         "year": 2025,
-        "venue": "IEEE Transactions on Intelligent Vehicles",
-        "publicationDate": "2025-02-01",
-        "url": "https://www.semanticscholar.org/paper/6fe3447f684225dbd951aefa879f604d64a36879"
+        "venue": "Journal of Applied Economics",
+        "publicationDate": "2025-02-12",
+        "url": "https://www.semanticscholar.org/paper/0c835cd2388e58a81b62085653d4a59b232798f4"
       }
     ]
   },
   "34217295-e616-80be-aede-c9b824fd461c": {
     "v": 2,
     "query": "public transit operations",
-    "computedAt": "2026-09-14T03:21:45.965Z",
+    "computedAt": "2026-09-21T03:31:32.825Z",
     "results": [
       {
         "title": "Joint Optimization of E-Scooter and Public Transit Operations",
@@ -688,7 +688,7 @@
   "33317295-e616-803a-8446-e0f3cc744b36": {
     "v": 2,
     "query": "micromobility",
-    "computedAt": "2026-09-14T03:21:56.935Z",
+    "computedAt": "2026-09-21T03:31:35.528Z",
     "results": [
       {
         "title": "Towards Autonomous Micromobility through Scalable Urban Simulation",
@@ -712,25 +712,25 @@
         "url": "https://www.semanticscholar.org/paper/05cbb359b836b7e6306d55f8c2caf29dbefa2294"
       },
       {
+        "title": "User characteristics and preferences for micromobility use in first- and last-mile journeys in Dublin, Ireland",
+        "year": 2025,
+        "venue": "Travel Behaviour & Society",
+        "publicationDate": "2025-01-01",
+        "url": "https://www.semanticscholar.org/paper/4b1ec57ff56b4b4a5b5f4b6d7f5126fff612f7f7"
+      },
+      {
         "title": "Exploring the recreational micromobility in relation to historic urban areas and social media: Insights from machine learning approaches",
         "year": 2025,
         "venue": "Landscape and Urban Planning",
         "publicationDate": null,
         "url": "https://www.semanticscholar.org/paper/bf7ec228e0bc7ccbaa6fbd36256839696d396c82"
-      },
-      {
-        "title": "Integration of Shared Micromobility into Public Transit: A Systematic Literature Review with Grey Literature",
-        "year": 2024,
-        "venue": "Sustainability",
-        "publicationDate": "2024-04-24",
-        "url": "https://www.semanticscholar.org/paper/e0a0a02b47b587fc2523d696c556df6162753a38"
       }
     ]
   },
   "31b17295-e616-80f8-9d54-dd7c3a020e0e": {
     "v": 2,
     "query": "Network-Proximity Line Importance assessment",
-    "computedAt": "2026-09-14T03:21:58.539Z",
+    "computedAt": "2026-09-21T03:31:36.588Z",
     "results": [
       {
         "title": "Evaluation of Ship Importance in Offshore Wind Farm Area Based on Fusion Gravity Model in Complex Network",
@@ -772,7 +772,7 @@
   "31b17295-e616-80e2-8b0a-c93d853b4436": {
     "v": 2,
     "query": "M-DRT mode choice LCM",
-    "computedAt": "2026-09-14T03:22:10.946Z",
+    "computedAt": "2026-09-21T03:31:37.522Z",
     "results": [
       {
         "title": "Achieving Low Temperature Densification of GDC Electrolyte on Metal Substrate by Hydrothermal Method",
@@ -787,20 +787,13 @@
         "venue": "Transportation Research Record",
         "publicationDate": "2025-08-22",
         "url": "https://www.semanticscholar.org/paper/4f2a4a63bcc192620842f7320b818e3b89946b55"
-      },
-      {
-        "title": "The Effects of the COVID-19 Pandemic on the Modal Shifting Utilising a Latent Class Choice Model with Covariates",
-        "year": 2024,
-        "venue": "Promet - Traffic&amp;Transportation",
-        "publicationDate": "2024-06-20",
-        "url": "https://www.semanticscholar.org/paper/4e228c2db3fbbbefdecbbdb1f51b525a6d92b4c1"
       }
     ]
   },
   "31b17295-e616-808f-9c6f-d733db68caa6": {
     "v": 2,
     "query": "Satisfaction uisng LCM",
-    "computedAt": "2026-09-14T03:22:23.206Z",
+    "computedAt": "2026-09-21T03:31:38.458Z",
     "results": [
       {
         "title": "Model for Digital Service Satisfaction: extending Expectation Confirmation Theory for online food ordering platforms",
@@ -842,7 +835,7 @@
   "31117295-e616-8013-9d94-d82995e94284": {
     "v": 2,
     "query": "travel behavior demand model",
-    "computedAt": "2026-09-14T03:22:28.710Z",
+    "computedAt": "2026-09-21T03:31:46.634Z",
     "results": [
       {
         "title": "An Agentic Approach for Active Data Collection, Travel Behavior Modeling, and Weather-Sensitive Demand Prediction",
@@ -884,7 +877,7 @@
   "31117295-e616-80a7-9761-fe5957c06da0": {
     "v": 2,
     "query": "travel behavior demand model",
-    "computedAt": "2026-09-14T03:22:30.323Z",
+    "computedAt": "2026-09-21T03:31:56.412Z",
     "results": [
       {
         "title": "An Agentic Approach for Active Data Collection, Travel Behavior Modeling, and Weather-Sensitive Demand Prediction",
@@ -926,7 +919,7 @@
   "31117295-e616-8007-a369-c0a9deb96b18": {
     "v": 2,
     "query": "MaaS&BERTrend",
-    "computedAt": "2026-09-14T03:22:39.656Z",
+    "computedAt": "2026-09-21T03:32:01.087Z",
     "results": [
       {
         "title": "Assessing the impact of Mobility-as-a-Service (MaaS) on sustainable urban travel behaviors: a systematic literature review",
@@ -968,7 +961,7 @@
   "31117295-e616-8043-8283-c6437ba87072": {
     "v": 2,
     "query": "DRT&CMO",
-    "computedAt": "2026-09-14T03:22:43.151Z",
+    "computedAt": "2026-09-21T03:32:05.811Z",
     "results": [
       {
         "title": "Choroidal vascularity profiles in diabetic macular oedema subtypes: a swept-source OCT angiography study",
@@ -1010,7 +1003,7 @@
   "31117295-e616-806b-9e6a-d8c6e20f08ff": {
     "v": 2,
     "query": "transportation infrastructure policy evaluation",
-    "computedAt": "2026-09-14T03:22:48.737Z",
+    "computedAt": "2026-09-21T03:32:07.162Z",
     "results": [
       {
         "title": "Evaluation of Development Policy and Increased Integrated Public Transportation in Bandung City",
@@ -1052,7 +1045,7 @@
   "31017295-e616-8008-8327-ee9527ea4cbd": {
     "v": 2,
     "query": "transportation infrastructure policy evaluation",
-    "computedAt": "2026-09-14T03:22:57.812Z",
+    "computedAt": "2026-09-21T03:32:08.538Z",
     "results": [
       {
         "title": "Evaluation of Development Policy and Increased Integrated Public Transportation in Bandung City",
@@ -1094,7 +1087,7 @@
   "31017295-e616-80a4-a4af-ceff06ae5774": {
     "v": 2,
     "query": "Development integrated model mode choice assignment",
-    "computedAt": "2026-09-14T03:22:59.620Z",
+    "computedAt": "2026-09-21T03:32:10.024Z",
     "results": [
       {
         "title": "Analyzing Passengers' Mode Choice Behavior in an Integrated Urban Transport System: Application to BRT System at Ring Road in Greater Cairo",
@@ -1136,7 +1129,7 @@
   "31017295-e616-8069-9363-cf7f96c7d0e6": {
     "v": 2,
     "query": "micromobility",
-    "computedAt": "2026-09-14T03:23:01.020Z",
+    "computedAt": "2026-09-21T03:32:12.726Z",
     "results": [
       {
         "title": "Towards Autonomous Micromobility through Scalable Urban Simulation",
@@ -1160,25 +1153,25 @@
         "url": "https://www.semanticscholar.org/paper/05cbb359b836b7e6306d55f8c2caf29dbefa2294"
       },
       {
+        "title": "User characteristics and preferences for micromobility use in first- and last-mile journeys in Dublin, Ireland",
+        "year": 2025,
+        "venue": "Travel Behaviour & Society",
+        "publicationDate": "2025-01-01",
+        "url": "https://www.semanticscholar.org/paper/4b1ec57ff56b4b4a5b5f4b6d7f5126fff612f7f7"
+      },
+      {
         "title": "Exploring the recreational micromobility in relation to historic urban areas and social media: Insights from machine learning approaches",
         "year": 2025,
         "venue": "Landscape and Urban Planning",
         "publicationDate": null,
         "url": "https://www.semanticscholar.org/paper/bf7ec228e0bc7ccbaa6fbd36256839696d396c82"
-      },
-      {
-        "title": "Integration of Shared Micromobility into Public Transit: A Systematic Literature Review with Grey Literature",
-        "year": 2024,
-        "venue": "Sustainability",
-        "publicationDate": "2024-04-24",
-        "url": "https://www.semanticscholar.org/paper/e0a0a02b47b587fc2523d696c556df6162753a38"
       }
     ]
   },
   "31017295-e616-8014-832f-c7bdb6d62c14": {
     "v": 2,
     "query": "micromobility",
-    "computedAt": "2026-09-14T03:23:04.342Z",
+    "computedAt": "2026-09-21T03:32:13.834Z",
     "results": [
       {
         "title": "Towards Autonomous Micromobility through Scalable Urban Simulation",
@@ -1209,26 +1202,19 @@
         "url": "https://www.semanticscholar.org/paper/bf7ec228e0bc7ccbaa6fbd36256839696d396c82"
       },
       {
-        "title": "Integration of Shared Micromobility into Public Transit: A Systematic Literature Review with Grey Literature",
-        "year": 2024,
-        "venue": "Sustainability",
-        "publicationDate": "2024-04-24",
-        "url": "https://www.semanticscholar.org/paper/e0a0a02b47b587fc2523d696c556df6162753a38"
+        "title": "User characteristics and preferences for micromobility use in first- and last-mile journeys in Dublin, Ireland",
+        "year": 2025,
+        "venue": "Travel Behaviour & Society",
+        "publicationDate": "2025-01-01",
+        "url": "https://www.semanticscholar.org/paper/4b1ec57ff56b4b4a5b5f4b6d7f5126fff612f7f7"
       }
     ]
   },
   "31017295-e616-8018-8c72-c6766de7fedc": {
     "v": 2,
     "query": "Car-Level Concentration Transfer Station Typology Fast",
-    "computedAt": "2026-09-14T03:23:07.487Z",
+    "computedAt": "2026-09-21T03:32:16.536Z",
     "results": [
-      {
-        "title": "the mw6.2 western Marmara sea earthquake of 23 April 2025: a preliminary assessment of ground motion, building vulnerability, societal response and Istanbul’s readiness for the anticipated major event",
-        "year": 2026,
-        "venue": "",
-        "publicationDate": "2026-07-13",
-        "url": "https://www.semanticscholar.org/paper/c0ea88ca4244384eeda926f8b6a93f53634347ae"
-      },
       {
         "title": "Shatter Throughput Ceilings: Leveraging Reflection Surfaces to Enhance Transmissions for Vehicular Fast Data Exchange",
         "year": 2026,
@@ -1251,6 +1237,13 @@
         "url": "https://www.semanticscholar.org/paper/29162806afa17425abaf3bea77a26e6e6349fd54"
       },
       {
+        "title": "Rapid screening of volatile chemicals in surface water samples from the East Palestine, Ohio chemical disaster site with proton transfer reaction mass spectrometry.",
+        "year": 2024,
+        "venue": "Science of the Total Environment",
+        "publicationDate": "2024-09-01",
+        "url": "https://www.semanticscholar.org/paper/4f3c613e7e023d7e63309c0118ae23466160d28c"
+      },
+      {
         "title": "Mitigation of Low Harmonic Ripples Based on the Three-Phase Dual Active Bridge Converter in Charging Station Applications",
         "year": 2024,
         "venue": "Electronics",
@@ -1262,7 +1255,7 @@
   "31017295-e616-808d-902f-d2233e893efe": {
     "v": 2,
     "query": "DBRS inter-regional bus routes",
-    "computedAt": "2026-09-14T03:23:08.595Z",
+    "computedAt": "2026-09-21T03:32:19.049Z",
     "results": [
       {
         "title": "Potential of battery-electric buses in Thailand’s Eastern Economic Corridor (EEC): Emissions analysis and policy perspectives",
@@ -1304,7 +1297,7 @@
   "1d717295-e616-8081-9074-ea190e4e7b6f": {
     "v": 2,
     "query": "travel behavior demand model",
-    "computedAt": "2026-09-14T03:23:10.241Z",
+    "computedAt": "2026-09-21T03:32:22.093Z",
     "results": [
       {
         "title": "An Agentic Approach for Active Data Collection, Travel Behavior Modeling, and Weather-Sensitive Demand Prediction",
@@ -1346,7 +1339,7 @@
   "1b317295-e616-8021-b717-c47adfcc1425": {
     "v": 2,
     "query": "route deviation",
-    "computedAt": "2026-09-14T03:23:13.755Z",
+    "computedAt": "2026-09-21T03:32:23.453Z",
     "results": [
       {
         "title": "Traveller Safety Web Application using License Plate Recognition, GPS Tracking, Route Deviation Detection, and Emergency Alert System",
@@ -1430,7 +1423,7 @@
   "1b217295-e616-8023-8145-fe98a281abec": {
     "v": 2,
     "query": "travel behavior demand model",
-    "computedAt": "2026-09-14T03:23:28.291Z",
+    "computedAt": "2026-09-21T03:32:26.470Z",
     "results": [
       {
         "title": "An Agentic Approach for Active Data Collection, Travel Behavior Modeling, and Weather-Sensitive Demand Prediction",
@@ -1472,7 +1465,7 @@
   "1b217295-e616-80db-ba56-c5d9bb750796": {
     "v": 2,
     "query": "micromobility",
-    "computedAt": "2026-09-14T03:23:29.681Z",
+    "computedAt": "2026-09-21T03:32:34.121Z",
     "results": [
       {
         "title": "Towards Autonomous Micromobility through Scalable Urban Simulation",
@@ -1503,11 +1496,11 @@
         "url": "https://www.semanticscholar.org/paper/bf7ec228e0bc7ccbaa6fbd36256839696d396c82"
       },
       {
-        "title": "Integration of Shared Micromobility into Public Transit: A Systematic Literature Review with Grey Literature",
-        "year": 2024,
-        "venue": "Sustainability",
-        "publicationDate": "2024-04-24",
-        "url": "https://www.semanticscholar.org/paper/e0a0a02b47b587fc2523d696c556df6162753a38"
+        "title": "User characteristics and preferences for micromobility use in first- and last-mile journeys in Dublin, Ireland",
+        "year": 2025,
+        "venue": "Travel Behaviour & Society",
+        "publicationDate": "2025-01-01",
+        "url": "https://www.semanticscholar.org/paper/4b1ec57ff56b4b4a5b5f4b6d7f5126fff612f7f7"
       }
     ]
   },
@@ -1556,7 +1549,7 @@
   "1b217295-e616-8025-9f38-e6787c5dab7e": {
     "v": 2,
     "query": "micromobility",
-    "computedAt": "2026-09-14T03:23:44.459Z",
+    "computedAt": "2026-09-21T03:32:35.265Z",
     "results": [
       {
         "title": "Towards Autonomous Micromobility through Scalable Urban Simulation",
@@ -1587,11 +1580,11 @@
         "url": "https://www.semanticscholar.org/paper/bf7ec228e0bc7ccbaa6fbd36256839696d396c82"
       },
       {
-        "title": "Integration of Shared Micromobility into Public Transit: A Systematic Literature Review with Grey Literature",
-        "year": 2024,
-        "venue": "Sustainability",
-        "publicationDate": "2024-04-24",
-        "url": "https://www.semanticscholar.org/paper/e0a0a02b47b587fc2523d696c556df6162753a38"
+        "title": "User characteristics and preferences for micromobility use in first- and last-mile journeys in Dublin, Ireland",
+        "year": 2025,
+        "venue": "Travel Behaviour & Society",
+        "publicationDate": "2025-01-01",
+        "url": "https://www.semanticscholar.org/paper/4b1ec57ff56b4b4a5b5f4b6d7f5126fff612f7f7"
       }
     ]
   }
