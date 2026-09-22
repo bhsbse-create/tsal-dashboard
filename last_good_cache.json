@@ -53,7 +53,9 @@
   },
   "3d417295-e616-808b-87f6-da8aa7efd7ab": {
     "title": "최성택",
-    "engAuthors": [],
+    "engAuthors": [
+      "Sungtaek Choi"
+    ],
     "field": "대중교통운영",
     "status": "Round 1",
     "topic": "Transfer station clustering",
@@ -318,9 +320,7 @@
   },
   "31117295-e616-806b-9e6a-d8c6e20f08ff": {
     "title": "김성아",
-    "engAuthors": [
-      "Seong-A Seren Kim"
-    ],
+    "engAuthors": [],
     "field": "인프라 및 정책평가",
     "status": "Round 1",
     "topic": "따릉이 B/C",
