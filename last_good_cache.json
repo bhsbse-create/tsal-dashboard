@@ -334,9 +334,7 @@
   },
   "31017295-e616-8008-8327-ee9527ea4cbd": {
     "title": "양윤철",
-    "engAuthors": [
-      "Yuncheol Yang"
-    ],
+    "engAuthors": [],
     "field": "인프라 및 정책평가",
     "status": "In-progress",
     "topic": "GTFS 기반 공항접근성 분석",
@@ -366,9 +364,7 @@
     "topic": "심야 시간 lastmile 따릉이 이용 이득 분해",
     "presented": false,
     "awarded": false,
-    "journals": [
-      "HKSTS"
-    ]
+    "journals": []
   },
   "31017295-e616-8014-832f-c7bdb6d62c14": {
     "title": "허창준",
