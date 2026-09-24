@@ -218,7 +218,9 @@
   },
   "33317295-e616-803a-8446-e0f3cc744b36": {
     "title": "김우경",
-    "engAuthors": [],
+    "engAuthors": [
+      "Wookyung Kim"
+    ],
     "field": "마이크로모빌리티",
     "status": "In-progress",
     "topic": "카택 데이터-세 도시 이야기",
@@ -265,7 +267,7 @@
     "journals": []
   },
   "31117295-e616-8013-9d94-d82995e94284": {
-    "title": "",
+    "title": "김성아",
     "engAuthors": [
       "Seong-A Seren Kim"
     ],
