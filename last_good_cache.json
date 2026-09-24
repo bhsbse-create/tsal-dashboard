@@ -171,7 +171,9 @@
     "topic": "오픈데이터를 활용한 지하철 승·하차 승객 수 산출 방법론",
     "presented": false,
     "awarded": false,
-    "journals": []
+    "journals": [
+      "대한교통학회"
+    ]
   },
   "3b817295-e616-8051-97b6-cfaee8822ad8": {
     "title": "김성아",
@@ -216,9 +218,7 @@
   },
   "33317295-e616-803a-8446-e0f3cc744b36": {
     "title": "김우경",
-    "engAuthors": [
-      "Wookyung Kim"
-    ],
+    "engAuthors": [],
     "field": "마이크로모빌리티",
     "status": "In-progress",
     "topic": "카택 데이터-세 도시 이야기",
@@ -265,7 +265,7 @@
     "journals": []
   },
   "31117295-e616-8013-9d94-d82995e94284": {
-    "title": "김성아",
+    "title": "",
     "engAuthors": [
       "Seong-A Seren Kim"
     ],
@@ -420,7 +420,7 @@
     "journals": []
   },
   "1b317295-e616-8021-b717-c47adfcc1425": {
-    "title": "",
+    "title": "조항훈",
     "engAuthors": [
       "Hanghun Jo"
     ],
