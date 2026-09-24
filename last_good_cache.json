@@ -145,7 +145,9 @@
     "topic": "광역형 수요응답형 대중교통의 승차 수요 영향요인 분석: 경기도 광역콜버스 사례를 중심으로",
     "presented": false,
     "awarded": false,
-    "journals": []
+    "journals": [
+      "대한교통학회"
+    ]
   },
   "3c817295-e616-80cc-a97f-c2e0a77d5bc7": {
     "title": "양윤철",
@@ -169,9 +171,7 @@
     "topic": "오픈데이터를 활용한 지하철 승·하차 승객 수 산출 방법론",
     "presented": false,
     "awarded": false,
-    "journals": [
-      "대한교통학회"
-    ]
+    "journals": []
   },
   "3b817295-e616-8051-97b6-cfaee8822ad8": {
     "title": "김성아",
@@ -420,7 +420,7 @@
     "journals": []
   },
   "1b317295-e616-8021-b717-c47adfcc1425": {
-    "title": "조항훈",
+    "title": "",
     "engAuthors": [
       "Hanghun Jo"
     ],
