@@ -171,7 +171,9 @@
     "topic": "오픈데이터를 활용한 지하철 승·하차 승객 수 산출 방법론",
     "presented": false,
     "awarded": false,
-    "journals": []
+    "journals": [
+      "대한교통학회"
+    ]
   },
   "3b817295-e616-8051-97b6-cfaee8822ad8": {
     "title": "김성아",
@@ -471,9 +473,7 @@
   },
   "1b217295-e616-8025-8e93-f30e6066d2b8": {
     "title": "조항훈",
-    "engAuthors": [
-      "Hanghun Jo"
-    ],
+    "engAuthors": [],
     "field": "인프라 및 정책평가",
     "status": "게재 完",
     "topic": "UAM (부동산)",
