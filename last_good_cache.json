@@ -314,9 +314,7 @@
     "topic": "DRT&CMO",
     "presented": false,
     "awarded": false,
-    "journals": [
-      "Cities"
-    ]
+    "journals": []
   },
   "31117295-e616-806b-9e6a-d8c6e20f08ff": {
     "title": "김성아",
@@ -493,6 +491,8 @@
     "topic": "따릉이 요금제 (요금탄력성)",
     "presented": true,
     "awarded": false,
-    "journals": []
+    "journals": [
+      "Cities"
+    ]
   }
 }
