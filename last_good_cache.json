@@ -119,7 +119,7 @@
     "field": "인프라 및 정책평가",
     "status": "Round 1",
     "topic": "BEVs non-exhaust emissions",
-    "presented": false,
+    "presented": true,
     "awarded": true,
     "journals": []
   },
@@ -188,7 +188,7 @@
     "journals": []
   },
   "3b817295-e616-80a3-828b-d5074a762413": {
-    "title": "김우경",
+    "title": "",
     "engAuthors": [
       "Wookyung Kim"
     ],
