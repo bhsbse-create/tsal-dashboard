@@ -195,7 +195,7 @@
     "field": "인프라 및 정책평가",
     "status": "In-progress",
     "topic": "대체 도로가 존재하는 유료 도로의 Dynamic Pricing 도입을 통한 유료 도로 수입 최적화",
-    "presented": false,
+    "presented": true,
     "awarded": false,
     "journals": [
       "대한교통학회"
