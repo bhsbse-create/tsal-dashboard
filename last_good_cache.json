@@ -372,9 +372,7 @@
   },
   "31017295-e616-8014-832f-c7bdb6d62c14": {
     "title": "허창준",
-    "engAuthors": [
-      "Changjun Heo"
-    ],
+    "engAuthors": [],
     "field": "마이크로모빌리티",
     "status": "In-progress",
     "topic": "ST-LLM을 통한 따릉이 대여량 예측",
@@ -473,9 +471,7 @@
   },
   "1b217295-e616-8025-8e93-f30e6066d2b8": {
     "title": "조항훈",
-    "engAuthors": [
-      "Hanghun Jo"
-    ],
+    "engAuthors": [],
     "field": "인프라 및 정책평가",
     "status": "게재 完",
     "topic": "UAM (부동산)",
