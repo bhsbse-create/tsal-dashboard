@@ -298,7 +298,7 @@
     "field": "신교통서비스",
     "status": "Round 1",
     "topic": "MaaS&BERTrend",
-    "presented": true,
+    "presented": false,
     "awarded": false,
     "journals": [
       "Transport Reviews"
