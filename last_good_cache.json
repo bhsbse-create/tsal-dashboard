@@ -328,7 +328,9 @@
     "topic": "따릉이 B/C",
     "presented": false,
     "awarded": false,
-    "journals": []
+    "journals": [
+      "Cities"
+    ]
   },
   "31017295-e616-8008-8327-ee9527ea4cbd": {
     "title": "양윤철",
@@ -420,7 +422,7 @@
     "journals": []
   },
   "1b317295-e616-8021-b717-c47adfcc1425": {
-    "title": "조항훈",
+    "title": "",
     "engAuthors": [
       "Hanghun Jo"
     ],
