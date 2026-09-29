@@ -371,7 +371,7 @@
     ]
   },
   "31017295-e616-8014-832f-c7bdb6d62c14": {
-    "title": "허창준",
+    "title": "",
     "engAuthors": [
       "Changjun Heo"
     ],
@@ -423,7 +423,9 @@
   },
   "1b317295-e616-8021-b717-c47adfcc1425": {
     "title": "조항훈",
-    "engAuthors": [],
+    "engAuthors": [
+      "Hanghun Jo"
+    ],
     "field": "마이크로모빌리티",
     "status": "In-progress",
     "topic": "전동킥보드- route deviation",
