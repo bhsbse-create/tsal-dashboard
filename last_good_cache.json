@@ -358,7 +358,9 @@
   },
   "31017295-e616-8069-9363-cf7f96c7d0e6": {
     "title": "서영운",
-    "engAuthors": [],
+    "engAuthors": [
+      "Youngwoon Seo"
+    ],
     "field": "마이크로모빌리티",
     "status": "In-progress",
     "topic": "심야 시간 lastmile 따릉이 이용 이득 분해",
