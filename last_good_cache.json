@@ -53,9 +53,7 @@
   },
   "3d417295-e616-808b-87f6-da8aa7efd7ab": {
     "title": "최성택",
-    "engAuthors": [
-      "Sungtaek Choi"
-    ],
+    "engAuthors": [],
     "field": "대중교통운영",
     "status": "Round 1",
     "topic": "Transfer station clustering",
@@ -384,7 +382,10 @@
   },
   "31017295-e616-8018-8c72-c6766de7fedc": {
     "title": "고건우, 서영운",
-    "engAuthors": [],
+    "engAuthors": [
+      "Keonwoo Koh",
+      "Youngwoon Seo"
+    ],
     "field": "대중교통운영",
     "status": "In-progress",
     "topic": "Car-Level Concentration Analysis Based on Transfer Station Typology and Fast Transfer car Accessibility",
