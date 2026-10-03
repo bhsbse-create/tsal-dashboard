@@ -384,10 +384,7 @@
   },
   "31017295-e616-8018-8c72-c6766de7fedc": {
     "title": "고건우, 서영운",
-    "engAuthors": [
-      "Keonwoo Koh",
-      "Youngwoon Seo"
-    ],
+    "engAuthors": [],
     "field": "대중교통운영",
     "status": "In-progress",
     "topic": "Car-Level Concentration Analysis Based on Transfer Station Typology and Fast Transfer car Accessibility",
