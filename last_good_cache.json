@@ -306,7 +306,9 @@
   },
   "31117295-e616-8043-8283-c6437ba87072": {
     "title": "김성아",
-    "engAuthors": [],
+    "engAuthors": [
+      "Seong-A Seren Kim"
+    ],
     "field": "인프라 및 정책평가",
     "status": "Round 1",
     "topic": "DRT&CMO",
