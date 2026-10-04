@@ -306,9 +306,7 @@
   },
   "31117295-e616-8043-8283-c6437ba87072": {
     "title": "김성아",
-    "engAuthors": [
-      "Seong-A Seren Kim"
-    ],
+    "engAuthors": [],
     "field": "인프라 및 정책평가",
     "status": "Round 1",
     "topic": "DRT&CMO",
@@ -449,7 +447,9 @@
   },
   "1b217295-e616-8023-8145-fe98a281abec": {
     "title": "김우경",
-    "engAuthors": [],
+    "engAuthors": [
+      "Wookyung Kim"
+    ],
     "field": "통행행태 수요모형",
     "status": "Round 1",
     "topic": "GTX의 통행시간가치",
