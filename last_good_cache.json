@@ -473,7 +473,9 @@
   },
   "1b217295-e616-8025-8e93-f30e6066d2b8": {
     "title": "조항훈",
-    "engAuthors": [],
+    "engAuthors": [
+      "Hanghun Jo"
+    ],
     "field": "인프라 및 정책평가",
     "status": "게재 完",
     "topic": "UAM (부동산)",
