@@ -119,7 +119,7 @@
     "field": "인프라 및 정책평가",
     "status": "Round 1",
     "topic": "BEVs non-exhaust emissions",
-    "presented": false,
+    "presented": true,
     "awarded": true,
     "journals": []
   },
@@ -493,8 +493,6 @@
     "topic": "따릉이 요금제 (요금탄력성)",
     "presented": true,
     "awarded": false,
-    "journals": [
-      "Cities"
-    ]
+    "journals": []
   }
 }
