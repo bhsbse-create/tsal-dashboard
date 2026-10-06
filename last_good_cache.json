@@ -491,7 +491,7 @@
     "field": "마이크로모빌리티",
     "status": "Round 1",
     "topic": "따릉이 요금제 (요금탄력성)",
-    "presented": true,
+    "presented": false,
     "awarded": false,
     "journals": [
       "Cities"
