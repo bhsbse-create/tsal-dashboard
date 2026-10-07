@@ -211,7 +211,10 @@
     "topic": "서울시 경전철 노선 개통 효과",
     "presented": true,
     "awarded": false,
-    "journals": []
+    "journals": [
+      "HKSTS",
+      "ITS"
+    ]
   },
   "33317295-e616-803a-8446-e0f3cc744b36": {
     "title": "김우경",
