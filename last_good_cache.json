@@ -125,7 +125,9 @@
   },
   "3c817295-e616-8024-88fe-de2faf34a632": {
     "title": "허창준",
-    "engAuthors": [],
+    "engAuthors": [
+      "Changjun Heo"
+    ],
     "field": "신교통서비스",
     "status": "In-progress",
     "topic": "what do travelers need from maas and how they differ?attitude-based individual heterogeneity",
