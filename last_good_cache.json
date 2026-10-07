@@ -119,7 +119,7 @@
     "field": "인프라 및 정책평가",
     "status": "Round 1",
     "topic": "BEVs non-exhaust emissions",
-    "presented": true,
+    "presented": false,
     "awarded": true,
     "journals": []
   },
@@ -211,10 +211,7 @@
     "topic": "서울시 경전철 노선 개통 효과",
     "presented": true,
     "awarded": false,
-    "journals": [
-      "HKSTS",
-      "ITS"
-    ]
+    "journals": []
   },
   "33317295-e616-803a-8446-e0f3cc744b36": {
     "title": "김우경",
@@ -243,7 +240,7 @@
     "journals": []
   },
   "31b17295-e616-80e2-8b0a-c93d853b4436": {
-    "title": "",
+    "title": "최성택",
     "engAuthors": [
       "Sungtaek Choi"
     ],
