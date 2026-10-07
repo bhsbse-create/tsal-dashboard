@@ -292,7 +292,9 @@
   },
   "31117295-e616-8007-a369-c0a9deb96b18": {
     "title": "김성아",
-    "engAuthors": [],
+    "engAuthors": [
+      "Seong-A Seren Kim"
+    ],
     "field": "신교통서비스",
     "status": "Round 1",
     "topic": "MaaS&BERTrend",
