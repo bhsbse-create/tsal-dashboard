@@ -159,7 +159,7 @@
     "field": "인프라 및 정책평가",
     "status": "Round 1",
     "topic": "Distance-dependent effects of rail travel time on residence–workplace distance: A nonparametric double machine learning approach",
-    "presented": false,
+    "presented": true,
     "awarded": false,
     "journals": []
   },
@@ -383,7 +383,7 @@
     "status": "In-progress",
     "topic": "ST-LLM을 통한 따릉이 대여량 예측",
     "presented": true,
-    "awarded": false,
+    "awarded": true,
     "journals": []
   },
   "31017295-e616-8018-8c72-c6766de7fedc": {
@@ -423,7 +423,7 @@
     "field": "통행행태 수요모형",
     "status": "Round 1",
     "topic": "GPS 궤적 비지도학습 수단 추정",
-    "presented": false,
+    "presented": true,
     "awarded": false,
     "journals": []
   },
@@ -512,6 +512,32 @@
     "status": "In preparation",
     "topic": "LLM 기반 AI 페르소나를 활용한 MaaS 진술 선호(SP)조사 응답 재현성 평가",
     "presented": true,
+    "awarded": false,
+    "journals": []
+  },
+  "3f317295-e616-8051-a031-f4be68848162": {
+    "title": "권은서",
+    "engAuthors": [
+      "Yuncheol Yang"
+    ],
+    "field": "통행행태 수요모형",
+    "status": "In-progress",
+    "topic": "존체계 세분화 연구",
+    "presented": true,
+    "awarded": false,
+    "journals": [
+      "대한교통학회"
+    ]
+  },
+  "3f317295-e616-8095-8996-e1ec94cb5303": {
+    "title": "양윤철",
+    "engAuthors": [
+      "Yuncheol Yang"
+    ],
+    "field": "통행행태 수요모형",
+    "status": "In-progress",
+    "topic": "정산 자동화 방안 연구",
+    "presented": false,
     "awarded": false,
     "journals": []
   }

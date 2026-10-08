@@ -1636,5 +1636,89 @@
         "url": "https://www.semanticscholar.org/paper/9a793119e2e13fb15de3782eae64317c543fe566"
       }
     ]
+  },
+  "3f317295-e616-8051-a031-f4be68848162": {
+    "v": 2,
+    "query": "travel behavior demand model",
+    "computedAt": "2026-10-08T08:36:31.824Z",
+    "results": [
+      {
+        "title": "An Agentic Approach for Active Data Collection, Travel Behavior Modeling, and Weather-Sensitive Demand Prediction",
+        "year": 2026,
+        "venue": "",
+        "publicationDate": "2026-08-20",
+        "url": "https://www.semanticscholar.org/paper/e1bc09d21ab9909b402c2a0cde74720ba6a680ac"
+      },
+      {
+        "title": "Interactions between Climate Policy and Technology-Influenced Travel Behavior: Mitigating Induced Demand from Cooperative Adaptive Cruise Control",
+        "year": 2026,
+        "venue": "Transportation Research Record",
+        "publicationDate": "2026-05-09",
+        "url": "https://www.semanticscholar.org/paper/ec244d6308e686778a81ca9ee0a3b999482ed406"
+      },
+      {
+        "title": "Machine Learning-Based Public Transit Demand Prediction and Travel Behavior Modeling",
+        "year": 2025,
+        "venue": "2025 IEEE 3rd International Conference on Electrical, Automation and Computer Engineering (ICEACE)",
+        "publicationDate": "2025-12-26",
+        "url": "https://www.semanticscholar.org/paper/a5e29250266f1adf787869ae61e2e7c94c22cc60"
+      },
+      {
+        "title": "AN AUTOMATIC CALIBRATION APPROACH FOR TOUR-BASED TRAVEL DEMAND MODELS: APPLICATION OF A DEMAND MODEL FOR THE GREATER CAIRO REGION",
+        "year": 2025,
+        "venue": "Journal of Southwest Jiaotong University",
+        "publicationDate": "2025-03-20",
+        "url": "https://www.semanticscholar.org/paper/a4fea0bd86aeb89fb7825c1bc83041c6a61e113a"
+      },
+      {
+        "title": "Research on Factors Influencing Electric Bicycle Travel Behavior Considering Demand Differences",
+        "year": 2024,
+        "venue": "International Conference on Systems and Informatics",
+        "publicationDate": "2024-12-14",
+        "url": "https://www.semanticscholar.org/paper/c91f6163203ad511ad852e113c3183ec19c61b23"
+      }
+    ]
+  },
+  "3f317295-e616-8095-8996-e1ec94cb5303": {
+    "v": 2,
+    "query": "travel behavior demand model",
+    "computedAt": "2026-10-08T08:36:34.759Z",
+    "results": [
+      {
+        "title": "An Agentic Approach for Active Data Collection, Travel Behavior Modeling, and Weather-Sensitive Demand Prediction",
+        "year": 2026,
+        "venue": "",
+        "publicationDate": "2026-08-20",
+        "url": "https://www.semanticscholar.org/paper/e1bc09d21ab9909b402c2a0cde74720ba6a680ac"
+      },
+      {
+        "title": "Interactions between Climate Policy and Technology-Influenced Travel Behavior: Mitigating Induced Demand from Cooperative Adaptive Cruise Control",
+        "year": 2026,
+        "venue": "Transportation Research Record",
+        "publicationDate": "2026-05-09",
+        "url": "https://www.semanticscholar.org/paper/ec244d6308e686778a81ca9ee0a3b999482ed406"
+      },
+      {
+        "title": "Machine Learning-Based Public Transit Demand Prediction and Travel Behavior Modeling",
+        "year": 2025,
+        "venue": "2025 IEEE 3rd International Conference on Electrical, Automation and Computer Engineering (ICEACE)",
+        "publicationDate": "2025-12-26",
+        "url": "https://www.semanticscholar.org/paper/a5e29250266f1adf787869ae61e2e7c94c22cc60"
+      },
+      {
+        "title": "AN AUTOMATIC CALIBRATION APPROACH FOR TOUR-BASED TRAVEL DEMAND MODELS: APPLICATION OF A DEMAND MODEL FOR THE GREATER CAIRO REGION",
+        "year": 2025,
+        "venue": "Journal of Southwest Jiaotong University",
+        "publicationDate": "2025-03-20",
+        "url": "https://www.semanticscholar.org/paper/a4fea0bd86aeb89fb7825c1bc83041c6a61e113a"
+      },
+      {
+        "title": "Research on Factors Influencing Electric Bicycle Travel Behavior Considering Demand Differences",
+        "year": 2024,
+        "venue": "International Conference on Systems and Informatics",
+        "publicationDate": "2024-12-14",
+        "url": "https://www.semanticscholar.org/paper/c91f6163203ad511ad852e113c3183ec19c61b23"
+      }
+    ]
   }
 }
