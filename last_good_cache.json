@@ -42,7 +42,7 @@
     ]
   },
   "3d417295-e616-80f5-8725-fb6e47e9af29": {
-    "title": "최성택",
+    "title": "",
     "engAuthors": [
       "Sungtaek Choi"
     ],
@@ -485,7 +485,7 @@
     "field": "인프라 및 정책평가",
     "status": "게재 完",
     "topic": "UAM (부동산)",
-    "presented": true,
+    "presented": false,
     "awarded": false,
     "journals": []
   },
