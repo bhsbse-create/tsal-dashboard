@@ -20,10 +20,12 @@
     ],
     "field": "대중교통운영",
     "status": "In-progress",
-    "topic": "Optimizing Express Train Stopping Patterns for Congestion Management Using Smart Card Data: A Case Study of the Gyeongin Line, Seoul",
-    "presented": false,
+    "topic": "Optimizing Express Stop Patterns on the Gyeongin Line: A Smart Card OD and Time-Expanded Network Approach",
+    "presented": true,
     "awarded": false,
-    "journals": []
+    "journals": [
+      "ITS"
+    ]
   },
   "3d417295-e616-8059-9947-cb93b665f078": {
     "title": "고건우",
@@ -167,7 +169,7 @@
       "Changjun Heo"
     ],
     "field": "대중교통운영",
-    "status": "In-progress",
+    "status": "Round 1",
     "topic": "오픈데이터를 활용한 지하철 승·하차 승객 수 산출 방법론",
     "presented": false,
     "awarded": false,
@@ -238,9 +240,11 @@
     "field": "대중교통운영",
     "status": "In-progress",
     "topic": "Network-Proximity based Line Importance assessment",
-    "presented": false,
+    "presented": true,
     "awarded": true,
-    "journals": []
+    "journals": [
+      "HKSTS"
+    ]
   },
   "31b17295-e616-80e2-8b0a-c93d853b4436": {
     "title": "최성택",
@@ -379,7 +383,7 @@
     "status": "In-progress",
     "topic": "ST-LLM을 통한 따릉이 대여량 예측",
     "presented": true,
-    "awarded": true,
+    "awarded": false,
     "journals": []
   },
   "31017295-e616-8018-8c72-c6766de7fedc": {
@@ -391,9 +395,11 @@
     "field": "대중교통운영",
     "status": "In-progress",
     "topic": "Car-Level Concentration Analysis Based on Transfer Station Typology and Fast Transfer car Accessibility",
-    "presented": false,
+    "presented": true,
     "awarded": true,
-    "journals": []
+    "journals": [
+      "대한교통학회"
+    ]
   },
   "31017295-e616-808d-902f-d2233e893efe": {
     "title": "고건우",
@@ -496,5 +502,17 @@
     "journals": [
       "Cities"
     ]
+  },
+  "3f317295-e616-805e-ad2e-de22b5d0708d": {
+    "title": "허창준",
+    "engAuthors": [
+      "Changjun Heo"
+    ],
+    "field": "기타",
+    "status": "In preparation",
+    "topic": "LLM 기반 AI 페르소나를 활용한 MaaS 진술 선호(SP)조사 응답 재현성 평가",
+    "presented": true,
+    "awarded": false,
+    "journals": []
   }
 }

@@ -43,9 +43,16 @@
   },
   "3d417295-e616-8011-873a-d44690f2097b": {
     "v": 2,
-    "query": "Optimizing Express Train Stopping Patterns Congestion",
-    "computedAt": "2026-10-05T03:35:54.647Z",
+    "query": "Optimizing Express Stop Patterns Gyeongin Line",
+    "computedAt": "2026-10-08T07:36:46.868Z",
     "results": [
+      {
+        "title": "Secondary Passenger Flow Control with Flexible Stop-Skipping Train Schedule Patterns on an Oversaturated Urban Metro Line",
+        "year": 2026,
+        "venue": "Journal of Transportation Engineering Part A Systems",
+        "publicationDate": "2026-12-01",
+        "url": "https://www.semanticscholar.org/paper/92c58476c50c677f8f0fd990a1281b33582a4839"
+      },
       {
         "title": "Optimization Model of Express–Local Train Schedules under Cross-Line Operation of Suburban Railway",
         "year": 2025,
@@ -54,32 +61,25 @@
         "url": "https://www.semanticscholar.org/paper/f2425d960717085d7a04b1ee0981763a873f3c94"
       },
       {
-        "title": "Optimizing the train timetable in a high-speed rail corridor: The implications on departure time, fare cost and seat preference of passengers",
+        "title": "Integrated Optimization of Timetabling and Skip-Stop Patterns with Passenger Transfer Strategy in Urban Rail Transit",
         "year": 2025,
-        "venue": "PLoS ONE",
-        "publicationDate": "2025-06-18",
-        "url": "https://www.semanticscholar.org/paper/43b6175374d24e5fa8d2e6b5401727c62e684eca"
+        "venue": "Applied Sciences",
+        "publicationDate": "2025-11-28",
+        "url": "https://www.semanticscholar.org/paper/6a18b454034ce2eaedf5dbd10d185037dabf4be4"
       },
       {
-        "title": "Novel Approach to Optimizing Express-Local Metro Train Timetable Considering Multiple Train Stopping Patterns",
+        "title": "Validating Express Rail Optimization with AFC and Backcasting: A Bi-Level Operations–Assignment Model to Improve Speed and Accessibility Along the Gyeongin Corridor",
         "year": 2025,
-        "venue": "Canadian journal of civil engineering (Print)",
-        "publicationDate": "2025-02-04",
-        "url": "https://www.semanticscholar.org/paper/85d79a0d522aa200ef046b523354102c678a82fa"
+        "venue": "Applied Sciences",
+        "publicationDate": "2025-10-31",
+        "url": "https://www.semanticscholar.org/paper/79ea5a2052d271901f1b65c746ce94e4f8a9e246"
       },
       {
-        "title": "Metro Train Stopping Scheme Decision Based on Multisource Data in Express-Local Train Mode",
-        "year": 2024,
-        "venue": "Journal of Advanced Transportation",
-        "publicationDate": "2024-04-30",
-        "url": "https://www.semanticscholar.org/paper/7c6f9fb222612f963664cb1990299d810888bb15"
-      },
-      {
-        "title": "Estimating the Railway Network Capacity Utilization with Mixed Train Routes and Stopping Patterns: A Multiobjective Optimization Approach",
-        "year": 2024,
-        "venue": "Journal of Advanced Transportation",
-        "publicationDate": "2024-02-15",
-        "url": "https://www.semanticscholar.org/paper/f37a16a607fadd94cb549602f133096d24bea2d9"
+        "title": "Train timetable design under passenger demand using skip-stop plans for a new railway transportation in express train service from Ban Phai to Nakhon Phanom",
+        "year": 2025,
+        "venue": "EUREKA Physics and Engineering",
+        "publicationDate": "2025-03-28",
+        "url": "https://www.semanticscholar.org/paper/bc06fa9818c25e1b44249a15f44bfeab375979a3"
       }
     ]
   },
@@ -1592,6 +1592,48 @@
         "venue": "Travel Behaviour & Society",
         "publicationDate": "2025-01-01",
         "url": "https://www.semanticscholar.org/paper/4b1ec57ff56b4b4a5b5f4b6d7f5126fff612f7f7"
+      }
+    ]
+  },
+  "3f317295-e616-805e-ad2e-de22b5d0708d": {
+    "v": 2,
+    "query": "LLM MaaS",
+    "computedAt": "2026-10-08T07:36:44.068Z",
+    "results": [
+      {
+        "title": "Harli: SLO-Aware Co-location of LLM Inference and PEFT-based Finetuning on Model-as-a-Service Platforms",
+        "year": 2025,
+        "venue": "arXiv.org",
+        "publicationDate": "2025-11-13",
+        "url": "https://www.semanticscholar.org/paper/39105bbb12ad60e82993409b201ce0dd37e404a7"
+      },
+      {
+        "title": "CD-LLM: A Heterogeneous Multi-FPGA System for Batched Decoding of 70B+ LLMs Using a Compute-Dedicated Architecture",
+        "year": 2025,
+        "venue": "ACM Transactions on Reconfigurable Technology and Systems",
+        "publicationDate": "2025-10-22",
+        "url": "https://www.semanticscholar.org/paper/1ea540b3588c738e1ea7fa1e57f03729abb5db1b"
+      },
+      {
+        "title": "AlayaDB: The Data Foundation for Efficient and Effective Long-context LLM Inference",
+        "year": 2025,
+        "venue": "SIGMOD Conference Companion",
+        "publicationDate": "2025-04-14",
+        "url": "https://www.semanticscholar.org/paper/2c2995776b6553568864b4cca2b0e4c52d49e7b9"
+      },
+      {
+        "title": "ECO: An LLM-Driven Efficient Code Optimizer for Warehouse Scale Computers",
+        "year": 2025,
+        "venue": "",
+        "publicationDate": "2025-03-19",
+        "url": "https://www.semanticscholar.org/paper/c3c9f5215bb0983e5717464adf1994a2c726432f"
+      },
+      {
+        "title": "ECO: An LLM-Driven Efficient Code Optimizer for Warehouse Scale Computers",
+        "year": 2025,
+        "venue": "arXiv.org",
+        "publicationDate": null,
+        "url": "https://www.semanticscholar.org/paper/9a793119e2e13fb15de3782eae64317c543fe566"
       }
     ]
   }
