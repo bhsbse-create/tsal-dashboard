@@ -284,7 +284,9 @@
   },
   "31117295-e616-80a7-9761-fe5957c06da0": {
     "title": "김성아",
-    "engAuthors": [],
+    "engAuthors": [
+      "Seong-A Seren Kim"
+    ],
     "field": "통행행태 수요모형",
     "status": "In preparation",
     "topic": "GPS&목적추정",
