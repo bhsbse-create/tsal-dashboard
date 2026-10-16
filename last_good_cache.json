@@ -296,9 +296,7 @@
   },
   "31117295-e616-8007-a369-c0a9deb96b18": {
     "title": "김성아",
-    "engAuthors": [
-      "Seong-A Seren Kim"
-    ],
+    "engAuthors": [],
     "field": "신교통서비스",
     "status": "Round 1",
     "topic": "MaaS&BERTrend",
@@ -449,7 +447,9 @@
     "topic": "대중교통만족도조사",
     "presented": true,
     "awarded": false,
-    "journals": []
+    "journals": [
+      "Transport Policy"
+    ]
   },
   "1b217295-e616-8023-8145-fe98a281abec": {
     "title": "김우경",
