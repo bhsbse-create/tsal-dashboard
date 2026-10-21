@@ -164,7 +164,7 @@
     "journals": []
   },
   "3c817295-e616-80bd-970d-dea52e3f0300": {
-    "title": "",
+    "title": "허창준",
     "engAuthors": [
       "Changjun Heo"
     ],
@@ -396,7 +396,7 @@
     "status": "In-progress",
     "topic": "Car-Level Concentration Analysis Based on Transfer Station Typology and Fast Transfer car Accessibility",
     "presented": true,
-    "awarded": true,
+    "awarded": false,
     "journals": [
       "대한교통학회"
     ]
