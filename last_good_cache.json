@@ -122,7 +122,7 @@
     "status": "Round 1",
     "topic": "BEVs non-exhaust emissions",
     "presented": true,
-    "awarded": true,
+    "awarded": false,
     "journals": []
   },
   "3c817295-e616-8024-88fe-de2faf34a632": {
@@ -455,7 +455,9 @@
   },
   "1b217295-e616-8023-8145-fe98a281abec": {
     "title": "김우경",
-    "engAuthors": [],
+    "engAuthors": [
+      "Wookyung Kim"
+    ],
     "field": "통행행태 수요모형",
     "status": "Round 1",
     "topic": "GTX의 통행시간가치",
