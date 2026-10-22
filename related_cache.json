@@ -44,7 +44,7 @@
   "3d417295-e616-8011-873a-d44690f2097b": {
     "v": 2,
     "query": "Optimizing Express Stop Patterns Gyeongin Line",
-    "computedAt": "2026-10-15T10:00:01.547Z",
+    "computedAt": "2026-10-22T10:16:02.916Z",
     "results": [
       {
         "title": "Secondary Passenger Flow Control with Flexible Stop-Skipping Train Schedule Patterns on an Oversaturated Urban Metro Line",
@@ -1605,21 +1605,21 @@
   "3f317295-e616-805e-ad2e-de22b5d0708d": {
     "v": 2,
     "query": "LLM MaaS",
-    "computedAt": "2026-10-15T10:00:00.592Z",
+    "computedAt": "2026-10-22T10:16:01.903Z",
     "results": [
-      {
-        "title": "Harli: SLO-Aware Co-location of LLM Inference and PEFT-based Finetuning on Model-as-a-Service Platforms",
-        "year": 2025,
-        "venue": "arXiv.org",
-        "publicationDate": "2025-11-13",
-        "url": "https://www.semanticscholar.org/paper/39105bbb12ad60e82993409b201ce0dd37e404a7"
-      },
       {
         "title": "CD-LLM: A Heterogeneous Multi-FPGA System for Batched Decoding of 70B+ LLMs Using a Compute-Dedicated Architecture",
         "year": 2025,
         "venue": "ACM Transactions on Reconfigurable Technology and Systems",
         "publicationDate": "2025-10-22",
         "url": "https://www.semanticscholar.org/paper/1ea540b3588c738e1ea7fa1e57f03729abb5db1b"
+      },
+      {
+        "title": "Jailbreak-as-a-Service++: Unveiling Distributed AI-Driven Malicious Information Campaigns Powered by LLM Crowdsourcing",
+        "year": 2025,
+        "venue": "",
+        "publicationDate": "2025-05-27",
+        "url": "https://www.semanticscholar.org/paper/5416c6e51a667669165c8792e0b8d099414c05d8"
       },
       {
         "title": "AlayaDB: The Data Foundation for Efficient and Effective Long-context LLM Inference",
@@ -1647,7 +1647,7 @@
   "3f317295-e616-8051-a031-f4be68848162": {
     "v": 2,
     "query": "travel behavior demand model",
-    "computedAt": "2026-10-15T09:59:56.400Z",
+    "computedAt": "2026-10-22T10:15:55.584Z",
     "results": [
       {
         "title": "An Agentic Approach for Active Data Collection, Travel Behavior Modeling, and Weather-Sensitive Demand Prediction",
@@ -1689,7 +1689,7 @@
   "3f317295-e616-8095-8996-e1ec94cb5303": {
     "v": 2,
     "query": "travel behavior demand model",
-    "computedAt": "2026-10-15T09:59:57.746Z",
+    "computedAt": "2026-10-22T10:15:58.703Z",
     "results": [
       {
         "title": "An Agentic Approach for Active Data Collection, Travel Behavior Modeling, and Weather-Sensitive Demand Prediction",
