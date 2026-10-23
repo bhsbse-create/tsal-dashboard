@@ -499,7 +499,9 @@
     "topic": "따릉이 요금제 (요금탄력성)",
     "presented": true,
     "awarded": false,
-    "journals": []
+    "journals": [
+      "Cities"
+    ]
   },
   "3f317295-e616-805e-ad2e-de22b5d0708d": {
     "title": "허창준",
