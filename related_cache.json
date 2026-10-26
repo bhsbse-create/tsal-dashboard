@@ -2,7 +2,7 @@
   "3d417295-e616-8045-a917-e554f696fd80": {
     "v": 2,
     "query": "public transit operations",
-    "computedAt": "2026-10-19T07:51:58.539Z",
+    "computedAt": "2026-10-26T14:20:26.324Z",
     "results": [
       {
         "title": "Joint Optimization of E-Scooter and Public Transit Operations",
@@ -86,7 +86,7 @@
   "3d417295-e616-8059-9947-cb93b665f078": {
     "v": 2,
     "query": "public transit operations",
-    "computedAt": "2026-10-19T07:51:59.897Z",
+    "computedAt": "2026-10-26T14:20:31.167Z",
     "results": [
       {
         "title": "Joint Optimization of E-Scooter and Public Transit Operations",
@@ -128,7 +128,7 @@
   "3d417295-e616-80f5-8725-fb6e47e9af29": {
     "v": 2,
     "query": "First-/last-mile",
-    "computedAt": "2026-10-19T07:52:07.825Z",
+    "computedAt": "2026-10-26T14:20:32.582Z",
     "results": [
       {
         "title": "Modeling bicycle choice behavior and its potential health impact: Case of first/last mile access to suburban rail",
@@ -170,7 +170,7 @@
   "3d417295-e616-808b-87f6-da8aa7efd7ab": {
     "v": 2,
     "query": "Transfer station clustering",
-    "computedAt": "2026-10-19T07:52:12.599Z",
+    "computedAt": "2026-10-26T14:20:37.311Z",
     "results": [
       {
         "title": "Multi-Objective Clustering Algorithm Using Ordered Weighted Averaging (OWA) Operator for Heterogeneous WSN",
@@ -212,7 +212,7 @@
   "3cd17295-e616-8070-89a6-f307a61156ed": {
     "v": 2,
     "query": "Seobu Underground Expressway",
-    "computedAt": "2026-10-19T07:52:16.650Z",
+    "computedAt": "2026-10-26T14:20:42.932Z",
     "results": [
       {
         "title": "Study on the Mitigation of Evacuation Bottlenecks in Deep Underground Tunnels through Deep Learning-Integrated Simulation",
@@ -254,7 +254,7 @@
   "3c917295-e616-80a3-9e89-f00f1968491b": {
     "v": 2,
     "query": "MaaS&SEM",
-    "computedAt": "2026-10-19T07:52:19.605Z",
+    "computedAt": "2026-10-26T14:20:49.499Z",
     "results": [
       {
         "title": "Digital Financial Readiness as a Behavioural Enabler of MaaS Adoption in Rural India: A Hybrid PLS-SEM–ANN Approach",
@@ -296,7 +296,7 @@
   "3c817295-e616-803a-8f6e-f6f3441b9e09": {
     "v": 2,
     "query": "Deep gravity model",
-    "computedAt": "2026-10-19T07:52:22.621Z",
+    "computedAt": "2026-10-26T14:20:51.162Z",
     "results": [
       {
         "title": "Determining and detailing the structure model of the Earth’s crust in the East Vietnam Sea deep basin and adjacent areas using new seismic, OBS and gravity data",
@@ -338,21 +338,21 @@
   "3c817295-e616-8047-80ec-fd9de9f4e06b": {
     "v": 2,
     "query": "Quantum Choice Model QCM",
-    "computedAt": "2026-10-19T07:52:25.452Z",
+    "computedAt": "2026-10-26T14:20:52.507Z",
     "results": [
-      {
-        "title": "A Unified Quantum Interferometric Framework for Interaction-Free Measurement and Delayed-Choice Experiments",
-        "year": 2026,
-        "venue": "",
-        "publicationDate": "2026-08-12",
-        "url": "https://www.semanticscholar.org/paper/5c7e4ca689df8f7591095185b5994662c753b9bb"
-      },
       {
         "title": "Q-SCM: A Quantum-Sequential Choice Model for Driver Mental State Evolution",
         "year": 2026,
         "venue": "",
         "publicationDate": "2026-07-14",
         "url": "https://www.semanticscholar.org/paper/e6ade8c333312d310c805203c040672b5fb847ee"
+      },
+      {
+        "title": "Supporting Information for Agent Choice via Quantum Flux in Living Systems",
+        "year": 2026,
+        "venue": "European Journal of Applied Sciences",
+        "publicationDate": "2026-06-09",
+        "url": "https://www.semanticscholar.org/paper/577a3b715ad622d46c7173f7a81fa632003c81c2"
       },
       {
         "title": "Choice of Quantum Vacuum for Inflation Observables",
@@ -422,7 +422,7 @@
   "3c817295-e616-8024-88fe-de2faf34a632": {
     "v": 2,
     "query": "travelers need maas they differ attitude-based",
-    "computedAt": "2026-10-19T07:52:29.471Z",
+    "computedAt": "2026-10-26T14:21:08.475Z",
     "results": [
       {
         "title": "Клинико-психологический анализ факторов перинатальной тревоги и депрессии",
@@ -443,7 +443,7 @@
   "3c817295-e616-800f-9ec3-c86f94855f27": {
     "v": 2,
     "query": "emerging mobility service",
-    "computedAt": "2026-10-19T07:52:32.332Z",
+    "computedAt": "2026-10-26T14:21:09.889Z",
     "results": [
       {
         "title": "Analysis of Thai’s willingness to adopt mobility-as-a-service (MaaS) in emerging urban transport system",
@@ -485,7 +485,7 @@
   "3c817295-e616-80cc-a97f-c2e0a77d5bc7": {
     "v": 2,
     "query": "Distance-dependent effects rail travel time residence–workplace",
-    "computedAt": "2026-10-19T07:52:38.131Z",
+    "computedAt": "2026-10-26T14:21:10.844Z",
     "results": [
       {
         "title": "Targeting travel and energy use after relocation: effects of a personalised intervention moderated by relocation disruptiveness",
@@ -527,7 +527,7 @@
   "3c817295-e616-80bd-970d-dea52e3f0300": {
     "v": 2,
     "query": "public transit operations",
-    "computedAt": "2026-10-19T07:52:40.713Z",
+    "computedAt": "2026-10-26T14:21:15.645Z",
     "results": [
       {
         "title": "Joint Optimization of E-Scooter and Public Transit Operations",
@@ -569,8 +569,15 @@
   "3b817295-e616-8051-97b6-cfaee8822ad8": {
     "v": 2,
     "query": "prof",
-    "computedAt": "2026-10-19T07:52:42.184Z",
+    "computedAt": "2026-10-26T14:21:17.137Z",
     "results": [
+      {
+        "title": "ANALISIS PEMIKIRAN PROF ALI YAFIE TERHADAP PENGELOLAAN EKOLOGI BERKELANJUTAN MELALUI PRINSIP HIFZ AL BĪʻAH",
+        "year": 2025,
+        "venue": "TAHKIM",
+        "publicationDate": "2025-12-23",
+        "url": "https://www.semanticscholar.org/paper/7e18ed4c362249d0ebb0e60510f845bad4625693"
+      },
       {
         "title": "The communication style of Prof. Dr. M. Quraish Shihab, M.A., and K.H. Ahmad Bahauddin Nursalim in interpreting the Quran (Study on YouTube channel of Pusat Studi Al-Quran)",
         "year": 2025,
@@ -598,20 +605,13 @@
         "venue": "Chemistry",
         "publicationDate": "2025-01-16",
         "url": "https://www.semanticscholar.org/paper/555481a578e72dc4e1707b15e0d770bf8ff7f474"
-      },
-      {
-        "title": "Light People: Prof. Henry Snaith’s (FRS) perovskite optoelectronics journey",
-        "year": 2025,
-        "venue": "Light: Science & Applications",
-        "publicationDate": "2025-01-01",
-        "url": "https://www.semanticscholar.org/paper/19fffeba17525028eb5bbb5d2030674d56cd56d1"
       }
     ]
   },
   "3b817295-e616-80a3-828b-d5074a762413": {
     "v": 2,
     "query": "Dynamic Pricing",
-    "computedAt": "2026-10-19T07:52:43.426Z",
+    "computedAt": "2026-10-26T14:21:20.189Z",
     "results": [
       {
         "title": "Techno-economic optimization of renewable hydrogen infrastructure via AI-based dynamic pricing",
@@ -653,7 +653,7 @@
   "34217295-e616-80be-aede-c9b824fd461c": {
     "v": 2,
     "query": "public transit operations",
-    "computedAt": "2026-10-19T07:52:44.807Z",
+    "computedAt": "2026-10-26T14:21:24.953Z",
     "results": [
       {
         "title": "Joint Optimization of E-Scooter and Public Transit Operations",
@@ -695,7 +695,7 @@
   "33317295-e616-803a-8446-e0f3cc744b36": {
     "v": 2,
     "query": "micromobility",
-    "computedAt": "2026-10-19T07:52:45.866Z",
+    "computedAt": "2026-10-26T14:21:31.341Z",
     "results": [
       {
         "title": "Future-Powered Transportation Fleets and Mobility in Eco-Friendly Cities: Economic Scheduling Interactions for Integrated Energy Hubs via Micromobility Electric Vehicles",
@@ -737,7 +737,7 @@
   "31b17295-e616-80f8-9d54-dd7c3a020e0e": {
     "v": 2,
     "query": "Network-Proximity Line Importance assessment",
-    "computedAt": "2026-10-19T07:52:46.919Z",
+    "computedAt": "2026-10-26T14:21:37.321Z",
     "results": [
       {
         "title": "Evaluation of Ship Importance in Offshore Wind Farm Area Based on Fusion Gravity Model in Complex Network",
@@ -779,7 +779,7 @@
   "31b17295-e616-80e2-8b0a-c93d853b4436": {
     "v": 2,
     "query": "M-DRT mode choice LCM",
-    "computedAt": "2026-10-19T07:52:49.435Z",
+    "computedAt": "2026-10-26T14:21:38.132Z",
     "results": [
       {
         "title": "Achieving Low Temperature Densification of GDC Electrolyte on Metal Substrate by Hydrothermal Method",
@@ -807,7 +807,7 @@
   "31b17295-e616-808f-9c6f-d733db68caa6": {
     "v": 2,
     "query": "Satisfaction uisng LCM",
-    "computedAt": "2026-10-19T07:52:51.973Z",
+    "computedAt": "2026-10-26T14:21:40.716Z",
     "results": [
       {
         "title": "Model for Digital Service Satisfaction: extending Expectation Confirmation Theory for online food ordering platforms",
@@ -849,7 +849,7 @@
   "31117295-e616-8013-9d94-d82995e94284": {
     "v": 2,
     "query": "travel behavior demand model",
-    "computedAt": "2026-10-19T07:53:03.084Z",
+    "computedAt": "2026-10-26T14:21:47.233Z",
     "results": [
       {
         "title": "An Agentic Approach for Active Data Collection, Travel Behavior Modeling, and Weather-Sensitive Demand Prediction",
@@ -891,7 +891,7 @@
   "31117295-e616-80a7-9761-fe5957c06da0": {
     "v": 2,
     "query": "travel behavior demand model",
-    "computedAt": "2026-10-19T07:53:05.969Z",
+    "computedAt": "2026-10-26T14:21:53.635Z",
     "results": [
       {
         "title": "An Agentic Approach for Active Data Collection, Travel Behavior Modeling, and Weather-Sensitive Demand Prediction",
@@ -933,7 +933,7 @@
   "31117295-e616-8007-a369-c0a9deb96b18": {
     "v": 2,
     "query": "MaaS&BERTrend",
-    "computedAt": "2026-10-19T07:53:07.379Z",
+    "computedAt": "2026-10-26T14:22:01.781Z",
     "results": [
       {
         "title": "Assessing the impact of Mobility-as-a-Service (MaaS) on sustainable urban travel behaviors: a systematic literature review",
@@ -975,7 +975,7 @@
   "31117295-e616-8043-8283-c6437ba87072": {
     "v": 2,
     "query": "DRT&CMO",
-    "computedAt": "2026-10-19T07:53:10.424Z",
+    "computedAt": "2026-10-26T14:22:06.416Z",
     "results": [
       {
         "title": "Choroidal vascularity profiles in diabetic macular oedema subtypes: a swept-source OCT angiography study",
@@ -999,39 +999,39 @@
         "url": "https://www.semanticscholar.org/paper/099e9c06f041bacff1a33ae021dba63630bb73bb"
       },
       {
-        "title": "Dynamic analysis of bi-material cathode in lithium-ion battery capacitors by DRT method",
-        "year": 2025,
-        "venue": "Next Materials",
-        "publicationDate": "2025-01-01",
-        "url": "https://www.semanticscholar.org/paper/d79de63f72541592372522af7ac13394164dfee4"
-      },
-      {
         "title": "Uncovering the electrochemical processes and understanding the causes of the degradation via EIS-DRT in large-scale solid oxide fuel cell",
         "year": 2025,
         "venue": "Applied Energy",
         "publicationDate": null,
         "url": "https://www.semanticscholar.org/paper/d8fec626d57af02da199d1764be9568e5b976dd2"
+      },
+      {
+        "title": "Dynamic analysis of bi-material cathode in lithium-ion battery capacitors by DRT method",
+        "year": 2025,
+        "venue": "Next Materials",
+        "publicationDate": "2025-01-01",
+        "url": "https://www.semanticscholar.org/paper/d79de63f72541592372522af7ac13394164dfee4"
       }
     ]
   },
   "31117295-e616-806b-9e6a-d8c6e20f08ff": {
     "v": 2,
     "query": "transportation infrastructure policy evaluation",
-    "computedAt": "2026-10-19T07:53:15.211Z",
+    "computedAt": "2026-10-26T14:22:11.142Z",
     "results": [
+      {
+        "title": "EVALUATING INTEGRATED URBAN TRANSPORT POLICY THROUGH THE MIKROTRANS PROGRAM IN NORTH JAKARTA: AN APPLICATION OF AGUSTINO’S POLICY EVALUATION MODEL",
+        "year": 2026,
+        "venue": "JPAP (Jurnal Penelitian Administrasi Publik)",
+        "publicationDate": "2026-10-02",
+        "url": "https://www.semanticscholar.org/paper/7c9905da774ceda79270cb5ec7dba8efeca87d7a"
+      },
       {
         "title": "Evaluation of Development Policy and Increased Integrated Public Transportation in Bandung City",
         "year": 2025,
         "venue": "Eduvest - Journal Of Universal Studies",
         "publicationDate": "2025-03-20",
         "url": "https://www.semanticscholar.org/paper/bae4b6d643c2d2a7cf71de085f063cb8259b2184"
-      },
-      {
-        "title": "Weather-Related Disruptions in Transportation and Logistics: A Systematic Literature Review and a Policy Implementation Roadmap",
-        "year": 2025,
-        "venue": "Logistics",
-        "publicationDate": "2025-02-20",
-        "url": "https://www.semanticscholar.org/paper/097170bbe9a46ebdb16ca72e81c2d3483981a7d1"
       },
       {
         "title": "Policy evaluation and performance assessment for sustainable urbanization: a study of selected city corporations in Bangladesh",
@@ -1059,21 +1059,21 @@
   "31017295-e616-8008-8327-ee9527ea4cbd": {
     "v": 2,
     "query": "transportation infrastructure policy evaluation",
-    "computedAt": "2026-10-19T07:53:18.367Z",
+    "computedAt": "2026-10-26T14:22:15.890Z",
     "results": [
+      {
+        "title": "EVALUATING INTEGRATED URBAN TRANSPORT POLICY THROUGH THE MIKROTRANS PROGRAM IN NORTH JAKARTA: AN APPLICATION OF AGUSTINO’S POLICY EVALUATION MODEL",
+        "year": 2026,
+        "venue": "JPAP (Jurnal Penelitian Administrasi Publik)",
+        "publicationDate": "2026-10-02",
+        "url": "https://www.semanticscholar.org/paper/7c9905da774ceda79270cb5ec7dba8efeca87d7a"
+      },
       {
         "title": "Evaluation of Development Policy and Increased Integrated Public Transportation in Bandung City",
         "year": 2025,
         "venue": "Eduvest - Journal Of Universal Studies",
         "publicationDate": "2025-03-20",
         "url": "https://www.semanticscholar.org/paper/bae4b6d643c2d2a7cf71de085f063cb8259b2184"
-      },
-      {
-        "title": "Weather-Related Disruptions in Transportation and Logistics: A Systematic Literature Review and a Policy Implementation Roadmap",
-        "year": 2025,
-        "venue": "Logistics",
-        "publicationDate": "2025-02-20",
-        "url": "https://www.semanticscholar.org/paper/097170bbe9a46ebdb16ca72e81c2d3483981a7d1"
       },
       {
         "title": "Policy evaluation and performance assessment for sustainable urbanization: a study of selected city corporations in Bangladesh",
@@ -1101,7 +1101,7 @@
   "31017295-e616-80a4-a4af-ceff06ae5774": {
     "v": 2,
     "query": "Development integrated model mode choice assignment",
-    "computedAt": "2026-10-19T07:53:21.569Z",
+    "computedAt": "2026-10-26T14:22:19.123Z",
     "results": [
       {
         "title": "Analyzing Passengers' Mode Choice Behavior in an Integrated Urban Transport System: Application to BRT System at Ring Road in Greater Cairo",
@@ -1143,7 +1143,7 @@
   "31017295-e616-8069-9363-cf7f96c7d0e6": {
     "v": 2,
     "query": "micromobility",
-    "computedAt": "2026-10-19T07:53:27.802Z",
+    "computedAt": "2026-10-26T14:22:20.152Z",
     "results": [
       {
         "title": "Future-Powered Transportation Fleets and Mobility in Eco-Friendly Cities: Economic Scheduling Interactions for Integrated Energy Hubs via Micromobility Electric Vehicles",
@@ -1185,7 +1185,7 @@
   "31017295-e616-8014-832f-c7bdb6d62c14": {
     "v": 2,
     "query": "micromobility",
-    "computedAt": "2026-10-19T07:53:28.940Z",
+    "computedAt": "2026-10-26T14:22:24.708Z",
     "results": [
       {
         "title": "Future-Powered Transportation Fleets and Mobility in Eco-Friendly Cities: Economic Scheduling Interactions for Integrated Energy Hubs via Micromobility Electric Vehicles",
@@ -1227,7 +1227,7 @@
   "31017295-e616-8018-8c72-c6766de7fedc": {
     "v": 2,
     "query": "Car-Level Concentration Transfer Station Typology Fast",
-    "computedAt": "2026-10-19T07:53:31.549Z",
+    "computedAt": "2026-10-26T14:22:27.479Z",
     "results": [
       {
         "title": "Shatter Throughput Ceilings: Leveraging Reflection Surfaces to Enhance Transmissions for Vehicular Fast Data Exchange",
@@ -1269,14 +1269,14 @@
   "31017295-e616-808d-902f-d2233e893efe": {
     "v": 2,
     "query": "DBRS inter-regional bus routes",
-    "computedAt": "2026-10-19T07:53:32.470Z",
+    "computedAt": "2026-10-26T14:22:28.413Z",
     "results": [
       {
-        "title": "Potential of battery-electric buses in Thailand’s Eastern Economic Corridor (EEC): Emissions analysis and policy perspectives",
+        "title": "Development of a regional new-quality productivity collaborative management platform based on cloud computing technology",
         "year": 2026,
-        "venue": "Journal of Energy Systems",
-        "publicationDate": "2026-03-17",
-        "url": "https://www.semanticscholar.org/paper/d7f9dbfb86eba46daab8be98641c7686b843f38e"
+        "venue": "The International Conference on Optical Communication and Optoelectronic Technology",
+        "publicationDate": "2026-10-18",
+        "url": "https://www.semanticscholar.org/paper/28c1cffa18d57ceef01728a07957d6d1d9d85be3"
       },
       {
         "title": "Examine Cultural Identity, Social Change, Tradition and Modernity in Contemporary India through Khair’s The Bus Stopped",
@@ -1311,7 +1311,7 @@
   "1d717295-e616-8081-9074-ea190e4e7b6f": {
     "v": 2,
     "query": "travel behavior demand model",
-    "computedAt": "2026-10-19T07:53:33.728Z",
+    "computedAt": "2026-10-26T14:22:31.392Z",
     "results": [
       {
         "title": "An Agentic Approach for Active Data Collection, Travel Behavior Modeling, and Weather-Sensitive Demand Prediction",
@@ -1353,14 +1353,14 @@
   "1b317295-e616-8021-b717-c47adfcc1425": {
     "v": 2,
     "query": "route deviation",
-    "computedAt": "2026-10-19T07:53:38.424Z",
+    "computedAt": "2026-10-26T14:22:34.483Z",
     "results": [
       {
-        "title": "Analysis of Drone Flight Route Deviation Based on the UTM-K Coordinate System in Various Regional Environments",
+        "title": "VTS-Oriented Route Deviation Monitoring for Autonomous Surface Vehicles Using Waypoint-Tracking Telemetry and Navigation Alerts",
         "year": 2026,
-        "venue": "Journal of the Korea Academia-Industrial cooperation Society",
-        "publicationDate": "2026-09-30",
-        "url": "https://www.semanticscholar.org/paper/9585e208a5d8a4960cae72c3756797539a3eadb0"
+        "venue": "International Journal of Marine Engineering Innovation and Research",
+        "publicationDate": "2026-09-28",
+        "url": "https://www.semanticscholar.org/paper/2da4291c742ec3b5c18c28a824dcfef3831adb10"
       },
       {
         "title": "From Metrics to Decisions: Interpreting Route Deviation and Service Quality Indices in Public Transport Planning",
@@ -1395,7 +1395,7 @@
   "1b317295-e616-8089-b35d-cdf35035f6db": {
     "v": 2,
     "query": "public transit operations",
-    "computedAt": "2026-10-19T07:53:39.843Z",
+    "computedAt": "2026-10-26T14:22:37.590Z",
     "results": [
       {
         "title": "Joint Optimization of E-Scooter and Public Transit Operations",
@@ -1437,7 +1437,7 @@
   "1b217295-e616-8023-8145-fe98a281abec": {
     "v": 2,
     "query": "travel behavior demand model",
-    "computedAt": "2026-10-19T07:53:41.273Z",
+    "computedAt": "2026-10-26T14:22:43.929Z",
     "results": [
       {
         "title": "An Agentic Approach for Active Data Collection, Travel Behavior Modeling, and Weather-Sensitive Demand Prediction",
@@ -1479,7 +1479,7 @@
   "1b217295-e616-80db-ba56-c5d9bb750796": {
     "v": 2,
     "query": "micromobility",
-    "computedAt": "2026-10-19T07:53:42.292Z",
+    "computedAt": "2026-10-26T14:22:46.782Z",
     "results": [
       {
         "title": "Future-Powered Transportation Fleets and Mobility in Eco-Friendly Cities: Economic Scheduling Interactions for Integrated Energy Hubs via Micromobility Electric Vehicles",
@@ -1521,21 +1521,21 @@
   "1b217295-e616-8025-8e93-f30e6066d2b8": {
     "v": 2,
     "query": "transportation infrastructure policy evaluation",
-    "computedAt": "2026-10-19T07:53:52.491Z",
+    "computedAt": "2026-10-26T14:22:49.843Z",
     "results": [
+      {
+        "title": "EVALUATING INTEGRATED URBAN TRANSPORT POLICY THROUGH THE MIKROTRANS PROGRAM IN NORTH JAKARTA: AN APPLICATION OF AGUSTINO’S POLICY EVALUATION MODEL",
+        "year": 2026,
+        "venue": "JPAP (Jurnal Penelitian Administrasi Publik)",
+        "publicationDate": "2026-10-02",
+        "url": "https://www.semanticscholar.org/paper/7c9905da774ceda79270cb5ec7dba8efeca87d7a"
+      },
       {
         "title": "Evaluation of Development Policy and Increased Integrated Public Transportation in Bandung City",
         "year": 2025,
         "venue": "Eduvest - Journal Of Universal Studies",
         "publicationDate": "2025-03-20",
         "url": "https://www.semanticscholar.org/paper/bae4b6d643c2d2a7cf71de085f063cb8259b2184"
-      },
-      {
-        "title": "Weather-Related Disruptions in Transportation and Logistics: A Systematic Literature Review and a Policy Implementation Roadmap",
-        "year": 2025,
-        "venue": "Logistics",
-        "publicationDate": "2025-02-20",
-        "url": "https://www.semanticscholar.org/paper/097170bbe9a46ebdb16ca72e81c2d3483981a7d1"
       },
       {
         "title": "Policy evaluation and performance assessment for sustainable urbanization: a study of selected city corporations in Bangladesh",
@@ -1563,7 +1563,7 @@
   "1b217295-e616-8025-9f38-e6787c5dab7e": {
     "v": 2,
     "query": "micromobility",
-    "computedAt": "2026-10-19T07:53:53.658Z",
+    "computedAt": "2026-10-26T14:22:52.644Z",
     "results": [
       {
         "title": "Future-Powered Transportation Fleets and Mobility in Eco-Friendly Cities: Economic Scheduling Interactions for Integrated Energy Hubs via Micromobility Electric Vehicles",
