@@ -23,9 +23,7 @@
     "topic": "Optimizing Express Stop Patterns on the Gyeongin Line: A Smart Card OD and Time-Expanded Network Approach",
     "presented": true,
     "awarded": false,
-    "journals": [
-      "ITS"
-    ]
+    "journals": []
   },
   "3d417295-e616-8059-9947-cb93b665f078": {
     "title": "고건우",
@@ -33,7 +31,7 @@
       "Keonwoo Koh"
     ],
     "field": "대중교통운영",
-    "status": "In-progress",
+    "status": "Writing",
     "topic": "필지 단위 대중교통 접근성 공백 진단을 통한 신규 지역내 공공버스 노선 설계",
     "presented": true,
     "awarded": true,
@@ -75,7 +73,9 @@
     "topic": "Seobu Underground Expressway",
     "presented": false,
     "awarded": false,
-    "journals": []
+    "journals": [
+      "Transportation Research Part D"
+    ]
   },
   "3c917295-e616-80a3-9e89-f00f1968491b": {
     "title": "김성아",
@@ -123,7 +123,9 @@
     "topic": "BEVs non-exhaust emissions",
     "presented": true,
     "awarded": true,
-    "journals": []
+    "journals": [
+      "Transportation Research Part D"
+    ]
   },
   "3c817295-e616-8024-88fe-de2faf34a632": {
     "title": "허창준",
@@ -139,7 +141,9 @@
   },
   "3c817295-e616-800f-9ec3-c86f94855f27": {
     "title": "서영운",
-    "engAuthors": [],
+    "engAuthors": [
+      "Youngwoon Seo"
+    ],
     "field": "신교통서비스",
     "status": "게재 完",
     "topic": "광역형 수요응답형 대중교통의 승차 수요 영향요인 분석: 경기도 광역콜버스 사례를 중심으로",
@@ -181,8 +185,8 @@
       "Seong-A Seren Kim"
     ],
     "field": "기타",
-    "status": "In-progress",
-    "topic": "무인점포(with 리나prof.)",
+    "status": "Writing",
+    "topic": "무인점포&입지 (with 리나prof.)",
     "presented": false,
     "awarded": false,
     "journals": []
@@ -236,12 +240,12 @@
       "Keonwoo Koh"
     ],
     "field": "대중교통운영",
-    "status": "In-progress",
+    "status": "Writing",
     "topic": "Network-Proximity based Line Importance assessment",
     "presented": true,
     "awarded": true,
     "journals": [
-      "HKSTS"
+      "Journal of Transport Geography"
     ]
   },
   "31b17295-e616-80e2-8b0a-c93d853b4436": {
@@ -298,7 +302,7 @@
       "Seong-A Seren Kim"
     ],
     "field": "신교통서비스",
-    "status": "Round 1",
+    "status": "논문 Transfer",
     "topic": "MaaS&BERTrend",
     "presented": true,
     "awarded": false,
@@ -312,7 +316,7 @@
       "Seong-A Seren Kim"
     ],
     "field": "인프라 및 정책평가",
-    "status": "Round 1",
+    "status": "Round 2",
     "topic": "DRT&CMO",
     "presented": false,
     "awarded": false,
@@ -326,7 +330,7 @@
       "Seong-A Seren Kim"
     ],
     "field": "인프라 및 정책평가",
-    "status": "Round 1",
+    "status": "Round 2",
     "topic": "따릉이 B/C",
     "presented": false,
     "awarded": false,
@@ -391,12 +395,12 @@
       "Youngwoon Seo"
     ],
     "field": "대중교통운영",
-    "status": "In-progress",
+    "status": "Writing",
     "topic": "Car-Level Concentration Analysis Based on Transfer Station Typology and Fast Transfer car Accessibility",
     "presented": true,
     "awarded": true,
     "journals": [
-      "대한교통학회"
+      "Transportation Research Part A"
     ]
   },
   "31017295-e616-808d-902f-d2233e893efe": {
@@ -443,7 +447,7 @@
       "Hanghun Jo"
     ],
     "field": "대중교통운영",
-    "status": "Round 3",
+    "status": "게재 完",
     "topic": "대중교통만족도조사",
     "presented": true,
     "awarded": false,
@@ -469,11 +473,13 @@
       "Hanghun Jo"
     ],
     "field": "마이크로모빌리티",
-    "status": "Round 1",
+    "status": "Round 2",
     "topic": "전동킥보드- 경로비교",
     "presented": false,
     "awarded": false,
-    "journals": []
+    "journals": [
+      "Scientific Reports"
+    ]
   },
   "1b217295-e616-8025-8e93-f30e6066d2b8": {
     "title": "조항훈",
@@ -485,7 +491,9 @@
     "topic": "UAM (부동산)",
     "presented": true,
     "awarded": false,
-    "journals": []
+    "journals": [
+      "Journal of Housing and the Built Environment"
+    ]
   },
   "1b217295-e616-8025-9f38-e6787c5dab7e": {
     "title": "조항훈",
@@ -493,9 +501,9 @@
       "Hanghun Jo"
     ],
     "field": "마이크로모빌리티",
-    "status": "Round 1",
+    "status": "Round 2",
     "topic": "따릉이 요금제 (요금탄력성)",
-    "presented": true,
+    "presented": false,
     "awarded": false,
     "journals": [
       "Cities"
@@ -535,6 +543,30 @@
     "field": "통행행태 수요모형",
     "status": "In-progress",
     "topic": "정산 자동화 방안 연구",
+    "presented": false,
+    "awarded": false,
+    "journals": []
+  },
+  "40617295-e616-803c-aa19-c341f6b3d0c0": {
+    "title": "김성아",
+    "engAuthors": [
+      "Seong-A Seren Kim"
+    ],
+    "field": "기타",
+    "status": "Writing",
+    "topic": "무인점포&형평성 (with 리나prof.)",
+    "presented": false,
+    "awarded": false,
+    "journals": []
+  },
+  "40617295-e616-80fe-ba2b-c0bf66dbcf7e": {
+    "title": "고건우",
+    "engAuthors": [
+      "Keonwoo Koh"
+    ],
+    "field": "인프라 및 정책평가",
+    "status": "In preparation",
+    "topic": "Airport Runway usage efficiency evaluation and optimisation",
     "presented": false,
     "awarded": false,
     "journals": []

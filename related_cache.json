@@ -1727,5 +1727,89 @@
         "url": "https://www.semanticscholar.org/paper/c91f6163203ad511ad852e113c3183ec19c61b23"
       }
     ]
+  },
+  "40617295-e616-803c-aa19-c341f6b3d0c0": {
+    "v": 2,
+    "query": "prof",
+    "computedAt": "2026-10-27T13:17:17.063Z",
+    "results": [
+      {
+        "title": "The communication style of Prof. Dr. M. Quraish Shihab, M.A., and K.H. Ahmad Bahauddin Nursalim in interpreting the Quran (Study on YouTube channel of Pusat Studi Al-Quran)",
+        "year": 2025,
+        "venue": "Priviet Social Sciences Journal",
+        "publicationDate": "2025-12-02",
+        "url": "https://www.semanticscholar.org/paper/976d538b26127a4d4a21e090fa30411181a1ef2c"
+      },
+      {
+        "title": "Towards Better and More Valid Zebrafish Models of Alzheimer's Disease: A Scientific Tribute to Prof. Mikhail I. Aghajanov",
+        "year": 2025,
+        "venue": "Journal of Neurochemistry",
+        "publicationDate": "2025-06-01",
+        "url": "https://www.semanticscholar.org/paper/007499106052f6d31f7d1d93d015927e9cde48ab"
+      },
+      {
+        "title": "Reforming EMI in higher education: The EMI ProF as a political normative framework for policy, quality, and professionalisation",
+        "year": 2025,
+        "venue": "International Journal of Educational Development",
+        "publicationDate": "2025-05-01",
+        "url": "https://www.semanticscholar.org/paper/7860e5b411732c88d106c6239ef6b45a487e3977"
+      },
+      {
+        "title": "Konsep Pendidikan Islam Prof. Dr. H. Muhaimin, MA: Menjawab Tantangan Era Modern",
+        "year": 2025,
+        "venue": "Jurnal QOSIM  Jurnal Pendidikan Sosial &amp; Humaniora",
+        "publicationDate": "2025-02-03",
+        "url": "https://www.semanticscholar.org/paper/e35ed60559e00b229d9a690ed233039a8cc22d19"
+      },
+      {
+        "title": "Prof. George Whitesides’ Contributions to Self-Assembled Monolayers (SAMs): Advancing Biointerface Science and Beyond",
+        "year": 2025,
+        "venue": "Chemistry",
+        "publicationDate": "2025-01-16",
+        "url": "https://www.semanticscholar.org/paper/555481a578e72dc4e1707b15e0d770bf8ff7f474"
+      }
+    ]
+  },
+  "40617295-e616-80fe-ba2b-c0bf66dbcf7e": {
+    "v": 2,
+    "query": "Airport Runway usage efficiency evaluation optimisation",
+    "computedAt": "2026-10-27T13:17:17.966Z",
+    "results": [
+      {
+        "title": "Optimizing Nominal Current Output in the Elevated Runway Edge Lighting System at Subang Airport through Machine Learning Analysis",
+        "year": 2025,
+        "venue": "International Conference on Machine Learning Technologies",
+        "publicationDate": "2025-05-23",
+        "url": "https://www.semanticscholar.org/paper/2e3b0a880cfee3722391f9a7186862ebcba9640a"
+      },
+      {
+        "title": "Airport runway roughness evaluation using TCP-InSAR technology",
+        "year": 2025,
+        "venue": "International Journal of Pavement Engineering",
+        "publicationDate": "2025-04-28",
+        "url": "https://www.semanticscholar.org/paper/182b5575bda4b2993fb5c205ed512fb61e81d122"
+      },
+      {
+        "title": "Application of Fuzzy Comprehensive Evaluation Method Based on AHP in the Efficiency Assessment of Airport Runway Emergency Repair Operations",
+        "year": 2025,
+        "venue": "Modeling and Simulation",
+        "publicationDate": null,
+        "url": "https://www.semanticscholar.org/paper/dd3f59185e5780a431d16916754d0a393223912b"
+      },
+      {
+        "title": "International Technical Standard Conformity Evaluation of an Airport Runway Foreign Object Debris Detection Prototype System Based on a 96-GHz Millimeter-Wave Radar",
+        "year": 2024,
+        "venue": "IEEE Conference on Antenna Measurements & Applications",
+        "publicationDate": "2024-10-09",
+        "url": "https://www.semanticscholar.org/paper/20fdef478148f71738108eb4ba1acd1f45773ca3"
+      },
+      {
+        "title": "Research on airport runway-taxiway system controlling optimization based on scheduling algorithm",
+        "year": 2024,
+        "venue": "Other Conferences",
+        "publicationDate": "2024-08-28",
+        "url": "https://www.semanticscholar.org/paper/c72d6fdb471f6d3f03096abac93d64fa526cdb4f"
+      }
+    ]
   }
 }
