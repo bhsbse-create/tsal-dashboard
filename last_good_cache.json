@@ -503,7 +503,7 @@
     "field": "마이크로모빌리티",
     "status": "Round 2",
     "topic": "따릉이 요금제 (요금탄력성)",
-    "presented": false,
+    "presented": true,
     "awarded": false,
     "journals": [
       "Cities"
