@@ -41,7 +41,9 @@
   },
   "3d417295-e616-80f5-8725-fb6e47e9af29": {
     "title": "최성택",
-    "engAuthors": [],
+    "engAuthors": [
+      "Sungtaek Choi"
+    ],
     "field": "마이크로모빌리티",
     "status": "Round 1",
     "topic": "First-/last-mile and BE",
