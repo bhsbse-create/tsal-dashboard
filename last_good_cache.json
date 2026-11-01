@@ -154,7 +154,7 @@
     ]
   },
   "3c817295-e616-80cc-a97f-c2e0a77d5bc7": {
-    "title": "",
+    "title": "양윤철",
     "engAuthors": [
       "Yuncheol Yang"
     ],
@@ -409,7 +409,7 @@
       "Keonwoo Koh"
     ],
     "field": "대중교통운영",
-    "status": "Round 2",
+    "status": "게재 完",
     "topic": "DBRS for inter-regional bus routes",
     "presented": true,
     "awarded": true,
@@ -431,7 +431,9 @@
   },
   "1b317295-e616-8021-b717-c47adfcc1425": {
     "title": "조항훈",
-    "engAuthors": [],
+    "engAuthors": [
+      "Hanghun Jo"
+    ],
     "field": "마이크로모빌리티",
     "status": "In-progress",
     "topic": "전동킥보드- route deviation",
