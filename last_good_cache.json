@@ -79,7 +79,9 @@
   },
   "3c917295-e616-80a3-9e89-f00f1968491b": {
     "title": "김성아",
-    "engAuthors": [],
+    "engAuthors": [
+      "Seong-A Seren Kim"
+    ],
     "field": "신교통서비스",
     "status": "In-progress",
     "topic": "MaaS&SEM",
@@ -152,7 +154,7 @@
     ]
   },
   "3c817295-e616-80cc-a97f-c2e0a77d5bc7": {
-    "title": "양윤철",
+    "title": "",
     "engAuthors": [
       "Yuncheol Yang"
     ],
@@ -429,9 +431,7 @@
   },
   "1b317295-e616-8021-b717-c47adfcc1425": {
     "title": "조항훈",
-    "engAuthors": [
-      "Hanghun Jo"
-    ],
+    "engAuthors": [],
     "field": "마이크로모빌리티",
     "status": "In-progress",
     "topic": "전동킥보드- route deviation",
