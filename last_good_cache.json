@@ -244,9 +244,7 @@
     "topic": "Network-Proximity based Line Importance assessment",
     "presented": true,
     "awarded": true,
-    "journals": [
-      "Journal of Transport Geography"
-    ]
+    "journals": []
   },
   "31b17295-e616-80e2-8b0a-c93d853b4436": {
     "title": "최성택",
@@ -549,7 +547,9 @@
   },
   "40617295-e616-803c-aa19-c341f6b3d0c0": {
     "title": "김성아",
-    "engAuthors": [],
+    "engAuthors": [
+      "Seong-A Seren Kim"
+    ],
     "field": "기타",
     "status": "Writing",
     "topic": "무인점포&형평성 (with 리나prof.)",
