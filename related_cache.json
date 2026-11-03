@@ -1731,15 +1731,8 @@
   "40617295-e616-803c-aa19-c341f6b3d0c0": {
     "v": 2,
     "query": "prof",
-    "computedAt": "2026-10-27T13:17:17.063Z",
+    "computedAt": "2026-11-03T15:15:21.261Z",
     "results": [
-      {
-        "title": "The communication style of Prof. Dr. M. Quraish Shihab, M.A., and K.H. Ahmad Bahauddin Nursalim in interpreting the Quran (Study on YouTube channel of Pusat Studi Al-Quran)",
-        "year": 2025,
-        "venue": "Priviet Social Sciences Journal",
-        "publicationDate": "2025-12-02",
-        "url": "https://www.semanticscholar.org/paper/976d538b26127a4d4a21e090fa30411181a1ef2c"
-      },
       {
         "title": "Towards Better and More Valid Zebrafish Models of Alzheimer's Disease: A Scientific Tribute to Prof. Mikhail I. Aghajanov",
         "year": 2025,
@@ -1767,13 +1760,20 @@
         "venue": "Chemistry",
         "publicationDate": "2025-01-16",
         "url": "https://www.semanticscholar.org/paper/555481a578e72dc4e1707b15e0d770bf8ff7f474"
+      },
+      {
+        "title": "Light People: Prof. Henry Snaith’s (FRS) perovskite optoelectronics journey",
+        "year": 2025,
+        "venue": "Light: Science & Applications",
+        "publicationDate": "2025-01-01",
+        "url": "https://www.semanticscholar.org/paper/19fffeba17525028eb5bbb5d2030674d56cd56d1"
       }
     ]
   },
   "40617295-e616-80fe-ba2b-c0bf66dbcf7e": {
     "v": 2,
     "query": "Airport Runway usage efficiency evaluation optimisation",
-    "computedAt": "2026-10-27T13:17:17.966Z",
+    "computedAt": "2026-11-03T15:15:23.773Z",
     "results": [
       {
         "title": "Optimizing Nominal Current Output in the Elevated Runway Edge Lighting System at Subang Airport through Machine Learning Analysis",
