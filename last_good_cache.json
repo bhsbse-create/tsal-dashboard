@@ -78,7 +78,7 @@
     ]
   },
   "3c917295-e616-80a3-9e89-f00f1968491b": {
-    "title": "김성아",
+    "title": "",
     "engAuthors": [
       "Seong-A Seren Kim"
     ],
@@ -91,9 +91,7 @@
   },
   "3c817295-e616-803a-8f6e-f6f3441b9e09": {
     "title": "조항훈",
-    "engAuthors": [
-      "Hanghun Jo"
-    ],
+    "engAuthors": [],
     "field": "통행행태 수요모형",
     "status": "In preparation",
     "topic": "Deep gravity model",
@@ -451,7 +449,9 @@
     "topic": "대중교통만족도조사",
     "presented": true,
     "awarded": false,
-    "journals": []
+    "journals": [
+      "Transport Policy"
+    ]
   },
   "1b217295-e616-8023-8145-fe98a281abec": {
     "title": "김우경",
