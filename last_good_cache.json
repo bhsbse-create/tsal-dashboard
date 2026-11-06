@@ -78,7 +78,7 @@
     ]
   },
   "3c917295-e616-80a3-9e89-f00f1968491b": {
-    "title": "",
+    "title": "김성아",
     "engAuthors": [
       "Seong-A Seren Kim"
     ],
@@ -91,7 +91,9 @@
   },
   "3c817295-e616-803a-8f6e-f6f3441b9e09": {
     "title": "조항훈",
-    "engAuthors": [],
+    "engAuthors": [
+      "Hanghun Jo"
+    ],
     "field": "통행행태 수요모형",
     "status": "In preparation",
     "topic": "Deep gravity model",
@@ -337,7 +339,7 @@
     ]
   },
   "31017295-e616-8008-8327-ee9527ea4cbd": {
-    "title": "양윤철",
+    "title": "",
     "engAuthors": [
       "Yuncheol Yang"
     ],
