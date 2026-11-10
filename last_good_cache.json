@@ -41,9 +41,7 @@
   },
   "3d417295-e616-80f5-8725-fb6e47e9af29": {
     "title": "최성택",
-    "engAuthors": [
-      "Sungtaek Choi"
-    ],
+    "engAuthors": [],
     "field": "마이크로모빌리티",
     "status": "Round 1",
     "topic": "First-/last-mile and BE",
@@ -390,7 +388,10 @@
   },
   "31017295-e616-8018-8c72-c6766de7fedc": {
     "title": "고건우, 서영운",
-    "engAuthors": [],
+    "engAuthors": [
+      "Keonwoo Koh",
+      "Youngwoon Seo"
+    ],
     "field": "대중교통운영",
     "status": "Writing",
     "topic": "Car-Level Concentration Analysis Based on Transfer Station Typology and Fast Transfer car Accessibility",
