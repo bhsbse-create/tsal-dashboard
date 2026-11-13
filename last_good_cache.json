@@ -154,7 +154,7 @@
     ]
   },
   "3c817295-e616-80cc-a97f-c2e0a77d5bc7": {
-    "title": "양윤철",
+    "title": "",
     "engAuthors": [
       "Yuncheol Yang"
     ],
@@ -236,7 +236,9 @@
   },
   "31b17295-e616-80f8-9d54-dd7c3a020e0e": {
     "title": "고건우",
-    "engAuthors": [],
+    "engAuthors": [
+      "Keonwoo Koh"
+    ],
     "field": "대중교통운영",
     "status": "Writing",
     "topic": "Network-Proximity based Line Importance assessment",
