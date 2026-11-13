@@ -236,9 +236,7 @@
   },
   "31b17295-e616-80f8-9d54-dd7c3a020e0e": {
     "title": "고건우",
-    "engAuthors": [
-      "Keonwoo Koh"
-    ],
+    "engAuthors": [],
     "field": "대중교통운영",
     "status": "Writing",
     "topic": "Network-Proximity based Line Importance assessment",
