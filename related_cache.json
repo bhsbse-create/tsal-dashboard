@@ -1724,8 +1724,15 @@
   "40617295-e616-803c-aa19-c341f6b3d0c0": {
     "v": 2,
     "query": "prof",
-    "computedAt": "2026-11-10T17:54:27.022Z",
+    "computedAt": "2026-11-18T04:28:38.659Z",
     "results": [
+      {
+        "title": "ANALISIS PEMIKIRAN PROF ALI YAFIE TERHADAP PENGELOLAAN EKOLOGI BERKELANJUTAN MELALUI PRINSIP HIFZ AL BĪʻAH",
+        "year": 2025,
+        "venue": "TAHKIM",
+        "publicationDate": "2025-12-23",
+        "url": "https://www.semanticscholar.org/paper/7e18ed4c362249d0ebb0e60510f845bad4625693"
+      },
       {
         "title": "Towards Better and More Valid Zebrafish Models of Alzheimer's Disease: A Scientific Tribute to Prof. Mikhail I. Aghajanov",
         "year": 2025,
@@ -1753,13 +1760,6 @@
         "venue": "Chemistry",
         "publicationDate": "2025-01-16",
         "url": "https://www.semanticscholar.org/paper/555481a578e72dc4e1707b15e0d770bf8ff7f474"
-      },
-      {
-        "title": "Light People: Prof. Henry Snaith’s (FRS) perovskite optoelectronics journey",
-        "year": 2025,
-        "venue": "Light: Science & Applications",
-        "publicationDate": "2025-01-01",
-        "url": "https://www.semanticscholar.org/paper/19fffeba17525028eb5bbb5d2030674d56cd56d1"
       }
     ]
   },
