@@ -287,7 +287,7 @@
     "journals": []
   },
   "31117295-e616-80a7-9761-fe5957c06da0": {
-    "title": "",
+    "title": "김성아",
     "engAuthors": [
       "Seong-A Seren Kim"
     ],
@@ -459,9 +459,7 @@
   },
   "1b217295-e616-8023-8145-fe98a281abec": {
     "title": "김우경",
-    "engAuthors": [
-      "Wookyung Kim"
-    ],
+    "engAuthors": [],
     "field": "통행행태 수요모형",
     "status": "Round 1",
     "topic": "GTX의 통행시간가치",
