@@ -427,7 +427,7 @@
     "field": "통행행태 수요모형",
     "status": "Round 1",
     "topic": "GPS 궤적 비지도학습 수단 추정",
-    "presented": true,
+    "presented": false,
     "awarded": false,
     "journals": []
   },
